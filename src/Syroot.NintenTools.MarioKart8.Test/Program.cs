@@ -1,5 +1,4 @@
-﻿using System;
-using Syroot.NintenTools.MarioKart8.Courses;
+﻿using Syroot.NintenTools.MarioKart8.Courses;
 
 namespace Syroot.NintenTools.MarioKart8.Test
 {
@@ -13,7 +12,7 @@ namespace Syroot.NintenTools.MarioKart8.Test
         private static void Main(string[] args)
         {
             CourseDefinition course = new CourseDefinition(
-                @"D:\Archive\Games\Emulators\Wii U\Roms\Mario Kart 8 EUR 4.1 with DLC1+2\content\course\D3ds_NeoBowserCity\course_muunt_200.byaml");
+                @"D:\Archive\Games\Emulators\Wii U\Roms\Mario Kart 8 EUR 4.1 with DLC1+2\content\course\Gu_FirstCircuit\course_muunt.byaml");
         }
     }
 }

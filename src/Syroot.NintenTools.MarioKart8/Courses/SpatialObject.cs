@@ -11,7 +11,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
-        /// Gets or sets the rotation of the object in radian.
+        /// Gets or sets the rotation of the object in radians.
         /// </summary>
         public Vector3F Rotate { get; set; }
 

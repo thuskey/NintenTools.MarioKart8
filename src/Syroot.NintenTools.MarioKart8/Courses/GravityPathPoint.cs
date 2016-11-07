@@ -5,16 +5,26 @@ using Syroot.NintenTools.Byaml;
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents a point of a <see cref="GlidePath"/>.
+    /// Represents a point of a <see cref="GravityPath"/>.
     /// </summary>
-    public class GlidePathPoint : PathPoint<GlidePath, GlidePathPoint>
+    public class GravityPathPoint : PathPoint<GravityPath, GravityPathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
-        /// Gets or sets a value indicating whether the driver is pulled as if shot through a cannon.
+        /// Gets or sets a distance possibly controlling how far from the ground the camera is positioned.
         /// </summary>
-        public bool Cannon { get; set; }
+        public int CameraHeight { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value possibly indicating whether this gravity path is only effective when gliding.
+        /// </summary>
+        public bool GlideOnly { get; set; }
+
+        /// <summary>
+        /// Gets or sets an unknown value.
+        /// </summary>
+        public bool Transform { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
@@ -25,7 +35,9 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override void DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            Cannon = node["Cannon"];
+            CameraHeight = node["CameraHeight"];
+            GlideOnly = node["GlideOnly"];
+            Transform = node["Transform"];
         }
 
         /// <summary>
@@ -35,7 +47,9 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic SerializeByaml()
         {
             dynamic node = base.SerializeByaml();
-            node["Cannon"] = Cannon;
+            node["CameraHeight"] = CameraHeight;
+            node["GlideOnly"] = GlideOnly;
+            node["Transform"] = Transform;
             return node;
         }
         
@@ -47,9 +61,9 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> to get the paths from.</param>
         /// <returns>The array of paths which can be referenced.</returns>
-        protected override IList<GlidePath> GetPathReferenceList(CourseDefinition courseDefinition)
+        protected override IList<GravityPath> GetPathReferenceList(CourseDefinition courseDefinition)
         {
-            return courseDefinition.GlidePaths;
+            return courseDefinition.GravityPaths;
         }
     }
 }

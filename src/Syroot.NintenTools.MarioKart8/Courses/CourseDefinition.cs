@@ -118,9 +118,29 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public List<EnemyPath> EnemyPaths { get; set; }
 
         /// <summary>
+        /// Gets or sets the list of <see cref="GCameraPath"/> instances.
+        /// </summary>
+        public List<GCameraPath> GCameraPaths { get; set; }
+
+        /// <summary>
         /// Gets or sets the list of <see cref="GlidePath"/> instances.
         /// </summary>
         public List<GlidePath> GlidePaths { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of <see cref="GravityPath"/> instances.
+        /// </summary>
+        public List<GravityPath> GravityPaths { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the list of <see cref="IntroCamera"/> instances.
+        /// </summary>
+        public List<IntroCamera> IntroCameras { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of <see cref="JugemPath"/> instances. There may be only one.
+        /// </summary>
+        public List<JugemPath> JugemPaths { get; set; }
 
         /// <summary>
         /// Gets or sets the list of ObjId's of objects to load for the track.
@@ -181,8 +201,12 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             ByamlFile.SetValue(node, "Clip", ByamlFile.SerializeList(Clips));
             ByamlFile.SetValue(node, "ClipArea", ByamlFile.SerializeList(ClipAreas));
             ByamlFile.SetValue(node, "EffectArea", ByamlFile.SerializeList(EffectAreas));
-            ByamlFile.SetValue(node, "EnemyPaths", ByamlFile.SerializeList(EnemyPaths));
-            ByamlFile.SetValue(node, "GlidePaths", ByamlFile.SerializeList(GlidePaths));
+            ByamlFile.SetValue(node, "EnemyPath", ByamlFile.SerializeList(EnemyPaths));
+            ByamlFile.SetValue(node, "GCameraPath", ByamlFile.SerializeList(GCameraPaths));
+            ByamlFile.SetValue(node, "GlidePath", ByamlFile.SerializeList(GlidePaths));
+            ByamlFile.SetValue(node, "GravityPath", ByamlFile.SerializeList(GravityPaths));
+            ByamlFile.SetValue(node, "IntroCamera", ByamlFile.SerializeList(IntroCameras));
+            ByamlFile.SetValue(node, "JugemPath", ByamlFile.SerializeList(JugemPaths));
             ByamlFile.SetValue(node, "MapObjIdList", MapObjIdList);
             ByamlFile.SetValue(node, "MapObjResList", MapObjResList);
             ByamlFile.SetValue(node, "Obj", ByamlFile.SerializeList(Objs));
@@ -218,7 +242,11 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             ClipPattern = ByamlFile.Deserialize<ClipPattern>(ByamlFile.GetValue(node, "ClipPattern"));
             EffectAreas = ByamlFile.DeserializeList<EffectArea>(ByamlFile.GetValue(node, "EffectArea"));
             EnemyPaths = ByamlFile.DeserializeList<EnemyPath>(ByamlFile.GetValue(node, "EnemyPath"));
+            GCameraPaths = ByamlFile.DeserializeList<GCameraPath>(ByamlFile.GetValue(node, "GCameraPath"));
             GlidePaths = ByamlFile.DeserializeList<GlidePath>(ByamlFile.GetValue(node, "GlidePath"));
+            GravityPaths = ByamlFile.DeserializeList<GravityPath>(ByamlFile.GetValue(node, "GravityPath"));
+            IntroCameras = ByamlFile.DeserializeList<IntroCamera>(ByamlFile.GetValue(node, "IntroCamera"));
+            JugemPaths = ByamlFile.DeserializeList<JugemPath>(ByamlFile.GetValue(node, "JugemPath"));
             MapObjIdList = ByamlFile.GetList<int>(node["MapObjIdList"]);
             MapObjResList = ByamlFile.GetList<string>(node["MapObjResList"]);
             Objs = ByamlFile.DeserializeList<Obj>(node["Obj"]);
@@ -227,7 +255,10 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             // After loading all the instances, allow references to be resolved.
             Areas?.ForEach(x => x.DeserializeReferences(this));
             EnemyPaths?.ForEach(x => x.DeserializeReferences(this));
+            GCameraPaths?.ForEach(x => x.DeserializeReferences(this));
             GlidePaths?.ForEach(x => x.DeserializeReferences(this));
+            GravityPaths?.ForEach(x => x.DeserializeReferences(this));
+            JugemPaths?.ForEach(x => x.DeserializeReferences(this));
             Objs.ForEach(x => x.DeserializeReferences(this));
         }
     }

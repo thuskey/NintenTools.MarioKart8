@@ -1,20 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Syroot.NintenTools.Byaml;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents a point of a <see cref="GlidePath"/>.
+    /// Represents a path possibly determining where Lakitu resets drivers back to.
     /// </summary>
-    public class GlidePathPoint : PathPoint<GlidePath, GlidePathPoint>
+    public class JugemPath : Path<JugemPath, JugemPathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
-        /// Gets or sets a value indicating whether the driver is pulled as if shot through a cannon.
+        /// Gets or sets a value possibly indicating the thickness of the path.
         /// </summary>
-        public bool Cannon { get; set; }
+        public float SplitWidth { get; set; }
+        
+        /// <summary>
+        /// Gets a <see cref="ByamlPath"/> embedded in this path for unknown reasons.
+        /// </summary>
+        public ByamlPath ObjPt { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
@@ -25,7 +29,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override void DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            Cannon = node["Cannon"];
+            ObjPt = node["ObjPt"];
+            SplitWidth = node["SplitWidth"];
         }
 
         /// <summary>
@@ -35,21 +40,9 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic SerializeByaml()
         {
             dynamic node = base.SerializeByaml();
-            node["Cannon"] = Cannon;
+            node["ObjPt"] = ObjPt;
+            node["SplitWidth"] = SplitWidth;
             return node;
-        }
-        
-        // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Returns the array of paths in the <see cref="CourseDefinition"/> which can be referenced by previous and
-        /// next points.
-        /// </summary>
-        /// <param name="courseDefinition">The <see cref="CourseDefinition"/> to get the paths from.</param>
-        /// <returns>The array of paths which can be referenced.</returns>
-        protected override IList<GlidePath> GetPathReferenceList(CourseDefinition courseDefinition)
-        {
-            return courseDefinition.GlidePaths;
         }
     }
 }
