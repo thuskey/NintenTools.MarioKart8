@@ -247,7 +247,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             ByamlFile.SetValue(node, "PatternNum", PatternCount);
             for (int i = 0; i < ObjParams.Length; i++)
             {
-                ByamlFile.SetValue(node, "OBJPrm" + i.ToString(), ObjParams[i]);
+                ByamlFile.SetValue(node, "OBJPrm" + (i + 1).ToString(), ObjParams[i]);
             }
 
             ByamlFile.SetValue(node, "Area", ByamlFile.SerializeList(Areas));
@@ -255,13 +255,14 @@ namespace Syroot.NintenTools.MarioKart8.Courses
 
             ByamlFile.SetValue(node, "Clip", ByamlFile.SerializeList(Clips));
             ByamlFile.SetValue(node, "ClipArea", ByamlFile.SerializeList(ClipAreas));
-            ByamlFile.SetValue(node, "ClipPattern", ClipPattern);
+            ByamlFile.SetValue(node, "ClipPattern", ClipPattern.SerializeByaml());
 
             ByamlFile.SetValue(node, "Path", ByamlFile.SerializeList(Paths));
             ByamlFile.SetValue(node, "EnemyPath", ByamlFile.SerializeList(EnemyPaths));
             ByamlFile.SetValue(node, "GCameraPath", ByamlFile.SerializeList(GCameraPaths));
             ByamlFile.SetValue(node, "GlidePath", ByamlFile.SerializeList(GlidePaths));
             ByamlFile.SetValue(node, "GravityPath", ByamlFile.SerializeList(GravityPaths));
+            ByamlFile.SetValue(node, "ItemPath", ByamlFile.SerializeList(ItemPaths));
             ByamlFile.SetValue(node, "JugemPath", ByamlFile.SerializeList(JugemPaths));
             ByamlFile.SetValue(node, "LapPath", ByamlFile.SerializeList(LapPaths));
             ByamlFile.SetValue(node, "ObjPath", ByamlFile.SerializeList(ObjPaths));

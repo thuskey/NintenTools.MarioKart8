@@ -9,13 +9,16 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// </summary>
     /// <typeparam name="TPath">The type of the path this point belongs to.</typeparam>
     /// <typeparam name="TPoint">The type of the point itself.</typeparam>
-    public abstract class PathPointBase<TPath, TPoint> : IByamlSerializable, IByamlReferencable
+    public abstract class PathPointBase<TPath, TPoint> : IByamlSerializable, ICourseReferencable
         where TPath : PathBase<TPath, TPoint>
-        where TPoint : PathPointBase<TPath, TPoint>, IByamlReferencable, new()
+        where TPoint : PathPointBase<TPath, TPoint>, ICourseReferencable, new()
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
-        private TPath _path;
+        /// <summary>
+        /// Gets or sets the path without any following logic.
+        /// </summary>
+        internal TPath PathInternal;
 
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
@@ -26,22 +29,22 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             get
             {
-                return _path;
+                return PathInternal;
             }
             set
             {
                 // Remove from a possible current parent.
-                if (_path != null)
+                if (PathInternal != null)
                 {
-                    _path.Points.Remove((TPoint)this);
+                    PathInternal.Points.Remove((TPoint)this);
                 }
 
                 // Set the new parent.
-                _path = value;
+                PathInternal = value;
                 // Add to the new parent's points.
-                if (_path != null)
+                if (PathInternal != null)
                 {
-                    _path.Points.Add((TPoint)this);
+                    PathInternal.Points.Add((TPoint)this);
                 }
             }
         }
@@ -53,11 +56,11 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             get
             {
-                if (_path == null)
+                if (PathInternal == null)
                 {
                     return -1;
                 }
-                return _path.Points.IndexOf((TPoint)this);
+                return PathInternal.Points.IndexOf((TPoint)this);
             }
         }
 
@@ -129,14 +132,14 @@ namespace Syroot.NintenTools.MarioKart8.Courses
                 ["Rotate"] = Rotate.SerializeByaml(),
                 ["Translate"] = Translate.SerializeByaml(),
             };
-            ByamlFile.SetValue(node, "Scale", Scale);
-            ByamlFile.SetValue(node, "PrevPt", PreviousPointIndices);
-            ByamlFile.SetValue(node, "NextPt", NextPointIndices);
+            ByamlFile.SetValue(node, "Scale", Scale?.SerializeByaml());
+            ByamlFile.SetValue(node, "PrevPt", ByamlFile.SerializeList(PreviousPointIndices));
+            ByamlFile.SetValue(node, "NextPt", ByamlFile.SerializeList(NextPointIndices));
             return node;
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be resolved to provide real instances instead of the raw values
+        /// Allows references of course data objects to be resolved to provide real instances instead of the raw values
         /// in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
@@ -161,7 +164,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be serialized into raw values stored in the BYAML.
+        /// Allows references between course objects to be serialized into raw values stored in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public virtual void SerializeReferences(CourseDefinition courseDefinition)

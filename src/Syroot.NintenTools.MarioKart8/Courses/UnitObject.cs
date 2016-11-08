@@ -7,7 +7,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents an object in the course which can be referenced by its <see cref="UnitIdNum"/>.
     /// </summary>
-    [DebuggerDisplay("UnitIdNum={UnitIdNum}")]
+    [DebuggerDisplay("{GetType().Name}  UnitIdNum={UnitIdNum}")]
     public abstract class UnitObject : IByamlSerializable
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------

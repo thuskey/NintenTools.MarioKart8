@@ -45,7 +45,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be resolved to provide real instances instead of the raw values
+        /// Allows references of course data objects to be resolved to provide real instances instead of the raw values
         /// in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
@@ -66,7 +66,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be serialized into raw values stored in the BYAML.
+        /// Allows references between course objects to be serialized into raw values stored in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public override void SerializeReferences(CourseDefinition courseDefinition)

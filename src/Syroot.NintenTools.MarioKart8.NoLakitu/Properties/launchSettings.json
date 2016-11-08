@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Syroot.NintenTools.MarioKart8.NoLakitu": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\Pictures\\course_muunt.byaml\""
+    }
+  }
+}

@@ -8,7 +8,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents an Obj placed on the course.
     /// </summary>
-    public class Obj : SpatialObject, IByamlReferencable
+    public class Obj : SpatialObject, ICourseReferencable
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 

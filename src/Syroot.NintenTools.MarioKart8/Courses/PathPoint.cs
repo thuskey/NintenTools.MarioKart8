@@ -52,7 +52,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             dynamic node = base.SerializeByaml();
             node["prm1"] = Prm1;
             node["prm2"] = Prm2;
-            node["ControlPoints"] = ControlPoints;
+            node["ControlPoints"] = ByamlFile.SerializeList(ControlPoints);
             return node;
         }
         

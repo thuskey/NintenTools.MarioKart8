@@ -11,6 +11,11 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
+        /// Gets or sets an unknown value.
+        /// </summary>
+        public int PtNum { get; set; }
+
+        /// <summary>
         /// Gets or sets a value possibly indicating the thickness of the path.
         /// </summary>
         public float SplitWidth { get; set; }
@@ -31,6 +36,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
             ObjPt = node["ObjPt"];
+            PtNum = node["PtNum"];
             SplitWidth = node["SplitWidth"];
             return this;
         }
@@ -43,6 +49,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             dynamic node = base.SerializeByaml();
             node["ObjPt"] = ObjPt;
+            node["PtNum"] = PtNum;
             node["SplitWidth"] = SplitWidth;
             return node;
         }

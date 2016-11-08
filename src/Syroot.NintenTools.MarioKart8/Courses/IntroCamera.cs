@@ -6,7 +6,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents a camera move played in the introductionary course video played at the start of offline races.
     /// </summary>
-    public class IntroCamera : SpatialObject, IByamlReferencable
+    public class IntroCamera : SpatialObject, ICourseReferencable
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
@@ -66,6 +66,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
             Num = node["CameraNum"];
             Time = node["CameraTime"];
+            Type = node["CameraType"];
             AtPath = node["Camera_AtPath"];
             _pathIndex = node["Camera_Path"];
             Fovy = node["Fovy"];
@@ -83,6 +84,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             IDictionary<string, dynamic> node = base.SerializeByaml();
             node["CameraNum"] = Num;
             node["CameraTime"] = Time;
+            node["CameraType"] = Type;
             node["Camera_AtPath"] = AtPath;
             node["Camera_Path"] = _pathIndex;
             node["Fovy"] = Fovy;
@@ -92,7 +94,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be resolved to provide real instances instead of the raw values
+        /// Allows references of course file objects to be resolved to provide real instances instead of the raw values
         /// in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
@@ -102,7 +104,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be serialized into raw values stored in the BYAML.
+        /// Allows references between course objects to be serialized into raw values stored in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void SerializeReferences(CourseDefinition courseDefinition)

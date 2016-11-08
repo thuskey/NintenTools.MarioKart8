@@ -7,7 +7,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents a return point of a <see cref="LapPath"/>.
     /// </summary>
-    public class ReturnPoint : IByamlSerializable, IByamlReferencable
+    public class ReturnPoint : IByamlSerializable, ICourseReferencable
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
@@ -77,14 +77,14 @@ namespace Syroot.NintenTools.MarioKart8.Courses
                 ["JugemIndex"] = _jugemPathPointIndex,
                 ["ReturnType"] = ReturnType,
                 ["hasError"] = HasError,
-                ["Normal"] = Normal,
-                ["Position"] = Position,
-                ["Tangent"] = Tangent
+                ["Normal"] = Normal.SerializeByaml(),
+                ["Position"] = Position.SerializeByaml(),
+                ["Tangent"] = Tangent.SerializeByaml()
             };
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be resolved to provide real instances instead of the raw values
+        /// Allows references of course data objects to be resolved to provide real instances instead of the raw values
         /// in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
@@ -95,7 +95,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be serialized into raw values stored in the BYAML.
+        /// Allows references between course objects to be serialized into raw values stored in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void SerializeReferences(CourseDefinition courseDefinition)

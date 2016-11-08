@@ -6,7 +6,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents the camera movements and cuts triggered by drivers in the replay video.
     /// </summary>
-    public class ReplayCamera : PrmObject
+    public class ReplayCamera : SpatialObject
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
@@ -76,6 +76,16 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public int Group { get; set; }
 
         /// <summary>
+        /// Gets or sets the first parameter.
+        /// </summary>
+        public int Prm1 { get; set; }
+
+        /// <summary>
+        /// Gets or sets the second parameter.
+        /// </summary>
+        public int Prm2 { get; set; }
+
+        /// <summary>
         /// Gets or sets the rotation around the X axis.
         /// </summary>
         public int Pitch { get; set; }
@@ -106,11 +116,14 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             Type = node["CameraType"];
             _pathIndex = ByamlFile.GetValue(node, "Camera_Path");
             DepthOfField = node["DepthOfField"];
+            Distance = node["Distance"];
             Follow = node["Follow"];
             Fovy = node["Fovy"];
             Fovy2 = node["Fovy2"];
             FovySpeed = node["FovySpeed"];
             Group = node["Group"];
+            Prm1 = node["prm1"];
+            Prm2 = node["prm2"];
             Pitch = node["Pitch"];
             Yaw = node["Yaw"];
             Roll = node["Roll"];
@@ -130,11 +143,14 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             node["CameraType"] = Type;
             node["Camera_Path"] = _pathIndex;
             node["DepthOfField"] = DepthOfField;
+            node["Distance"] = Distance;
             node["Follow"] = Follow;
             node["Fovy"] = Fovy;
             node["Fovy2"] = Fovy2;
             node["FovySpeed"] = FovySpeed;
             node["Group"] = Group;
+            node["prm1"] = Prm1;
+            node["prm2"] = Prm2;
             node["Pitch"] = Pitch;
             node["Yaw"] = Yaw;
             node["Roll"] = Roll;

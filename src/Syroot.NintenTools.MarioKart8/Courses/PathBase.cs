@@ -6,9 +6,9 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents a path used for different aspects in the game.
     /// </summary>
-    public abstract class PathBase<TPath, TPoint> : UnitObject, IByamlReferencable
+    public abstract class PathBase<TPath, TPoint> : UnitObject, ICourseReferencable
         where TPath : PathBase<TPath, TPoint>
-        where TPoint : PathPointBase<TPath, TPoint>, IByamlReferencable, new()
+        where TPoint : PathPointBase<TPath, TPoint>, ICourseReferencable, new()
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
@@ -39,12 +39,12 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic SerializeByaml()
         {
             dynamic node = base.SerializeByaml();
-            node["PathPt"] = Points;
+            node["PathPt"] = ByamlFile.SerializeList(Points);
             return node;
         }
         
         /// <summary>
-        /// Allows references between BYAML instances to be resolved to provide real instances instead of the raw values
+        /// Allows references of course data objects to be resolved to provide real instances instead of the raw values
         /// in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
@@ -58,7 +58,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be serialized into raw values stored in the BYAML.
+        /// Allows references between course objects to be serialized into raw values stored in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public virtual void SerializeReferences(CourseDefinition courseDefinition)

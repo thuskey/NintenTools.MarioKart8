@@ -8,6 +8,10 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// </summary>
     public class LapPath : PathBase<LapPath, LapPathPoint>
     {
+        // ---- MEMBERS ------------------------------------------------------------------------------------------------
+
+        private List<int> _gravityPathIndices;
+
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
@@ -26,6 +30,11 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// </summary>
         public List<ReturnPoint> ReturnPoints { get; set; }
 
+        /// <summary>
+        /// Gets or sets a list of <see cref="GravityPaths"/> instances used by this lap path.
+        /// </summary>
+        public List<GravityPath> GravityPaths { get; set; }
+
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
         /// <summary>
@@ -39,6 +48,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             Group = node["LapPathGroup"];
             ReturnPointsError = node["ReturnPointsError"];
             ReturnPoints = ByamlFile.DeserializeList<ReturnPoint>(node["ReturnPoints"]);
+            _gravityPathIndices = ByamlFile.GetList<int>(ByamlFile.GetValue(node, "LapPath_GravityPath"));
             return this;
         }
 
@@ -51,8 +61,56 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             dynamic node = base.SerializeByaml();
             node["LapPathGroup"] = Group;
             node["ReturnPointsError"] = ReturnPointsError;
-            node["ReturnPoints"] = ReturnPoints;
+            node["ReturnPoints"] = ByamlFile.SerializeList(ReturnPoints);
+            ByamlFile.SetValue(node, "LapPath_GravityPath", _gravityPathIndices);
             return node;
+        }
+
+        /// <summary>
+        /// Allows references of course data objects to be resolved to provide real instances instead of the raw values
+        /// in the BYAML.
+        /// </summary>
+        /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
+        public override void DeserializeReferences(CourseDefinition courseDefinition)
+        {
+            base.DeserializeReferences(courseDefinition);
+
+            // Gravity paths.
+            if (_gravityPathIndices == null)
+            {
+                GravityPaths = null;
+            }
+            else
+            {
+                GravityPaths = new List<GravityPath>();
+                foreach (int index in _gravityPathIndices)
+                {
+                    GravityPaths.Add(courseDefinition.GravityPaths[index]);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Allows references between course objects to be serialized into raw values stored in the BYAML.
+        /// </summary>
+        /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
+        public override void SerializeReferences(CourseDefinition courseDefinition)
+        {
+            base.SerializeReferences(courseDefinition);
+
+            // Gravity paths.
+            if (GravityPaths == null)
+            {
+                _gravityPathIndices = null;
+            }
+            else
+            {
+                _gravityPathIndices = new List<int>();
+                foreach (GravityPath path in GravityPaths)
+                {
+                    _gravityPathIndices.Add(courseDefinition.GravityPaths.IndexOf(path));
+                }
+            }
         }
     }
 }

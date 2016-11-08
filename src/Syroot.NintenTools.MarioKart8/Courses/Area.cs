@@ -6,7 +6,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents an area controlling different things inside of it.
     /// </summary>
-    public class Area : PrmObject, IByamlReferencable
+    public class Area : PrmObject, ICourseReferencable
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
         
