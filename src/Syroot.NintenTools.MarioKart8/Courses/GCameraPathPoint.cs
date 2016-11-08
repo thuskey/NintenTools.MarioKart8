@@ -6,7 +6,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents a point of a <see cref="GCameraPath"/>.
     /// </summary>
-    public class GCameraPathPoint : PathPoint<GCameraPath, GCameraPathPoint>
+    public class GCameraPathPoint : PathPointBase<GCameraPath, GCameraPathPoint>
     {   
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
 

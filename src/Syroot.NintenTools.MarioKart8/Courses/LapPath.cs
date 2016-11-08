@@ -1,23 +1,30 @@
 ﻿using System.Collections.Generic;
+using Syroot.NintenTools.Byaml;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents a path a gliding driver is pulled along.
+    /// Represents a path which drivers need to taken to complete a lap.
     /// </summary>
-    public class GlidePath : PathBase<GlidePath, GlidePathPoint>
+    public class LapPath : PathBase<LapPath, LapPathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
-        /// Gets or sets a value indicating the type of gliding.
+        /// Gets or sets a value indicating the group the lap path belongs to, possibly for multiple routes.
         /// </summary>
-        public int GlideType { get; set; }
+        public int Group { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this is an updraft glide.
+        /// Gets or sets an unknown value, possibly handling Lakitu return locations and referencing
+        /// <see cref="ReturnPoint"/> instances.
         /// </summary>
-        public bool IsUp { get; set; }
+        public bool ReturnPointsError { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of <see cref="ReturnPoint"/> instances.
+        /// </summary>
+        public List<ReturnPoint> ReturnPoints { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
@@ -28,8 +35,9 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override void DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            GlideType = node["GlideType"];
-            IsUp = node["IsUp"];
+            Group = node["LapPathGroup"];
+            ReturnPointsError = node["ReturnPointsError"];
+            ReturnPoints = ByamlFile.DeserializeList<ReturnPoint>(node["ReturnPoints"]);
         }
 
         /// <summary>
@@ -39,8 +47,9 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic SerializeByaml()
         {
             dynamic node = base.SerializeByaml();
-            node["GlideType"] = GlideType;
-            node["IsUp"] = IsUp;
+            node["LapPathGroup"] = Group;
+            node["ReturnPointsError"] = ReturnPointsError;
+            node["ReturnPoints"] = ReturnPoints;
             return node;
         }
     }

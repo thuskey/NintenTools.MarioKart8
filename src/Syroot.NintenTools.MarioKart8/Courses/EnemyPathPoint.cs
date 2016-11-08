@@ -5,7 +5,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents a point of an <see cref="EnemyPath"/>.
     /// </summary>
-    public class EnemyPathPoint : PathPoint<EnemyPath, EnemyPathPoint>
+    public class EnemyPathPoint : PathPointBase<EnemyPath, EnemyPathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 

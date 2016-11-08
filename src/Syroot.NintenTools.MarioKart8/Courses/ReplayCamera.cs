@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Syroot.NintenTools.Byaml;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents a camera move played in the introductionary course video played at the start of offline races.
+    /// Represents the camera movements and cuts triggered by drivers in the replay video.
     /// </summary>
-    public class IntroCamera : SpatialObject, IByamlReferencable
+    public class ReplayCamera : PrmObject
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
@@ -15,29 +15,45 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
-        /// Gets or sets the index of the camera in the intro camera array.
+        /// Gets or sets an unknown angle on the X axis.
         /// </summary>
-        public int Num { get; set; }
+        public int AngleX { get; set; }
 
         /// <summary>
-        /// Gets or sets the number of frames the camera is active.
+        /// Gets or sets an unknown angle on the Y axis.
         /// </summary>
-        public int Time { get; set; }
-        
+        public int AngleY { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the field of view angle is computed in accordance to the distance to
+        /// the driver who triggered the camera.
+        /// </summary>
+        public bool AutoFovy { get; set; }
+
         /// <summary>
         /// Gets or sets an unknown camera type.
         /// </summary>
         public int Type { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value referencing an unknown path property.
-        /// </summary>
-        public int AtPath { get; set; }
         
         /// <summary>
-        /// Gets or sets a <see cref="Path"/> on which this camera moves along.
+        /// Gets or sets the <see cref="Path"/> this camera moves along.
         /// </summary>
         public Path Path { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating the blur effect for far-away geometry.
+        /// </summary>
+        public int DepthOfField { get; set; }
+
+        /// <summary>
+        /// Gets or sets the distance of the camera to the driver.
+        /// </summary>
+        public int Distance { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether to lock the view target onto the driver who triggered the camera.
+        /// </summary>
+        public bool Follow { get; set; }
 
         /// <summary>
         /// Gets or sets the field of view angle possibly at the start of the move.
@@ -48,12 +64,32 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Gets or sets the field of view angle possibly at the end of the move.
         /// </summary>
         public int Fovy2 { get; set; }
-
+        
         /// <summary>
         /// Gets or sets a speed possibly controlling how the FoV change is done.
         /// </summary>
         public int FovySpeed { get; set; }
 
+        /// <summary>
+        /// Gets or sets the group this camera belongs to.
+        /// </summary>
+        public int Group { get; set; }
+
+        /// <summary>
+        /// Gets or sets the rotation around the X axis.
+        /// </summary>
+        public int Pitch { get; set; }
+
+        /// <summary>
+        /// Gets or sets the rotation around the Y axis.
+        /// </summary>
+        public int Yaw { get; set; }
+
+        /// <summary>
+        /// Gets or sets the rotation around the Z axis.
+        /// </summary>
+        public int Roll { get; set; }
+        
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
         /// <summary>
@@ -63,13 +99,20 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override void DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            Num = node["CameraNum"];
-            Time = node["CameraTime"];
-            AtPath = node["Camera_AtPath"];
+            AngleX = node["AngleX"];
+            AngleY = node["AngleY"];
+            AutoFovy = node["AutoFovy"];
+            Type = node["CameraType"];
             _pathIndex = node["Camera_Path"];
+            DepthOfField = node["DepthOfField"];
+            Follow = node["Follow"];
             Fovy = node["Fovy"];
             Fovy2 = node["Fovy2"];
             FovySpeed = node["FovySpeed"];
+            Group = node["Group"];
+            Pitch = node["Pitch"];
+            Yaw = node["Yaw"];
+            Roll = node["Roll"];
         }
 
         /// <summary>
@@ -79,19 +122,26 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic SerializeByaml()
         {
             IDictionary<string, dynamic> node = base.SerializeByaml();
-            node["CameraNum"] = Num;
-            node["CameraTime"] = Time;
-            node["Camera_AtPath"] = AtPath;
+            node["AngleX"] = AngleX;
+            node["AngleY"] = AngleY;
+            node["AutoFovy"] = AutoFovy;
+            node["CameraType"] = Type;
             node["Camera_Path"] = _pathIndex;
+            node["DepthOfField"] = DepthOfField;
+            node["Follow"] = Follow;
             node["Fovy"] = Fovy;
             node["Fovy2"] = Fovy2;
             node["FovySpeed"] = FovySpeed;
+            node["Group"] = Group;
+            node["Pitch"] = Pitch;
+            node["Yaw"] = Yaw;
+            node["Roll"] = Roll;
             return node;
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be resolved to provide real instances instead of the raw values
-        /// in the BYAML.
+        /// Allows references between BYAML instances to be resolved to provide real instances
+        /// instead of the raw values in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void DeserializeReferences(CourseDefinition courseDefinition)
@@ -100,7 +150,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be serialized into raw values stored in the BYAML.
+        /// Allows references between BYAML instances to be serialized into raw values stored in the
+        /// BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void SerializeReferences(CourseDefinition courseDefinition)

@@ -7,7 +7,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents a point of a <see cref="GlidePath"/>.
     /// </summary>
-    public class GlidePathPoint : PathPoint<GlidePath, GlidePathPoint>
+    public class GlidePathPoint : PathPointBase<GlidePath, GlidePathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 

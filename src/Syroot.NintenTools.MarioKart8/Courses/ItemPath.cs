@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents a path the AI drives.
+    /// Represents a path an item like a red shell takes.
     /// </summary>
-    public class EnemyPath : PathBase<EnemyPath, EnemyPathPoint>
+    public class ItemPath : PathBase<ItemPath, ItemPathPoint>
     {
     }
 }

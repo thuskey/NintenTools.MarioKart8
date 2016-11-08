@@ -6,7 +6,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <summary>
     /// Represents a path possibly determining where Lakitu resets drivers back to.
     /// </summary>
-    public class JugemPath : Path<JugemPath, JugemPathPoint>
+    public class JugemPath : PathBase<JugemPath, JugemPathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 

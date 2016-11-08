@@ -1,22 +1,30 @@
 ﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents a path used for different aspects in the game.
+    /// Represents a tangentially smoothed path used for different aspects in the game.
     /// </summary>
-    public abstract class Path<TPath, TPoint> : UnitObject, IByamlReferencable
-        where TPath : Path<TPath, TPoint>
-        where TPoint : PathPoint<TPath, TPoint>, IByamlReferencable, new()
+    public class Path : PathBase<Path, PathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
+        
+        /// <summary>
+        /// Gets or sets a value possibly indicating whether Objs using this path are dispoed after reaching the end
+        /// of the (non-closed) path.
+        /// </summary>
+        public bool Delete { get; set; }
 
         /// <summary>
-        /// Gets or sets the list of point instances making up this path.
+        /// Gets or sets a value indicating whether this path is circular and that the last point connects to the first.
         /// </summary>
-        public PathPointCollection<TPath, TPoint> Points { get; set; }
+        public bool IsClosed { get; set; }
 
+        /// <summary>
+        /// Gets or sets an unknown rail type.
+        /// </summary>
+        public int RailType { get; set; }
+        
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
         /// <summary>
@@ -26,8 +34,9 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override void DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            Points = new PathPointCollection<TPath, TPoint>((TPath)this);
-            Points.AddRange(ByamlFile.DeserializeList<TPoint>(node["PathPt"]));
+            Delete = node["Delete"];
+            IsClosed = node["IsClosed"];
+            RailType = node["RailType"];
         }
 
         /// <summary>
@@ -37,35 +46,10 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic SerializeByaml()
         {
             dynamic node = base.SerializeByaml();
-            node["PathPt"] = Points;
+            node["Delete"] = Delete;
+            node["IsClosed"] = IsClosed;
+            node["RailType"] = RailType;
             return node;
-        }
-        
-        /// <summary>
-        /// Allows references between BYAML instances to be resolved to provide real instances instead of the raw values
-        /// in the BYAML.
-        /// </summary>
-        /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
-        public virtual void DeserializeReferences(CourseDefinition courseDefinition)
-        {
-            // Resolve the linked point list.
-            foreach (TPoint point in Points)
-            {
-                point.DeserializeReferences(courseDefinition);
-            }
-        }
-
-        /// <summary>
-        /// Allows references between BYAML instances to be serialized into raw values stored in the BYAML.
-        /// </summary>
-        /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
-        public virtual void SerializeReferences(CourseDefinition courseDefinition)
-        {
-            // Resolve the linked point list.
-            foreach (TPoint point in Points)
-            {
-                point.SerializeReferences(courseDefinition);
-            }
         }
     }
 }

@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a path of the game camera.
     /// </summary>
-    public class GCameraPath : Path<GCameraPath, GCameraPathPoint>
+    public class GCameraPath : PathBase<GCameraPath, GCameraPathPoint>
     {
     }
 }

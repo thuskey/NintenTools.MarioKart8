@@ -87,10 +87,19 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// </summary>
         public int? PatternCount { get; set; }
 
+        // ---- Areas ----
+
         /// <summary>
         /// Gets or sets the list of <see cref="Area"/> instances.
         /// </summary>
         public List<Area> Areas { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of <see cref="EffectArea"/> instances.
+        /// </summary>
+        public List<EffectArea> EffectAreas { get; set; }
+
+        // ---- Clipping ----
 
         /// <summary>
         /// Gets or sets the list of <see cref="Clip"/> instances.
@@ -106,11 +115,13 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Gets or sets the <see cref="ClipPattern"/> instance.
         /// </summary>
         public ClipPattern ClipPattern { get; set; }
+        
+        // ---- Paths ----
 
         /// <summary>
-        /// Gets or sets the list of <see cref="EffectArea"/> instances.
+        /// Gets or sets the list of <see cref="Path"/> instances.
         /// </summary>
-        public List<EffectArea> EffectAreas { get; set; }
+        public List<Path> Paths { get; set; }
 
         /// <summary>
         /// Gets or sets the list of <see cref="EnemyPath"/> instances.
@@ -131,16 +142,23 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Gets or sets the list of <see cref="GravityPath"/> instances.
         /// </summary>
         public List<GravityPath> GravityPaths { get; set; }
-        
-        /// <summary>
-        /// Gets or sets the list of <see cref="IntroCamera"/> instances.
-        /// </summary>
-        public List<IntroCamera> IntroCameras { get; set; }
 
         /// <summary>
-        /// Gets or sets the list of <see cref="JugemPath"/> instances. There may be only one.
+        /// Gets or sets the list of <see cref="ItemPath"/> instances.
+        /// </summary>
+        public List<ItemPath> ItemPaths { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of <see cref="JugemPath"/> instances.
         /// </summary>
         public List<JugemPath> JugemPaths { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of <see cref="LapPath"/> instances.
+        /// </summary>
+        public List<LapPath> LapPaths { get; set; }
+
+        // ---- Objects ----
 
         /// <summary>
         /// Gets or sets the list of ObjId's of objects to load for the track.
@@ -161,6 +179,18 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Gets or sets the list of <see cref="SoundObj"/> instances.
         /// </summary>
         public List<SoundObj> SoundObjs { get; set; }
+
+        // ---- Cameras ----
+
+        /// <summary>
+        /// Gets or sets the list of <see cref="IntroCamera"/> instances.
+        /// </summary>
+        public List<IntroCamera> IntroCameras { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of <see cref="ReplayCamera"/> instances.
+        /// </summary>
+        public List<ReplayCamera> ReplayCameras { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
@@ -184,6 +214,22 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             IDictionary<string, dynamic> node = new Dictionary<string, dynamic>();
 
+            // Before saving all the instances, allow references to be resolved.
+            Areas?.ForEach(x => x.SerializeReferences(this));
+
+            EnemyPaths?.ForEach(x => x.SerializeReferences(this));
+            GCameraPaths?.ForEach(x => x.SerializeReferences(this));
+            GlidePaths?.ForEach(x => x.SerializeReferences(this));
+            GravityPaths?.ForEach(x => x.SerializeReferences(this));
+            ItemPaths?.ForEach(x => x.SerializeReferences(this));
+            JugemPaths?.ForEach(x => x.SerializeReferences(this));
+            LapPaths?.ForEach(x => x.SerializeReferences(this));
+
+            Objs.ForEach(x => x.SerializeReferences(this));
+
+            ReplayCameras?.ForEach(x => x.SerializeReferences(this));
+
+            // Save the serialized values.
             ByamlFile.SetValue(node, "EffectSW", EffectSW);
             ByamlFile.SetValue(node, "HeadLight", (int?)HeadLight);
             ByamlFile.SetValue(node, "IsFirstLeft", IsFirstLeft);
@@ -197,20 +243,29 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             {
                 ByamlFile.SetValue(node, "OBJPrm" + i.ToString(), ObjParams[i]);
             }
+
             ByamlFile.SetValue(node, "Area", ByamlFile.SerializeList(Areas));
+            ByamlFile.SetValue(node, "EffectArea", ByamlFile.SerializeList(EffectAreas));
+
             ByamlFile.SetValue(node, "Clip", ByamlFile.SerializeList(Clips));
             ByamlFile.SetValue(node, "ClipArea", ByamlFile.SerializeList(ClipAreas));
-            ByamlFile.SetValue(node, "EffectArea", ByamlFile.SerializeList(EffectAreas));
+            ByamlFile.SetValue(node, "ClipPattern", ClipPattern);
+
+            ByamlFile.SetValue(node, "Path", ByamlFile.SerializeList(Paths));
             ByamlFile.SetValue(node, "EnemyPath", ByamlFile.SerializeList(EnemyPaths));
             ByamlFile.SetValue(node, "GCameraPath", ByamlFile.SerializeList(GCameraPaths));
             ByamlFile.SetValue(node, "GlidePath", ByamlFile.SerializeList(GlidePaths));
             ByamlFile.SetValue(node, "GravityPath", ByamlFile.SerializeList(GravityPaths));
-            ByamlFile.SetValue(node, "IntroCamera", ByamlFile.SerializeList(IntroCameras));
             ByamlFile.SetValue(node, "JugemPath", ByamlFile.SerializeList(JugemPaths));
+            ByamlFile.SetValue(node, "LapPath", ByamlFile.SerializeList(LapPaths));
+
             ByamlFile.SetValue(node, "MapObjIdList", MapObjIdList);
             ByamlFile.SetValue(node, "MapObjResList", MapObjResList);
             ByamlFile.SetValue(node, "Obj", ByamlFile.SerializeList(Objs));
             ByamlFile.SetValue(node, "SoundObj", ByamlFile.SerializeList(SoundObjs));
+
+            ByamlFile.SetValue(node, "IntroCamera", ByamlFile.SerializeList(IntroCameras));
+            ByamlFile.SetValue(node, "ReplayCamera", ByamlFile.SerializeList(ReplayCameras));
 
             ByamlFile.Save(stream, node);
         }
@@ -221,6 +276,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             dynamic node = ByamlFile.Load(stream);
 
+            // Load all the values from the file.
             EffectSW = ByamlFile.GetValue(node, "EffectSW");
             HeadLight = (CourseHeadLight?)ByamlFile.GetValue(node, "HeadLight");
             IsFirstLeft = ByamlFile.GetValue(node, "IsFirstLeft");
@@ -237,29 +293,43 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             }
 
             Areas = ByamlFile.DeserializeList<Area>(ByamlFile.GetValue(node, "Area"));
+            EffectAreas = ByamlFile.DeserializeList<EffectArea>(ByamlFile.GetValue(node, "EffectArea"));
+
             Clips = ByamlFile.DeserializeList<Clip>(ByamlFile.GetValue(node, "Clip"));
             ClipAreas = ByamlFile.DeserializeList<ClipArea>(ByamlFile.GetValue(node, "ClipArea"));
             ClipPattern = ByamlFile.Deserialize<ClipPattern>(ByamlFile.GetValue(node, "ClipPattern"));
-            EffectAreas = ByamlFile.DeserializeList<EffectArea>(ByamlFile.GetValue(node, "EffectArea"));
+
+            Paths = ByamlFile.DeserializeList<Path>(ByamlFile.GetValue(node, "Path"));
             EnemyPaths = ByamlFile.DeserializeList<EnemyPath>(ByamlFile.GetValue(node, "EnemyPath"));
             GCameraPaths = ByamlFile.DeserializeList<GCameraPath>(ByamlFile.GetValue(node, "GCameraPath"));
             GlidePaths = ByamlFile.DeserializeList<GlidePath>(ByamlFile.GetValue(node, "GlidePath"));
             GravityPaths = ByamlFile.DeserializeList<GravityPath>(ByamlFile.GetValue(node, "GravityPath"));
-            IntroCameras = ByamlFile.DeserializeList<IntroCamera>(ByamlFile.GetValue(node, "IntroCamera"));
+            ItemPaths = ByamlFile.DeserializeList<ItemPath>(ByamlFile.GetValue(node, "ItemPath"));
             JugemPaths = ByamlFile.DeserializeList<JugemPath>(ByamlFile.GetValue(node, "JugemPath"));
+            LapPaths = ByamlFile.DeserializeList<LapPath>(ByamlFile.GetValue(node, "LapPath"));
+
             MapObjIdList = ByamlFile.GetList<int>(node["MapObjIdList"]);
             MapObjResList = ByamlFile.GetList<string>(node["MapObjResList"]);
             Objs = ByamlFile.DeserializeList<Obj>(node["Obj"]);
             SoundObjs = ByamlFile.DeserializeList<SoundObj>(ByamlFile.GetValue(node, "SoundObj"));
 
+            IntroCameras = ByamlFile.DeserializeList<IntroCamera>(ByamlFile.GetValue(node, "IntroCamera"));
+            ReplayCameras = ByamlFile.DeserializeList<ReplayCamera>(ByamlFile.GetValue(node, "ReplayCamera"));
+
             // After loading all the instances, allow references to be resolved.
             Areas?.ForEach(x => x.DeserializeReferences(this));
+
             EnemyPaths?.ForEach(x => x.DeserializeReferences(this));
             GCameraPaths?.ForEach(x => x.DeserializeReferences(this));
             GlidePaths?.ForEach(x => x.DeserializeReferences(this));
             GravityPaths?.ForEach(x => x.DeserializeReferences(this));
+            ItemPaths?.ForEach(x => x.DeserializeReferences(this));
             JugemPaths?.ForEach(x => x.DeserializeReferences(this));
+            LapPaths?.ForEach(x => x.DeserializeReferences(this));
+
             Objs.ForEach(x => x.DeserializeReferences(this));
+
+            ReplayCameras?.ForEach(x => x.DeserializeReferences(this));
         }
     }
 

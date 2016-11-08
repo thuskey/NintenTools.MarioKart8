@@ -12,12 +12,12 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets the first parameter.
         /// </summary>
-        public float prm1 { get; set; }
+        public float Prm1 { get; set; }
 
         /// <summary>
         /// Gets or sets the second parameter.
         /// </summary>
-        public float prm2 { get; set; }
+        public float Prm2 { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
@@ -28,8 +28,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override void DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            prm1 = node["prm1"];
-            prm2 = node["prm2"];
+            Prm1 = node["prm1"];
+            Prm2 = node["prm2"];
         }
 
         /// <summary>
@@ -39,8 +39,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic SerializeByaml()
         {
             IDictionary<string, dynamic> node = base.SerializeByaml();
-            node["prm1"] = prm1;
-            node["prm2"] = prm2;
+            node["prm1"] = Prm1;
+            node["prm2"] = Prm2;
             return node;
         }
     }

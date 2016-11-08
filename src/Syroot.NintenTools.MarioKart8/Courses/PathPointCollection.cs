@@ -12,8 +12,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <typeparam name="TPoint">The type of the points.</typeparam>
     [DebuggerDisplay("PathPointCollection ({_list.Count} points)")]
     public class PathPointCollection<TPath, TPoint> : IList<TPoint>
-        where TPath : Path<TPath, TPoint>
-        where TPoint : PathPoint<TPath, TPoint>, IByamlReferencable, new()
+        where TPath : PathBase<TPath, TPoint>
+        where TPoint : PathPointBase<TPath, TPoint>, IByamlReferencable, new()
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
@@ -80,13 +80,13 @@ namespace Syroot.NintenTools.MarioKart8.Courses
                 TPoint currentPoint = _list[index];
                 if (currentPoint != null)
                 {
-                    currentPoint.Parent = null;
+                    currentPoint.Path = null;
                 }
 
                 // Set the new point.
                 if (value != null)
                 {
-                    value.Parent = Parent;
+                    value.Path = Parent;
                     _list[index] = value;
                 }
             }
@@ -104,7 +104,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             _list.Add(item);
             if (item != null)
             {
-                item.Parent = Parent;
+                item.Path = Parent;
             }
         }
 
@@ -119,7 +119,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             foreach (TPoint point in instances)
             {
-                point.Parent = Parent;
+                point.Path = Parent;
             }
             _list.AddRange(instances);
         }
@@ -132,7 +132,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             _list.Clear();
             foreach (TPoint point in _list)
             {
-                point.Parent = null;
+                point.Path = null;
             }
         }
 
@@ -188,7 +188,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public void Insert(int index, TPoint item)
         {
             _list.Insert(index, item);
-            item.Parent = Parent;
+            item.Path = Parent;
         }
 
         /// <summary>
@@ -203,7 +203,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             if (_list.Remove(item))
             {
-                item.Parent = null;
+                item.Path = null;
                 return true;
             }
             return false;
@@ -217,7 +217,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             TPoint point = _list[index];
             _list.RemoveAt(index);
-            point.Parent = null;
+            point.Path = null;
         }
 
         /// <summary>

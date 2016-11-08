@@ -18,7 +18,7 @@
     },
 
     "dependencies": {
-        "Syroot.NintenTools": "1.0.4"
+        "Syroot.NintenTools": "1.0.6"
     },
 
     "buildOptions": {

@@ -9,16 +9,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     public class Area : PrmObject, IByamlReferencable
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Gets or sets a path used when <see cref="AreaType"/> is set to <see cref="AreaType.None"/> or
-        /// <see cref="AreaType.Unknown2"/>.
-        /// </summary>
+        
         private int? _pathIndex;
-        /// <summary>
-        /// Gets or sets the path objects are moved along when the <see cref="AreaType"/> is set to
-        /// <see cref="AreaType.Pull"/>.
-        /// </summary>
         private int? _pullPathIndex;
 
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
@@ -33,9 +25,22 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// </summary>
         public AreaType AreaType { get; set; }
         
+        /// <summary>
+        /// Gets or sets a list of indices to unknown areas, possibly triggering replay cameras.
+        /// </summary>
         public List<int> CameraAreas { get; set; }
 
-        // TODO: Paths
+        /// <summary>
+        /// Gets or sets a <see cref="Path"/> instance used by this area when <see cref="AreaType"/>  is set to
+        /// <see cref="AreaType.None"/> or <see cref="AreaType.Unknown2"/>.
+        /// </summary>
+        public Path Path { get; set; }
+
+        /// <summary>
+        /// Gets or sets a <see cref="Path"/> instance determining the direction objects in this area are pulled along
+        /// when the <see cref="AreaType"/> is set to <see cref="AreaType.Pull"/>.
+        /// </summary>
+        public Path PullPath { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
@@ -75,7 +80,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void DeserializeReferences(CourseDefinition courseDefinition)
         {
-            // TODO: Paths
+            Path = _pathIndex == null ? null : courseDefinition.Paths[_pathIndex.Value];
+            PullPath = _pullPathIndex == null ? null : courseDefinition.Paths[_pullPathIndex.Value];
         }
 
         /// <summary>
@@ -85,7 +91,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void SerializeReferences(CourseDefinition courseDefinition)
         {
-            // TODO: Paths
+            _pathIndex = Path == null ? null : (int?)courseDefinition.Paths.IndexOf(Path);
+            _pullPathIndex = PullPath == null ? null : (int?)courseDefinition.Paths.IndexOf(PullPath);
         }
     }
 }

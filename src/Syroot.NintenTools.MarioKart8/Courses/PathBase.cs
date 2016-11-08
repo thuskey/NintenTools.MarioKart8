@@ -4,20 +4,18 @@ using Syroot.NintenTools.Byaml;
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents a path controlling the gravity direction of the course.
+    /// Represents a path used for different aspects in the game.
     /// </summary>
-    public class GravityPath : PathBase<GravityPath, GravityPathPoint>
+    public abstract class PathBase<TPath, TPoint> : UnitObject, IByamlReferencable
+        where TPath : PathBase<TPath, TPoint>
+        where TPoint : PathPointBase<TPath, TPoint>, IByamlReferencable, new()
     {
-        // ---- MEMBERS ------------------------------------------------------------------------------------------------
-
-        private List<int> _gCameraPathIndices;
-
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
-        /// Gets or sets the list of <see cref="GCameraPath"/> instances this gravity path uses.
+        /// Gets or sets the list of point instances making up this path.
         /// </summary>
-        public List<GCameraPath> GCameraPaths { get; set; }
+        public PathPointCollection<TPath, TPoint> Points { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
@@ -28,7 +26,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override void DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            _gCameraPathIndices = ByamlFile.GetList<int>(ByamlFile.GetValue(node, "GravityPath_GCameraPath"));
+            Points = new PathPointCollection<TPath, TPoint>((TPath)this);
+            Points.AddRange(ByamlFile.DeserializeList<TPoint>(node["PathPt"]));
         }
 
         /// <summary>
@@ -38,28 +37,21 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic SerializeByaml()
         {
             dynamic node = base.SerializeByaml();
-            ByamlFile.SetValue(node, "GravityPath_GCameraPath", _gCameraPathIndices);
+            node["PathPt"] = Points;
             return node;
         }
-
+        
         /// <summary>
         /// Allows references between BYAML instances to be resolved to provide real instances instead of the raw values
         /// in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
-        public override void DeserializeReferences(CourseDefinition courseDefinition)
+        public virtual void DeserializeReferences(CourseDefinition courseDefinition)
         {
-            // Solve the point references.
-            base.DeserializeReferences(courseDefinition);
-
-            // Solve the GCamera path references.
-            if (_gCameraPathIndices != null)
+            // Resolve the linked point list.
+            foreach (TPoint point in Points)
             {
-                GCameraPaths = new List<GCameraPath>();
-                foreach (int index in _gCameraPathIndices)
-                {
-                    GCameraPaths.Add(courseDefinition.GCameraPaths[index]);
-                }
+                point.DeserializeReferences(courseDefinition);
             }
         }
 
@@ -67,19 +59,12 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Allows references between BYAML instances to be serialized into raw values stored in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
-        public override void SerializeReferences(CourseDefinition courseDefinition)
+        public virtual void SerializeReferences(CourseDefinition courseDefinition)
         {
-            // Solve the point references.
-            base.SerializeReferences(courseDefinition);
-
-            // Solve the GCamera path references.
-            if (GCameraPaths != null)
+            // Resolve the linked point list.
+            foreach (TPoint point in Points)
             {
-                _gCameraPathIndices = new List<int>();
-                foreach (GCameraPath path in GCameraPaths)
-                {
-                    _gCameraPathIndices.Add(courseDefinition.GCameraPaths.IndexOf(path));
-                }
+                point.SerializeReferences(courseDefinition);
             }
         }
     }
