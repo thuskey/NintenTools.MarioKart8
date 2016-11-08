@@ -9,7 +9,14 @@ Usage
 
 Right now, the following usage cases are possible:
 - Loading, modifying and saving the contents of **objflow.byaml** with the help of `ObjDefinitionDb`.
-- (Partially) Loading, modifying and saving the contents of a **&ast;_muunt&ast;.byaml** file with the help of `CourseDefinition`.
+- Loading, modifying and saving the contents of a **&ast;_muunt&ast;.byaml** file with the help of `CourseDefinition`.
+
+Tools
+=====
+
+The repository contains the following command line tools. Please note these were developed for testing purposes and do not receive support.
+- **ObjDumper**: Dumps the information found in **objflow.byaml** into a readable table.
+- **NoLakitu**: Removes `EnemyPath` and `LapPath` from a **&ast;_muunt&ast;.byaml** (and Objs having referenced those) in order to get rid of Lakitu who would prevent you from going out of bounds.
 
 License
 =======
