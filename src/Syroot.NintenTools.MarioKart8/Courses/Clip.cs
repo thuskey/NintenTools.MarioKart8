@@ -16,14 +16,16 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public List<int> Values { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-        
+
         /// <summary>
         /// Reads the data from the given dynamic BYAML node into the instance.
         /// </summary>
         /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        public void DeserializeByaml(dynamic node)
+        /// <returns>The instance itself.</returns>
+        public dynamic DeserializeByaml(dynamic node)
         {
             Values = ByamlFile.GetList<int>(node);
+            return this;
         }
 
         /// <summary>

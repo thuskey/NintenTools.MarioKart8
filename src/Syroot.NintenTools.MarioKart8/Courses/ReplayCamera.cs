@@ -10,7 +10,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
-        private int _pathIndex;
+        private int? _pathIndex;
 
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
@@ -89,21 +89,22 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Gets or sets the rotation around the Z axis.
         /// </summary>
         public int Roll { get; set; }
-        
+
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
         /// <summary>
         /// Reads the data from the given dynamic BYAML node into the instance.
         /// </summary>
         /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        public override void DeserializeByaml(dynamic node)
+        /// <returns>The instance itself.</returns>
+        public override dynamic DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
             AngleX = node["AngleX"];
             AngleY = node["AngleY"];
             AutoFovy = node["AutoFovy"];
             Type = node["CameraType"];
-            _pathIndex = node["Camera_Path"];
+            _pathIndex = ByamlFile.GetValue(node, "Camera_Path");
             DepthOfField = node["DepthOfField"];
             Follow = node["Follow"];
             Fovy = node["Fovy"];
@@ -113,6 +114,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             Pitch = node["Pitch"];
             Yaw = node["Yaw"];
             Roll = node["Roll"];
+            return this;
         }
 
         /// <summary>
@@ -146,7 +148,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void DeserializeReferences(CourseDefinition courseDefinition)
         {
-            Path = courseDefinition.Paths[_pathIndex];
+            Path = _pathIndex == null ? null : courseDefinition.Paths[_pathIndex.Value];
         }
 
         /// <summary>
@@ -156,7 +158,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void SerializeReferences(CourseDefinition courseDefinition)
         {
-            _pathIndex = courseDefinition.Paths.IndexOf(Path);
+            _pathIndex = Path == null ? null : (int?)courseDefinition.Paths.IndexOf(Path);
         }
     }
 }

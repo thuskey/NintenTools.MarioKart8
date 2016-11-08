@@ -1,28 +1,29 @@
 ﻿using System.Collections.Generic;
+using Syroot.NintenTools.Byaml;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents a point of an <see cref="EnemyPath"/>.
+    /// Represents a point of an <see cref="ObjPath"/>.
     /// </summary>
-    public class EnemyPathPoint : PathPointBase<EnemyPath, EnemyPathPoint>
+    public class ObjPathPoint : PathPointBase<ObjPath, ObjPathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
-        /// Gets or sets an unknown battle flag.
+        /// Gets or sets an index into the points of the parents <see cref="ByamlPath"/>.
         /// </summary>
-        public int BattleFlag { get; set; }
+        public int PathIndex { get; set; }
 
         /// <summary>
-        /// Gets or sets an unknown point direction.
+        /// Gets or sets the first parameter.
         /// </summary>
-        public int PathDir { get; set; }
+        public float Prm1 { get; set; }
 
         /// <summary>
-        /// Gets or sets an unknown point priority.
+        /// Gets or sets the second parameter.
         /// </summary>
-        public int Priority { get; set; }
+        public float Prm2 { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
@@ -34,9 +35,9 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            BattleFlag = node["BattleFlag"];
-            PathDir = node["PathDir"];
-            Priority = node["Priority"];
+            PathIndex = node["Index"];
+            Prm1 = node["prm1"];
+            Prm2 = node["prm2"];
             return this;
         }
 
@@ -47,12 +48,12 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic SerializeByaml()
         {
             dynamic node = base.SerializeByaml();
-            node["BattleFlag"] = BattleFlag;
-            node["PathDir"] = PathDir;
-            node["Priority"] = Priority;
+            node["Index"] = PathIndex;
+            node["prm1"] = Prm1;
+            node["prm2"] = Prm2;
             return node;
         }
-
+        
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
 
         /// <summary>
@@ -61,9 +62,9 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> to get the paths from.</param>
         /// <returns>The array of paths which can be referenced.</returns>
-        protected override IList<EnemyPath> GetPathReferenceList(CourseDefinition courseDefinition)
+        protected override IList<ObjPath> GetPathReferenceList(CourseDefinition courseDefinition)
         {
-            return courseDefinition.EnemyPaths;
+            return courseDefinition.ObjPaths;
         }
     }
 }

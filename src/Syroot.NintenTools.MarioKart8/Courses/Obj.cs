@@ -12,7 +12,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
-        // References to path unit objects.
+        // References to paths and their points.
         private int? _pathIndex;
         private int? _pathPointIndex;
         private int? _lapPathIndex;
@@ -71,14 +71,14 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public LapPathPoint LapPathPoint { get; set; }
 
         /// <summary>
-        /// Gets or sets another <see cref="Courses.Path"/> this Obj is attached to.
+        /// Gets or sets the <see cref="Courses.ObjPath"/> this Obj is attached to.
         /// </summary>
-        public Path ObjPath { get; set; }
+        public ObjPath ObjPath { get; set; }
 
         /// <summary>
-        /// Gets or sets the point in the <see cref="ObjPath"/> this Obj is attached to.
+        /// Gets or sets the point in the <see cref="Courses.ObjPath"/> this Obj is attached to.
         /// </summary>
-        public PathPoint ObjPathPoint { get; set; }
+        public ObjPathPoint ObjPathPoint { get; set; }
 
         /// <summary>
         /// Gets or sets the first <see cref="EnemyPath"/> this Obj is attached to.
@@ -126,7 +126,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Reads the data from the given dynamic BYAML node into the instance.
         /// </summary>
         /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        public override void DeserializeByaml(dynamic node)
+        /// <returns>The instance itself.</returns>
+        public override dynamic DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
 
@@ -154,6 +155,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
 
             // Exclusions.
             ModeInclusion = ModeInclusionExtensions.GetFromByaml(node);
+
+            return this;
         }
 
         /// <summary>
@@ -199,13 +202,13 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void DeserializeReferences(CourseDefinition courseDefinition)
         {
-            // References to paths and points.
+            // References to paths and their points.
             Path = _pathIndex == null ? null : courseDefinition.Paths[_pathIndex.Value];
             PathPoint = _pathPointIndex == null ? null : Path.Points[_pathPointIndex.Value];
             LapPath = _lapPathIndex == null ? null : courseDefinition.LapPaths[_lapPathIndex.Value];
             LapPathPoint = _lapPathPointIndex == null ? null : LapPath.Points[_lapPathPointIndex.Value];
-            ObjPath = _objPathIndex == null ? null : courseDefinition.Paths[_objPathIndex.Value];
-            ObjPathPoint = _objPathPointIndex == null ? null : Path.Points[_objPathPointIndex.Value];
+            ObjPath = _objPathIndex == null ? null : courseDefinition.ObjPaths[_objPathIndex.Value];
+            ObjPathPoint = _objPathPointIndex == null ? null : ObjPath.Points[_objPathPointIndex.Value];
             EnemyPath1 = _enemyPath1Index == null ? null : courseDefinition.EnemyPaths[_enemyPath1Index.Value];
             EnemyPath2 = _enemyPath2Index == null ? null : courseDefinition.EnemyPaths[_enemyPath2Index.Value];
             ItemPath1 = _itemPath1Index == null ? null : courseDefinition.ItemPaths[_itemPath1Index.Value];
@@ -223,12 +226,12 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void SerializeReferences(CourseDefinition courseDefinition)
         {
-            // References to paths and points.
+            // References to paths and their points.
             _pathIndex = Path == null ? null : (int?)courseDefinition.Paths.IndexOf(Path);
             _pathPointIndex = PathPoint?.Index;
             _lapPathIndex = LapPath == null ? null : (int?)courseDefinition.LapPaths.IndexOf(LapPath);
             _lapPathPointIndex = LapPathPoint?.Index;
-            _objPathIndex = ObjPath == null ? null : (int?)courseDefinition.Paths.IndexOf(ObjPath);
+            _objPathIndex = ObjPath == null ? null : (int?)courseDefinition.ObjPaths.IndexOf(ObjPath);
             _objPathPointIndex = ObjPathPoint?.Index;
             _enemyPath1Index = EnemyPath1 == null ? null : (int?)courseDefinition.EnemyPaths.IndexOf(EnemyPath1);
             _enemyPath2Index = EnemyPath2 == null ? null : (int?)courseDefinition.EnemyPaths.IndexOf(EnemyPath2);

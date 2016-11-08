@@ -48,7 +48,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Reads the data from the given dynamic BYAML node into the instance.
         /// </summary>
         /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        public override void DeserializeByaml(dynamic node)
+        /// <returns>The instance itself.</returns>
+        public override dynamic DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
             AreaShape = (AreaShape)node["AreaShape"];
@@ -56,6 +57,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             _pathIndex = ByamlFile.GetValue(node, "Area_Path");
             _pullPathIndex = ByamlFile.GetValue(node, "Area_PullPath");
             CameraAreas = ByamlFile.GetList<int>(ByamlFile.GetValue(node, "Camera_Area"));
+            return this;
         }
 
         /// <summary>

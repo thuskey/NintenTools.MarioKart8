@@ -13,7 +13,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets the unknown &quot;StartOnly&quot; value.
         /// </summary>
-        public int StartOnly { get; set; }
+        public int? StartOnly { get; set; }
 
         /// <summary>
         /// Gets or sets the <see cref="AreaFlag"/> instance.
@@ -26,10 +26,12 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Reads the data from the given dynamic BYAML node into the instance.
         /// </summary>
         /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        public void DeserializeByaml(dynamic node)
+        /// <returns>The instance itself.</returns>
+        public dynamic DeserializeByaml(dynamic node)
         {
-            StartOnly = node["StartOnly"];
+            StartOnly = ByamlFile.GetValue(node, "StartOnly");
             AreaFlag = ByamlFile.Deserialize<AreaFlag>(node["AreaFlag"]);
+            return this;
         }
 
         /// <summary>
@@ -38,11 +40,12 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <returns>The dynamic BYAML node.</returns>
         public dynamic SerializeByaml()
         {
-            return new Dictionary<string, dynamic>()
+            Dictionary<string, dynamic> node = new Dictionary<string, dynamic>()
             {
-                ["StartOnly"] = StartOnly,
                 ["AreaFlag"] = AreaFlag.SerializeByaml()
             };
+            ByamlFile.SetValue(node, "StartOnly", StartOnly);
+            return node;
         }
     }
 }

@@ -1,19 +1,14 @@
 ﻿using System.Collections.Generic;
+using Syroot.NintenTools.Byaml;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents a tangentially smoothed path used for different aspects in the game.
+    /// Represents a path for Objs.
     /// </summary>
-    public class Path : PathBase<Path, PathPoint>
+    public class ObjPath : PathBase<ObjPath, ObjPathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
-        
-        /// <summary>
-        /// Gets or sets a value possibly indicating whether Objs using this path are dispoed after reaching the end
-        /// of the (non-closed) path.
-        /// </summary>
-        public bool Delete { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this path is circular and that the last point connects to the first.
@@ -21,9 +16,19 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public bool IsClosed { get; set; }
 
         /// <summary>
-        /// Gets or sets an unknown rail type.
+        /// Gets or sets an unknown value.
         /// </summary>
-        public int RailType { get; set; }
+        public int PtNum { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value possibly indicating the thickness of the path.
+        /// </summary>
+        public float SplitWidth { get; set; }
+
+        /// <summary>
+        /// Gets a <see cref="ByamlPath"/> embedded in this path for unknown reasons.
+        /// </summary>
+        public ByamlPath ObjPt { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
@@ -35,9 +40,10 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            Delete = node["Delete"];
             IsClosed = node["IsClosed"];
-            RailType = node["RailType"];
+            PtNum = node["PtNum"];
+            SplitWidth = node["SplitWidth"];
+            ObjPt = node["ObjPt"];
             return this;
         }
 
@@ -48,9 +54,10 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public override dynamic SerializeByaml()
         {
             dynamic node = base.SerializeByaml();
-            node["Delete"] = Delete;
             node["IsClosed"] = IsClosed;
-            node["RailType"] = RailType;
+            node["PtNum"] = PtNum;
+            node["SplitWidth"] = SplitWidth;
+            node["ObjPt"] = ObjPt;
             return node;
         }
     }

@@ -52,7 +52,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Reads the data from the given dynamic BYAML node into the instance.
         /// </summary>
         /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        public void DeserializeByaml(dynamic node)
+        /// <returns>The instance itself.</returns>
+        public dynamic DeserializeByaml(dynamic node)
         {
             _jugemPathIndex = node["JugemPath"];
             _jugemPathPointIndex = node["JugemIndex"];
@@ -61,6 +62,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             Normal = new Vector3F(node["Normal"]);
             Position = new Vector3F(node["Position"]);
             Tangent = new Vector3F(node["Tangent"]);
+            return this;
         }
 
         /// <summary>

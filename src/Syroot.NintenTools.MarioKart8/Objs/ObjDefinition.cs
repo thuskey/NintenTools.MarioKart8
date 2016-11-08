@@ -175,7 +175,8 @@ namespace Syroot.NintenTools.MarioKart8.Objs
         /// Reads the data from the given dynamic BYAML node into the instance.
         /// </summary>
         /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        public void DeserializeByaml(dynamic node)
+        /// <returns>The instance itself.</returns>
+        public dynamic DeserializeByaml(dynamic node)
         {
             AiReact = (AiReact)node["AiReact"];
             CalcCut = node["CalcCut"];
@@ -208,6 +209,7 @@ namespace Syroot.NintenTools.MarioKart8.Objs
             PylonReact = node["PylonReact"];
             ResName = ByamlFile.GetList<string>(node["ResName"]);
             VR = node["VR"];
+            return this;
         }
 
         /// <summary>

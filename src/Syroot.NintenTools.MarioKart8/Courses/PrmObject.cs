@@ -25,11 +25,13 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Reads the data from the given dynamic BYAML node into the instance.
         /// </summary>
         /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        public override void DeserializeByaml(dynamic node)
+        /// <returns>The instance itself.</returns>
+        public override dynamic DeserializeByaml(dynamic node)
         {
             base.DeserializeByaml((IDictionary<string, dynamic>)node);
             Prm1 = node["prm1"];
             Prm2 = node["prm2"];
+            return this;
         }
 
         /// <summary>

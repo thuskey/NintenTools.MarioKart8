@@ -102,7 +102,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Reads the data from the given dynamic BYAML node into the instance.
         /// </summary>
         /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        public virtual void DeserializeByaml(dynamic node)
+        /// <returns>The instance itself.</returns>
+        public virtual dynamic DeserializeByaml(dynamic node)
         {
             // Spatial.
             Rotate = new Vector3F(node["Rotate"]);
@@ -113,6 +114,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             // Predecessor and successor points.
             PreviousPointIndices = ByamlFile.DeserializeList<PathPointReference>(ByamlFile.GetValue(node, "PrevPt"));
             NextPointIndices = ByamlFile.DeserializeList<PathPointReference>(ByamlFile.GetValue(node, "NextPt"));
+
+            return this;
         }
 
         /// <summary>
