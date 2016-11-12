@@ -141,7 +141,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             node["AngleY"] = AngleY;
             node["AutoFovy"] = AutoFovy;
             node["CameraType"] = Type;
-            node["Camera_Path"] = _pathIndex;
+            ByamlFile.SetValue(node, "Camera_Path", _pathIndex);
             node["DepthOfField"] = DepthOfField;
             node["Distance"] = Distance;
             node["Follow"] = Follow;
