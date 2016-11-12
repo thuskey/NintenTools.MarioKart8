@@ -74,6 +74,32 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
+        /// Gets a <see cref="ModeInclusion"/> value according to the (optional) Single, Multi2P, Multi4P, WiFi2P and
+        /// WiFi4P dictionary entries of the given BYAML <paramref name="node"/>.
+        /// The &quot;Single&quot; value is stored as a string rather than a boolean.
+        /// </summary>
+        /// <param name="node">The BYAML node to retrieve the dictionary entries from.</param>
+        /// <returns>A <see cref="ModeInclusion"/> value according to the BYAML node.</returns>
+        public static ModeInclusion GetFromByamlAlternative(IDictionary<string, dynamic> node)
+        {
+            ModeInclusion modeInclusion = ModeInclusion.None;
+
+            // Note that the BYAML values are negated, they are true if an object is excluded from track.
+
+            // Single is optional (was added with the DLC courses), but can default to be available if not set.
+            string single = ByamlFile.GetValue(node, "Single");
+            if (single == null || single == "False") modeInclusion |= ModeInclusion.Single;
+
+            // Other modes are always set.
+            if (!node["Multi2P"]) modeInclusion |= ModeInclusion.Multi2P;
+            if (!node["Multi4P"]) modeInclusion |= ModeInclusion.Multi4P;
+            if (!node["WiFi"]) modeInclusion |= ModeInclusion.WiFi;
+            if (!node["WiFi2P"]) modeInclusion |= ModeInclusion.WiFi2P;
+
+            return modeInclusion;
+        }
+
+        /// <summary>
         /// Sets the dictionary entries of the given BYAML <paramref name="node"/> according to the current instance.
         /// </summary>
         /// <param name="modeInclusion">The extended <see cref="ModeInclusion"/> instance.</param>
@@ -82,6 +108,22 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             // Note that the BYAML values are negated, they are true if an object is excluded from track.
             node["Single"] = !modeInclusion.HasFlag(ModeInclusion.Single); // Can be set even in non-DLC courses.
+            node["Multi2P"] = !modeInclusion.HasFlag(ModeInclusion.Multi2P);
+            node["Multi4P"] = !modeInclusion.HasFlag(ModeInclusion.Multi4P);
+            node["WiFi"] = !modeInclusion.HasFlag(ModeInclusion.WiFi);
+            node["WiFi2P"] = !modeInclusion.HasFlag(ModeInclusion.WiFi2P);
+        }
+
+        /// <summary>
+        /// Sets the dictionary entries of the given BYAML <paramref name="node"/> according to the current instance.
+        /// The &quot;Single&quot; value is stored as a string rather than a boolean.
+        /// </summary>
+        /// <param name="modeInclusion">The extended <see cref="ModeInclusion"/> instance.</param>
+        /// <param name="node">The BYAML node to configure.</param>
+        public static void SetForByamlAlternative(this ModeInclusion modeInclusion, IDictionary<string, dynamic> node)
+        {
+            // Note that the BYAML values are negated, they are true if an object is excluded from track.
+            node["Single"] = !modeInclusion.HasFlag(ModeInclusion.Single) ? "True" : "False"; // Can be set even in non-DLC courses.
             node["Multi2P"] = !modeInclusion.HasFlag(ModeInclusion.Multi2P);
             node["Multi4P"] = !modeInclusion.HasFlag(ModeInclusion.Multi4P);
             node["WiFi"] = !modeInclusion.HasFlag(ModeInclusion.WiFi);

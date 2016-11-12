@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Syroot.NintenTools.MarioKart8.Adjust200": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\Archive\\Hacking\\Wii U\\Cafiine Server\\data\\00050000-1010ED00\\vol\\content\\course\\Gu_Cake\\course_muunt.byaml\""
+    }
+  }
+}
