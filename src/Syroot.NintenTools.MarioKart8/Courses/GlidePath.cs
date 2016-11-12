@@ -3,7 +3,7 @@
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents a path a gliding driver is pulled along.
+    /// Represents a path a gliding driver is flying along.
     /// </summary>
     public class GlidePath : PathBase<GlidePath, GlidePathPoint>
     {

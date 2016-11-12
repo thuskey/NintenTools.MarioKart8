@@ -31,16 +31,16 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public List<int> CameraAreas { get; set; }
 
         /// <summary>
-        /// Gets or sets a <see cref="Path"/> instance used by this area when <see cref="AreaType"/>  is set to
+        /// Gets or sets a <see cref="Path"/> instance used by this area when <see cref="AreaType"/> is set to
         /// <see cref="AreaType.None"/> or <see cref="AreaType.Unknown2"/>.
         /// </summary>
         public Path Path { get; set; }
 
         /// <summary>
-        /// Gets or sets a <see cref="Path"/> instance determining the direction objects in this area are pulled along
-        /// when the <see cref="AreaType"/> is set to <see cref="AreaType.Pull"/>.
+        /// Gets or sets a <see cref="PullPath"/> instance determining the direction objects in this area are pulled
+        /// along when the <see cref="AreaType"/> is set to <see cref="AreaType.Pull"/>.
         /// </summary>
-        public Path PullPath { get; set; }
+        public PullPath PullPath { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public void DeserializeReferences(CourseDefinition courseDefinition)
         {
             Path = _pathIndex == null ? null : courseDefinition.Paths[_pathIndex.Value];
-            PullPath = _pullPathIndex == null ? null : courseDefinition.Paths[_pullPathIndex.Value];
+            PullPath = _pullPathIndex == null ? null : courseDefinition.PullPaths[_pullPathIndex.Value];
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public void SerializeReferences(CourseDefinition courseDefinition)
         {
             _pathIndex = Path == null ? null : (int?)courseDefinition.Paths.IndexOf(Path);
-            _pullPathIndex = PullPath == null ? null : (int?)courseDefinition.Paths.IndexOf(PullPath);
+            _pullPathIndex = PullPath == null ? null : (int?)courseDefinition.PullPaths.IndexOf(PullPath);
         }
     }
 }
