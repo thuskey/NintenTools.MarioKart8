@@ -163,6 +163,11 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// </summary>
         public List<ObjPath> ObjPaths { get; set; }
 
+        /// <summary>
+        /// Gets or sets the list of <see cref="PullPath"/> instances.
+        /// </summary>
+        public List<PullPath> PullPaths { get; set; }
+
         // ---- Objects ----
 
         /// <summary>
@@ -221,7 +226,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
 
             // Before saving all the instances, allow references to be resolved.
             Areas?.ForEach(x => x.SerializeReferences(this));
-
+            
             EnemyPaths?.ForEach(x => x.SerializeReferences(this));
             GCameraPaths?.ForEach(x => x.SerializeReferences(this));
             GlidePaths?.ForEach(x => x.SerializeReferences(this));
@@ -229,7 +234,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             ItemPaths?.ForEach(x => x.SerializeReferences(this));
             JugemPaths?.ForEach(x => x.SerializeReferences(this));
             LapPaths?.ForEach(x => x.SerializeReferences(this));
-            ObjPaths?.ForEach(x => x.SerializeReferences(this));
+            PullPaths?.ForEach(x => x.SerializeReferences(this));
 
             Objs.ForEach(x => x.SerializeReferences(this));
 
@@ -266,6 +271,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             ByamlFile.SetValue(node, "JugemPath", ByamlFile.SerializeList(JugemPaths));
             ByamlFile.SetValue(node, "LapPath", ByamlFile.SerializeList(LapPaths));
             ByamlFile.SetValue(node, "ObjPath", ByamlFile.SerializeList(ObjPaths));
+            ByamlFile.SetValue(node, "PullPath", ByamlFile.SerializeList(PullPaths));
 
             ByamlFile.SetValue(node, "MapObjIdList", MapObjIdList);
             ByamlFile.SetValue(node, "MapObjResList", MapObjResList);
@@ -316,6 +322,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             JugemPaths = ByamlFile.DeserializeList<JugemPath>(ByamlFile.GetValue(node, "JugemPath"));
             LapPaths = ByamlFile.DeserializeList<LapPath>(ByamlFile.GetValue(node, "LapPath"));
             ObjPaths = ByamlFile.DeserializeList<ObjPath>(ByamlFile.GetValue(node, "ObjPath"));
+            PullPaths = ByamlFile.DeserializeList<PullPath>(ByamlFile.GetValue(node, "PullPath"));
 
             MapObjIdList = ByamlFile.GetList<int>(node["MapObjIdList"]);
             MapObjResList = ByamlFile.GetList<string>(node["MapObjResList"]);
@@ -327,7 +334,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
 
             // After loading all the instances, allow references to be resolved.
             Areas?.ForEach(x => x.DeserializeReferences(this));
-
+            
             EnemyPaths?.ForEach(x => x.DeserializeReferences(this));
             GCameraPaths?.ForEach(x => x.DeserializeReferences(this));
             GlidePaths?.ForEach(x => x.DeserializeReferences(this));
@@ -335,6 +342,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             ItemPaths?.ForEach(x => x.DeserializeReferences(this));
             JugemPaths?.ForEach(x => x.DeserializeReferences(this));
             LapPaths?.ForEach(x => x.DeserializeReferences(this));
+            PullPaths?.ForEach(x => x.DeserializeReferences(this));
 
             Objs.ForEach(x => x.DeserializeReferences(this));
 
