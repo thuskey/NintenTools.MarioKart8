@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Syroot.NintenTools.MarioKart8.Studio")]
+[assembly: AssemblyTitle("Syroot.Dumb3D")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Syroot.NintenTools.MarioKart8.Studio")]
+[assembly: AssemblyProduct("Syroot.Dumb3D")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a662162d-77fe-47ab-b19d-6cb7acc35006")]
+[assembly: Guid("62644a3d-86b1-43de-a29d-604edaccdc19")]
 
 // Version information for an assembly consists of the following four values:
 //

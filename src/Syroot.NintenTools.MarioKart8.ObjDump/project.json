@@ -14,7 +14,7 @@
     },
 
     "dependencies": {
-        "Syroot.NintenTools.MarioKart8": "0.1.3-alpha"
+        "Syroot.NintenTools.MarioKart8": "0.1.1-alpha"
     },
 
     "buildOptions": {
