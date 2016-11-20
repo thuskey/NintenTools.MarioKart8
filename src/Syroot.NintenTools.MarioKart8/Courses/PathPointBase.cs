@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
-using Syroot.NintenTools.Maths;
+using Syroot.NintenTools.Byaml.Serialization;
+using Syroot.Maths;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
@@ -9,7 +9,8 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// </summary>
     /// <typeparam name="TPath">The type of the path this point belongs to.</typeparam>
     /// <typeparam name="TPoint">The type of the point itself.</typeparam>
-    public abstract class PathPointBase<TPath, TPoint> : IByamlSerializable, ICourseReferencable
+    [ByamlObject]
+    public abstract class PathPointBase<TPath, TPoint> : ICourseReferencable
         where TPath : PathBase<TPath, TPoint>
         where TPoint : PathPointBase<TPath, TPoint>, ICourseReferencable, new()
     {
@@ -67,16 +68,19 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets the rotation of the object in radian.
         /// </summary>
+        [ByamlMember]
         public Vector3F Rotate { get; set; }
 
         /// <summary>
         /// Gets or sets the scale of the object. Might be optional for specific path types.
         /// </summary>
+        [ByamlMember(Optional = true)]
         public Vector3F? Scale { get; set; }
 
         /// <summary>
         /// Gets or sets the position at which the object is placed.
         /// </summary>
+        [ByamlMember]
         public Vector3F Translate { get; set; }
 
         /// <summary>
@@ -92,52 +96,17 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets the list of <see cref="PathPointReference"/> instances for preceeding points.
         /// </summary>
+        [ByamlMember("PrevPt", Optional = true)]
         protected List<PathPointReference> PreviousPointIndices;
 
         /// <summary>
         /// Gets or sets the list of <see cref="PathPointReference"/> instances for succeeding points.
         /// </summary>
+        [ByamlMember("NextPt", Optional = true)]
         protected List<PathPointReference> NextPointIndices;
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public virtual dynamic DeserializeByaml(dynamic node)
-        {
-            // Spatial.
-            Rotate = new Vector3F(node["Rotate"]);
-            dynamic scale = ByamlFile.GetValue(node, "Scale");
-            if (scale != null) Scale = new Vector3F(scale);
-            Translate = new Vector3F(node["Translate"]);
-
-            // Predecessor and successor points.
-            PreviousPointIndices = ByamlFile.DeserializeList<PathPointReference>(ByamlFile.GetValue(node, "PrevPt"));
-            NextPointIndices = ByamlFile.DeserializeList<PathPointReference>(ByamlFile.GetValue(node, "NextPt"));
-
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public virtual dynamic SerializeByaml()
-        {
-            Dictionary<string, dynamic> node = new Dictionary<string, dynamic>()
-            {
-                ["Rotate"] = Rotate.SerializeByaml(),
-                ["Translate"] = Translate.SerializeByaml(),
-            };
-            ByamlFile.SetValue(node, "Scale", Scale?.SerializeByaml());
-            ByamlFile.SetValue(node, "PrevPt", ByamlFile.SerializeList(PreviousPointIndices));
-            ByamlFile.SetValue(node, "NextPt", ByamlFile.SerializeList(NextPointIndices));
-            return node;
-        }
-
+        
         /// <summary>
         /// Allows references of course data objects to be resolved to provide real instances instead of the raw values
         /// in the BYAML.
@@ -148,18 +117,24 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             // Solve the previous and next point references.
             IList<TPath> paths = GetPathReferenceList(courseDefinition);
 
-            PreviousPoints = new List<TPoint>();
-            foreach (PathPointReference index in PreviousPointIndices)
+            if (PreviousPointIndices != null)
             {
-                TPath referencedPath = paths[index.PathIndex];
-                PreviousPoints.Add(referencedPath.Points[index.PointIndex]);
+                PreviousPoints = new List<TPoint>();
+                foreach (PathPointReference index in PreviousPointIndices)
+                {
+                    TPath referencedPath = paths[index.PathIndex];
+                    PreviousPoints.Add(referencedPath.Points[index.PointIndex]);
+                }
             }
 
-            NextPoints = new List<TPoint>();
-            foreach (PathPointReference index in NextPointIndices)
+            if (NextPointIndices != null)
             {
-                TPath referencedPath = paths[index.PathIndex];
-                NextPoints.Add(referencedPath.Points[index.PointIndex]);
+                NextPoints = new List<TPoint>();
+                foreach (PathPointReference index in NextPointIndices)
+                {
+                    TPath referencedPath = paths[index.PathIndex];
+                    NextPoints.Add(referencedPath.Points[index.PointIndex]);
+                }
             }
         }
 

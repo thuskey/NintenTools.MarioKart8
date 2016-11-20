@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a point of an <see cref="EnemyPath"/>.
     /// </summary>
+    [ByamlObject]
     public class EnemyPathPoint : PathPointBase<EnemyPath, EnemyPathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
@@ -12,46 +14,20 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets an unknown battle flag.
         /// </summary>
+        [ByamlMember]
         public int BattleFlag { get; set; }
 
         /// <summary>
         /// Gets or sets an unknown point direction.
         /// </summary>
+        [ByamlMember]
         public int PathDir { get; set; }
 
         /// <summary>
         /// Gets or sets an unknown point priority.
         /// </summary>
+        [ByamlMember]
         public int Priority { get; set; }
-
-        // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public override dynamic DeserializeByaml(dynamic node)
-        {
-            base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            BattleFlag = node["BattleFlag"];
-            PathDir = node["PathDir"];
-            Priority = node["Priority"];
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public override dynamic SerializeByaml()
-        {
-            dynamic node = base.SerializeByaml();
-            node["BattleFlag"] = BattleFlag;
-            node["PathDir"] = PathDir;
-            node["Priority"] = Priority;
-            return node;
-        }
 
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
 

@@ -1,17 +1,18 @@
-﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
-using Syroot.NintenTools.Maths;
+﻿using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a return point of a <see cref="LapPath"/>.
     /// </summary>
-    public class ReturnPoint : IByamlSerializable, ICourseReferencable
+    [ByamlObject]
+    public class ReturnPoint : ICourseReferencable
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
-        private int _jugemPathIndex;
+        [ByamlMember("JugemPath")]
+        private int _jugemPathIndex; // TODO: JugemPath member in ReturnPointEnemy is a string with "rail2" etc.
+        [ByamlMember("JugemIndex")]
         private int _jugemPathPointIndex;
 
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
@@ -19,12 +20,14 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets an unknown return type.
         /// </summary>
+        [ByamlMember]
         public int ReturnType { get; set; }
 
         /// <summary>
         /// Gets or sets an unknown value.
         /// </summary>
-        public int HasError { get; set; }
+        [ByamlMember("hasError")]
+        public ReturnPointErrorType HasError { get; set; }
 
         /// <summary>
         /// Gets or sets a referenced <see cref="JugemPathPoint"/>.
@@ -34,55 +37,23 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets the spatial normal.
         /// </summary>
-        public Vector3F Normal { get; set; }
+        [ByamlMember]
+        public ByamlVector3F Normal { get; set; }
 
         /// <summary>
         /// Gets or sets the spatial position.
         /// </summary>
-        public Vector3F Position { get; set; }
+        [ByamlMember]
+        public ByamlVector3F Position { get; set; }
 
         /// <summary>
         /// Gets or sets the spatial tangent.
         /// </summary>
-        public Vector3F Tangent { get; set; }
+        [ByamlMember]
+        public ByamlVector3F Tangent { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public dynamic DeserializeByaml(dynamic node)
-        {
-            _jugemPathIndex = node["JugemPath"];
-            _jugemPathPointIndex = node["JugemIndex"];
-            ReturnType = node["ReturnType"];
-            HasError = node["hasError"];
-            Normal = new Vector3F(node["Normal"]);
-            Position = new Vector3F(node["Position"]);
-            Tangent = new Vector3F(node["Tangent"]);
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public dynamic SerializeByaml()
-        {
-            return new Dictionary<string, dynamic>()
-            {
-                ["JugemPath"] = _jugemPathIndex,
-                ["JugemIndex"] = _jugemPathPointIndex,
-                ["ReturnType"] = ReturnType,
-                ["hasError"] = HasError,
-                ["Normal"] = Normal.SerializeByaml(),
-                ["Position"] = Position.SerializeByaml(),
-                ["Tangent"] = Tangent.SerializeByaml()
-            };
-        }
-
+        
         /// <summary>
         /// Allows references of course data objects to be resolved to provide real instances instead of the raw values
         /// in the BYAML.

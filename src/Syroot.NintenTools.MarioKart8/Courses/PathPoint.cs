@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
-using Syroot.NintenTools.Maths;
+﻿using System.Collections.Generic;
+using Syroot.Maths;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a point of a <see cref="Path"/>.
     /// </summary>
+    [ByamlObject]
     public class PathPoint : PathPointBase<Path, PathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
@@ -15,47 +15,21 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets the first parameter.
         /// </summary>
+        [ByamlMember("prm1")]
         public float Prm1 { get; set; }
 
         /// <summary>
         /// Gets or sets the second parameter.
         /// </summary>
+        [ByamlMember("prm2")]
         public float Prm2 { get; set; }
 
         /// <summary>
         /// Gets or sets the list of tangential smoothing points (must be exactly 2).
         /// </summary>
-        public List<Vector3F> ControlPoints { get; set; }
+        [ByamlMember]
+        public List<ByamlVector3F> ControlPoints { get; set; }
 
-        // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public override dynamic DeserializeByaml(dynamic node)
-        {
-            base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            Prm1 = node["prm1"];
-            Prm2 = node["prm2"];
-            ControlPoints = ByamlFile.DeserializeList<Vector3F>(node["ControlPoints"]);
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public override dynamic SerializeByaml()
-        {
-            dynamic node = base.SerializeByaml();
-            node["prm1"] = Prm1;
-            node["prm2"] = Prm2;
-            node["ControlPoints"] = ByamlFile.SerializeList(ControlPoints);
-            return node;
-        }
-        
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
 
         /// <summary>

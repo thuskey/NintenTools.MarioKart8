@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
+﻿using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents the serialized index to a path and a point in it from the course definition.
     /// </summary>
-    public class PathPointReference : IByamlSerializable
+    [ByamlObject]
+    public class PathPointReference
     {
         // ---- CONSTRUCTORS & DESTRUCTOR ------------------------------------------------------------------------------
 
@@ -34,38 +34,13 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Gets or sets the index of the path instance referenced from the list of enemy paths in the course
         /// definition.
         /// </summary>
+        [ByamlMember("PathId")]
         internal int PathIndex { get; set; }
 
         /// <summary>
         /// Gets or sets the index of the path point of the path referenced by <see cref="PathIndex"/>.
         /// </summary>
+        [ByamlMember("PtId")]
         internal int PointIndex { get; set; }
-
-        // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public dynamic DeserializeByaml(dynamic node)
-        {
-            PathIndex = node["PathId"];
-            PointIndex = node["PtId"];
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public dynamic SerializeByaml()
-        {
-            return new Dictionary<string, dynamic>()
-            {
-                ["PathId"] = PathIndex,
-                ["PtId"] = PointIndex
-            };
-        }
     }
 }

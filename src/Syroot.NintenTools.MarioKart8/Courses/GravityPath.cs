@@ -1,15 +1,17 @@
 ﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a path controlling the gravity direction of the course.
     /// </summary>
+    [ByamlObject]
     public class GravityPath : PathBase<GravityPath, GravityPathPoint>
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
+        [ByamlMember("GravityPath_GCameraPath", Optional = true)]
         private List<int> _gCameraPathIndices;
 
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
@@ -20,30 +22,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public List<GCameraPath> GCameraPaths { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public override dynamic DeserializeByaml(dynamic node)
-        {
-            base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            _gCameraPathIndices = ByamlFile.GetList<int>(ByamlFile.GetValue(node, "GravityPath_GCameraPath"));
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public override dynamic SerializeByaml()
-        {
-            dynamic node = base.SerializeByaml();
-            ByamlFile.SetValue(node, "GravityPath_GCameraPath", _gCameraPathIndices);
-            return node;
-        }
-
+        
         /// <summary>
         /// Allows references of course data objects to be resolved to provide real instances instead of the raw values
         /// in the BYAML.

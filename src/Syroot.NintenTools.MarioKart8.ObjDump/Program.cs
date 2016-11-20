@@ -215,7 +215,7 @@ namespace Syroot.NintenTools.MarioKart8.Test
                 foreach (ObjDefinition entry in _objDb.Definitions)
                 {
                     // Get generic object information.
-                    List<string> resNames = entry.ResName;
+                    List<string> resNames = entry.ResNames;
                     if (resNames == null)
                     {
                         resNames = new List<string>();

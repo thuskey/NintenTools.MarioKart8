@@ -1,44 +1,13 @@
 ﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
-    /// Represents the &quot;AreaFlag&quot; node inside of a <see cref="ClipPattern"/>.
+    /// Represents the &quot;AreaFlag&quot; list of 4 integer values inside of a <see cref="ClipPattern"/>.
     /// </summary>
-    public class AreaFlag : IByamlSerializable
+    [ByamlObject]
+    public class AreaFlag : List<int>
     {
-        // ---- PROPERTIES ---------------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Gets or sets a list holding lists of 4 unknown integers.
-        /// </summary>
-        public List<List<int>> Values { get; set; }
-
-        // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public dynamic DeserializeByaml(dynamic node)
-        {
-            Values = new List<List<int>>();
-            foreach (dynamic array in node)
-            {
-                Values.Add(ByamlFile.GetList<int>(array));
-            }
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public dynamic SerializeByaml()
-        {
-            return Values;
-        }
     }
 }

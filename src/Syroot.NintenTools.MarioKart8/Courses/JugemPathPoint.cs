@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
+﻿using System.Collections.Generic;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a point of a <see cref="JugemPath"/>.
     /// </summary>
+    [ByamlObject]
     public class JugemPathPoint : PathPointBase<JugemPath, JugemPathPoint>
     {
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------

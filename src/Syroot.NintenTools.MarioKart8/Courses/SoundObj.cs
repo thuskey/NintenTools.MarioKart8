@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a region in which a sound is emitted.
     /// </summary>
-    public class SoundObj : SpatialObject
+    [ByamlObject]
+    public class SoundObj : SpatialObject, IByamlSerializable
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
@@ -17,12 +20,19 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets the first parameter.
         /// </summary>
+        [ByamlMember("prm1")]
         public int Prm1 { get; set; }
 
         /// <summary>
         /// Gets or sets the second parameter.
         /// </summary>
+        [ByamlMember("prm2")]
         public int Prm2 { get; set; }
+
+        /// <summary>
+        /// Gets or sets an unknown setting.
+        /// </summary>
+        public bool? Single { get; set; }
 
         /// <summary>
         /// Gets or sets an unknown setting which has never been used in the original courses.
@@ -30,34 +40,28 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public bool TopView { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-        
+
         /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
+        /// Reads data from the given <paramref name="dictionary"/> to satisfy members.
         /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public override dynamic DeserializeByaml(dynamic node)
+        /// <param name="dictionary">The <see cref="IDictionary{String, Object}"/> to read the data from.</param>
+        public void DeserializeByaml(IDictionary<string, object> dictionary)
         {
-            base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            ModeInclusion = ModeInclusionExtensions.GetFromByamlAlternative(node);
-            Prm1 = node["prm1"];
-            Prm2 = node["prm2"];
-            TopView = node["TopView"] == "True";
-            return this;
+            TopView = (string)dictionary["TopView"] == "true";
+
+            object single;
+            if (dictionary.TryGetValue("Single", out single)) Single = (string)single == "true";
         }
 
         /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
+        /// Writes instance members into the given <paramref name="dictionary"/> to store them as BYAML data.
         /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public override dynamic SerializeByaml()
+        /// <param name="dictionary">The <see cref="Dictionary{String, Object}"/> to store the data in.</param>
+        public void SerializeByaml(IDictionary<string, object> dictionary)
         {
-            IDictionary<string, dynamic> node = base.SerializeByaml();
-            ModeInclusion.SetForByamlAlternative(node);
-            node["prm1"] = Prm1;
-            node["prm2"] = Prm2;
-            node["TopView"] = TopView ? "True" : "False";
-            return node;
+            dictionary["TopView"] = TopView ? "true" : "false";
+
+            if (Single.HasValue) dictionary["Single"] = Single.Value ? "true" : "false";
         }
     }
 }

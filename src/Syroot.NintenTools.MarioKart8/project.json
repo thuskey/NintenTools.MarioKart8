@@ -5,33 +5,7 @@
     "language": "en-US",
     "name": "Syroot.NintenTools.MarioKart8",
     "title": "NintenTools.MarioKart8",
-    "version": "0.1.2-*",
-    
-    "frameworks": {
-        "net45": {},
-        "netstandard1.6": {
-            "dependencies": {
-                "NETStandard.Library": "1.6.0"
-            },
-            "imports": "dnxcore50"
-        }
-    },
-
-    "dependencies": {
-        "Syroot.NintenTools": "1.1.4"
-    },
-
-    "buildOptions": {
-        "debugType": "portable",
-        "optimize": true,
-        "xmlDoc": true
-    },
-
-    "scripts": {
-        "postcompile": [
-            //"dotnet pack --no-build --configuration %compile:Configuration%"
-        ]
-    },
+    "version": "0.1.3-alpha",
 
     "packOptions": {
         "iconUrl": "https://raw.githubusercontent.com/Syroot/NintenTools.MarioKart8/master/res/Logo.png",
@@ -44,6 +18,45 @@
             "url": "https://github.com/Syroot/NintenTools.MarioKart8"
         },
         "summary": ".NET library and tools to load and modify Mario Kart 8 file formats.",
-        "tags": [ "byaml", "mk8", "mario kart 8", "nintendo" ]
+        "tags": [ "mk8", "mario kart 8", "nintendo" ]
+    },
+
+    "frameworks": {
+        "net45": {},
+        "netstandard1.6": {
+            "dependencies": {
+                "NETStandard.Library": "1.6.1-*"
+            },
+            "imports": "dnxcore50"
+        }
+    },
+
+    "dependencies": {
+        "Syroot.NintenTools.Byaml": "2.*"
+    },
+
+    "configurations": {
+        "debug": {
+            "buildOptions": {
+                "define": [ "DEBUG" ],
+                "debugType": "portable",
+                "optimize": false,
+                "xmlDoc": true
+            }
+        },
+        "release": {
+            "buildOptions": {
+                "define": [ "RELEASE" ],
+                "debugType": "none",
+                "optimize": true,
+                "xmlDoc": true
+            }
+        }
+    },
+
+    "scripts": {
+        "postcompile": [
+            "dotnet pack --no-build --configuration %compile:Configuration%"
+        ]
     }
 }

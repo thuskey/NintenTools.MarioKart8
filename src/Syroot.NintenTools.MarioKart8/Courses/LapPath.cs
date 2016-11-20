@@ -1,15 +1,17 @@
 ﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a path which drivers need to taken to complete a lap.
     /// </summary>
+    [ByamlObject]
     public class LapPath : PathBase<LapPath, LapPathPoint>
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
+        [ByamlMember("LapPath_GravityPath", Optional = true)]
         private List<int> _gravityPathIndices;
 
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
@@ -17,17 +19,20 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets a value indicating the group the lap path belongs to, possibly for multiple routes.
         /// </summary>
+        [ByamlMember("LapPathGroup")]
         public int Group { get; set; }
 
         /// <summary>
         /// Gets or sets an unknown value, possibly handling Lakitu return locations and referencing
         /// <see cref="ReturnPoint"/> instances.
         /// </summary>
+        [ByamlMember]
         public bool ReturnPointsError { get; set; }
 
         /// <summary>
         /// Gets or sets the list of <see cref="ReturnPoint"/> instances.
         /// </summary>
+        [ByamlMember(Optional = true)]
         public List<ReturnPoint> ReturnPoints { get; set; }
 
         /// <summary>
@@ -36,36 +41,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public List<GravityPath> GravityPaths { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public override dynamic DeserializeByaml(dynamic node)
-        {
-            base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            Group = node["LapPathGroup"];
-            ReturnPointsError = node["ReturnPointsError"];
-            ReturnPoints = ByamlFile.DeserializeList<ReturnPoint>(node["ReturnPoints"]);
-            _gravityPathIndices = ByamlFile.GetList<int>(ByamlFile.GetValue(node, "LapPath_GravityPath"));
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public override dynamic SerializeByaml()
-        {
-            dynamic node = base.SerializeByaml();
-            node["LapPathGroup"] = Group;
-            node["ReturnPointsError"] = ReturnPointsError;
-            node["ReturnPoints"] = ByamlFile.SerializeList(ReturnPoints);
-            ByamlFile.SetValue(node, "LapPath_GravityPath", _gravityPathIndices);
-            return node;
-        }
-
+        
         /// <summary>
         /// Allows references of course data objects to be resolved to provide real instances instead of the raw values
         /// in the BYAML.

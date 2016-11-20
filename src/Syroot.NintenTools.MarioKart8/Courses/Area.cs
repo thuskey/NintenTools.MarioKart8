@@ -1,16 +1,19 @@
 ﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents an area controlling different things inside of it.
     /// </summary>
+    [ByamlObject]
     public class Area : PrmObject, ICourseReferencable
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
-        
+
+        [ByamlMember("Area_Path", Optional = true)]
         private int? _pathIndex;
+        [ByamlMember("Area_PullPath", Optional = true)]
         private int? _pullPathIndex;
 
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
@@ -18,16 +21,19 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or set the shape the outer form of this area spans.
         /// </summary>
+        [ByamlMember]
         public AreaShape AreaShape { get; set; }
 
         /// <summary>
         /// Gets or sets the action taken for objects in this area.
         /// </summary>
+        [ByamlMember]
         public AreaType AreaType { get; set; }
-        
+
         /// <summary>
         /// Gets or sets a list of indices to unknown areas, possibly triggering replay cameras.
         /// </summary>
+        [ByamlMember("Camera_Area", Optional = true)]
         public List<int> CameraAreas { get; set; }
 
         /// <summary>
@@ -43,38 +49,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public PullPath PullPath { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public override dynamic DeserializeByaml(dynamic node)
-        {
-            base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            AreaShape = (AreaShape)node["AreaShape"];
-            AreaType = (AreaType)node["AreaType"];
-            _pathIndex = ByamlFile.GetValue(node, "Area_Path");
-            _pullPathIndex = ByamlFile.GetValue(node, "Area_PullPath");
-            CameraAreas = ByamlFile.GetList<int>(ByamlFile.GetValue(node, "Camera_Area"));
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public override dynamic SerializeByaml()
-        {
-            IDictionary<string, dynamic> node = base.SerializeByaml();
-            node["AreaShape"] = (int)AreaShape;
-            node["AreaType"] = (int)AreaType;
-            ByamlFile.SetValue(node, "Area_Path", _pathIndex);
-            ByamlFile.SetValue(node, "Area_PullPath", _pullPathIndex);
-            ByamlFile.SetValue(node, "Camera_Area", CameraAreas);
-            return node;
-        }
-
+        
         /// <summary>
         /// Allows references between BYAML instances to be resolved to provide real instances
         /// instead of the raw values in the BYAML.

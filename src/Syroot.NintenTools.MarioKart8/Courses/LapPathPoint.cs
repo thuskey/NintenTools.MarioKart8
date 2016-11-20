@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a point of a <see cref="LapPath"/>.
     /// </summary>
+    [ByamlObject]
     public class LapPathPoint : PathPointBase<LapPath, LapPathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
@@ -13,91 +14,59 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets a value possibly indicating whether this is a required point to complete a lap.
         /// </summary>
+        [ByamlMember]
         public int CheckPoint { get; set; }
 
         /// <summary>
         /// Gets or sets a possible index into a <see cref="Clip"/> instance.
         /// </summary>
+        [ByamlMember("ClipIdx", Optional = true)]
         public int? ClipIndex { get; set; }
-        
+
         /// <summary>
         /// Gets or sets a possible index into a <see cref="Clip"/> instance. DLC courses use this index, stored in
         /// &quot;ClipNum&quot; instead of &quot;ClipIdx&quot;.
         /// </summary>
+        [ByamlMember("ClipNum", Optional = true)]
         public int? ClipIndexDlc { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether headlights are turned on on this part of the path when
         /// <see cref="CourseDefinition.HeadLight"/> is set to <see cref="CourseHeadLight.ByLapPath"/>.
         /// </summary>
+        [ByamlMember]
         public bool HeadLightSW { get; set; }
 
         /// <summary>
         /// Gets or sets a value possibly indicating whether this point increases the lap count.
         /// </summary>
+        [ByamlMember]
         public int LapCheck { get; set; }
 
         /// <summary>
         /// Gets or sets the field of view angle of the camera at this part of the path.
         /// </summary>
+        [ByamlMember]
         public int MapCameraFovy { get; set; }
 
         /// <summary>
         /// Gets or sets the height distance of the camera at this part of the path.
         /// </summary>
+        [ByamlMember]
         public int MapCameraY { get; set; }
 
         /// <summary>
         /// Gets or sets a value handling a <see cref="ReturnPoint"/> or -1 if there is no return point.
         /// </summary>
+        [ByamlMember]
         public int ReturnPosition { get; set; }
 
         /// <summary>
         /// Gets or sets an index to a sound effect played at this part of the path or -1 if there is no additional
         /// effect.
         /// </summary>
+        [ByamlMember]
         public int SoundSW { get; set; }
-
-        // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public override dynamic DeserializeByaml(dynamic node)
-        {
-            base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            CheckPoint = node["CheckPoint"];
-            ClipIndex = ByamlFile.GetValue(node, "ClipIdx");
-            ClipIndexDlc = ByamlFile.GetValue(node, "ClipNum");
-            HeadLightSW = node["HeadLightSW"];
-            LapCheck = node["LapCheck"];
-            MapCameraFovy = node["MapCameraFovy"];
-            MapCameraY = node["MapCameraY"];
-            ReturnPosition = node["ReturnPosition"];
-            SoundSW = node["SoundSW"];
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public override dynamic SerializeByaml()
-        {
-            dynamic node = base.SerializeByaml();
-            node["CheckPoint"] = CheckPoint;
-            ByamlFile.SetValue(node, "ClipIdx", ClipIndex);
-            ByamlFile.SetValue(node, "ClipNum", ClipIndexDlc);
-            node["HeadLightSW"] = HeadLightSW;
-            node["LapCheck"] = LapCheck;
-            node["MapCameraFovy"] = MapCameraFovy;
-            node["MapCameraY"] = MapCameraY;
-            node["ReturnPosition"] = ReturnPosition;
-            node["SoundSW"] = SoundSW;
-            return node;
-        }
         
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
 

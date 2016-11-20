@@ -1,53 +1,73 @@
-﻿using System;
-using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
-using Syroot.NintenTools.MarioKart8.Objs;
+﻿using System.Collections.Generic;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents an Obj placed on the course.
     /// </summary>
-    public class Obj : SpatialObject, ICourseReferencable
+    public class Obj : SpatialObject, IByamlSerializable, ICourseReferencable
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
         // References to paths and their points.
+        [ByamlMember("Obj_Path", Optional = true)]
         private int? _pathIndex;
+        [ByamlMember("Obj_PathPoint", Optional = true)]
         private int? _pathPointIndex;
+        [ByamlMember("Obj_LapPath", Optional = true)]
         private int? _lapPathIndex;
+        [ByamlMember("Obj_LapPoint", Optional = true)]
         private int? _lapPathPointIndex;
+        [ByamlMember("Obj_ObjPath", Optional = true)]
         private int? _objPathIndex;
+        [ByamlMember("Obj_ObjPoint", Optional = true)]
         private int? _objPathPointIndex;
+        [ByamlMember("Obj_EnemyPath1", Optional = true)]
         private int? _enemyPath1Index;
+        [ByamlMember("Obj_EnemyPath2", Optional = true)]
         private int? _enemyPath2Index;
+        [ByamlMember("Obj_ItemPath1", Optional = true)]
         private int? _itemPath1Index;
+        [ByamlMember("Obj_ItemPath2", Optional = true)]
         private int? _itemPath2Index;
-        
+
         // References to other unit objects.
+        [ByamlMember("Area_Obj", Optional = true)]
         private int? _areaIndex;
+        [ByamlMember("Obj_Obj", Optional = true)]
         private int? _objIndex;
 
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
-        /// Gets or sets the ID determining the type of this object (as defined in the <see cref="ObjDefinitionDb"/>).
+        /// Gets or sets the ID determining the type of this object.
         /// </summary>
+        [ByamlMember]
         public int ObjId { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether collision detection with this Obj will be skipped.
         /// </summary>
+        [ByamlMember(Optional = true)]
         public bool? NoCol { get; set; }
 
         /// <summary>
         /// Gets or sets an unknown setting which has never been used in the original courses.
         /// </summary>
+        [ByamlMember]
         public bool TopView { get; set; }
+
+        /// <summary>
+        /// Gets or sets an unknown setting.
+        /// </summary>
+        [ByamlMember(Optional = true)]
+        public bool? Single { get; set; }
 
         /// <summary>
         /// Gets or sets the speed in which a path is followed.
         /// </summary>
+        [ByamlMember]
         public float Speed { get; set; }
         
         /// <summary>
@@ -114,90 +134,36 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// Gets or sets the game modes in which this Obj will appear.
         /// </summary>
         public ModeInclusion ModeInclusion { get; set; }
-        
+
         /// <summary>
         /// Gets or sets an array of 8 float values further controlling object behavior.
         /// </summary>
+        [ByamlMember]
         public List<float> Params { get; set; }
 
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
 
         /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
+        /// Reads data from the given <paramref name="dictionary"/> to satisfy members.
         /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public override dynamic DeserializeByaml(dynamic node)
+        /// <param name="dictionary">The <see cref="IDictionary{String, Object}"/> to read the data from.</param>
+        public void DeserializeByaml(IDictionary<string, object> dictionary)
         {
-            base.DeserializeByaml((IDictionary<string, dynamic>)node);
-
-            ObjId = node["ObjId"];
-            NoCol = ByamlFile.GetValue(node, "NoCol");
-            TopView = node["TopView"];
-            Params = ByamlFile.GetList<float>(node["Params"]);
-
-            // Paths.
-            Speed = node["Speed"];
-            _pathIndex = ByamlFile.GetValue(node, "Obj_Path");
-            _pathPointIndex = ByamlFile.GetValue(node, "Obj_PathPoint");
-            _lapPathIndex = ByamlFile.GetValue(node, "Obj_LapPath");
-            _lapPathPointIndex = ByamlFile.GetValue(node, "Obj_LapPoint");
-            _objPathIndex = ByamlFile.GetValue(node, "Obj_ObjPath");
-            _objPathPointIndex = ByamlFile.GetValue(node, "Obj_ObjPoint");
-            _enemyPath1Index = ByamlFile.GetValue(node, "Obj_EnemyPath1");
-            _enemyPath2Index = ByamlFile.GetValue(node, "Obj_EnemyPath2");
-            _itemPath1Index = ByamlFile.GetValue(node, "Obj_ItemPath1");
-            _itemPath2Index = ByamlFile.GetValue(node, "Obj_ItemPath2");
-
-            // References.
-            _areaIndex = ByamlFile.GetValue(node, "Area_Obj");
-            _objIndex = ByamlFile.GetValue(node, "Obj_Obj");
-
-            // Exclusions.
-            ModeInclusion = ModeInclusionExtensions.GetFromByaml(node);
-
-            return this;
+            ModeInclusion = ModeInclusion.FromDictionary(dictionary);
         }
 
         /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
+        /// Writes instance members into the given <paramref name="dictionary"/> to store them as BYAML data.
         /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public override dynamic SerializeByaml()
+        /// <param name="dictionary">The <see cref="Dictionary{String, Object}"/> to store the data in.</param>
+        public void SerializeByaml(IDictionary<string, object> dictionary)
         {
-            IDictionary<string, dynamic> node = base.SerializeByaml();
-
-            node["ObjId"] = ObjId;
-            ByamlFile.SetValue(node, "NoCol", NoCol);
-            node["TopView"] = TopView;
-            node["Params"] = Params;
-
-            // Paths.
-            node["Speed"] = Speed;
-            ByamlFile.SetValue(node, "Obj_Path", _pathIndex);
-            ByamlFile.SetValue(node, "Obj_PathPoint", _pathPointIndex);
-            ByamlFile.SetValue(node, "Obj_LapPath", _lapPathIndex);
-            ByamlFile.SetValue(node, "Obj_LapPoint", _lapPathPointIndex);
-            ByamlFile.SetValue(node, "Obj_ObjPath", _objPathIndex);
-            ByamlFile.SetValue(node, "Obj_ObjPoint", _objPathPointIndex);
-            ByamlFile.SetValue(node, "Obj_EnemyPath1", _enemyPath1Index);
-            ByamlFile.SetValue(node, "Obj_EnemyPath2", _enemyPath2Index);
-            ByamlFile.SetValue(node, "Obj_ItemPath1", _itemPath1Index);
-            ByamlFile.SetValue(node, "Obj_ItemPath2", _itemPath2Index);
-
-            // References.
-            ByamlFile.SetValue(node, "Area_Obj", _areaIndex);
-            ByamlFile.SetValue(node, "Obj_Obj", _objIndex);
-
-            // Exclusions.
-            ModeInclusion.SetForByaml(node);
-
-            return node;
+            ModeInclusion.ToDictionary(dictionary);
         }
-        
+
         /// <summary>
-        /// Allows references between BYAML instances to be resolved to provide real instances
-        /// instead of the raw values in the BYAML.
+        /// Allows references of course data objects to be resolved to provide real instances instead of the raw values
+        /// in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void DeserializeReferences(CourseDefinition courseDefinition)
@@ -220,8 +186,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
-        /// Allows references between BYAML instances to be serialized into raw values stored in the
-        /// BYAML.
+        /// Allows references between course objects to be serialized into raw values stored in the BYAML.
         /// </summary>
         /// <param name="courseDefinition">The <see cref="CourseDefinition"/> providing the objects.</param>
         public void SerializeReferences(CourseDefinition courseDefinition)

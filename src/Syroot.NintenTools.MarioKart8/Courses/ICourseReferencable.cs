@@ -1,6 +1,4 @@
-﻿using Syroot.NintenTools.MarioKart8.Courses;
-
-namespace Syroot.NintenTools.MarioKart8.Courses
+﻿namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a BYAML element which references others and thus must resolve and build the dependencies.

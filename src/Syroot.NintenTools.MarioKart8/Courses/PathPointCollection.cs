@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 
+// TODO: Fix this class.
+
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
@@ -11,7 +13,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
     /// <typeparam name="TPath">The type of the path holding the points.</typeparam>
     /// <typeparam name="TPoint">The type of the points.</typeparam>
     [DebuggerDisplay("PathPointCollection ({_list.Count} points)")]
-    public class PathPointCollection<TPath, TPoint> : IList<TPoint>
+    public class PathPointCollection<TPath, TPoint> : IList<TPoint>, IList
         where TPath : PathBase<TPath, TPoint>
         where TPoint : PathPointBase<TPath, TPoint>, ICourseReferencable, new()
     {
@@ -20,17 +22,12 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         private List<TPoint> _list;
 
         // ---- CONSTRUCTORS & DESTRUCTOR ------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PathPointCollection{TPath, TPoint}"/> for the given path.
-        /// </summary>
-        /// <param name="parent">The path holding the points.</param>
-        public PathPointCollection(TPath parent)
+        
+        private PathPointCollection()
         {
             _list = new List<TPoint>();
-            Parent = parent;
         }
-
+        
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
 
         /// <summary>
@@ -54,6 +51,14 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
+        /// Gets a value indicating whether the <see cref="PathPointCollection{TPath, TPoint}"/> has a fixed size.
+        /// </summary>
+        public bool IsFixedSize
+        {
+            get { return false; }
+        }
+
+        /// <summary>
         /// Gets a value indicating whether the <see cref="PathPointCollection{TPath, TPoint}"/> is read-only.
         /// </summary>
         public bool IsReadOnly
@@ -62,6 +67,36 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             {
                 return false;
             }
+        }
+
+        /// <summary>
+        /// Gets a value indicating whether access to the <see cref="PathPointCollection{TPath, TPoint}"/> is
+        /// synchronized (thread safe).
+        /// </summary>
+        public bool IsSynchronized
+        {
+            get { return false; }
+        }
+
+        /// <summary>
+        /// Not supported by this class.
+        /// </summary>
+        public object SyncRoot
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        // ---- OPERATORS ----------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Gets or sets the element at the given <paramref name="index"/>.
+        /// </summary>
+        /// <param name="index">The index of the element..</param>
+        /// <returns>The element at the given index.</returns>
+        object IList.this[int index]
+        {
+            get { return _list[index]; }
+            set { _list[index] = (TPoint)value; }
         }
 
         /// <summary>
@@ -98,8 +133,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Adds a point to the <see cref="PathPointCollection{TPath, TPoint}"/>.
         /// </summary>
-        /// <param name="item">The point to add to the <see cref="PathPointCollection{TPath, TPoint}"/>.
-        /// </param>
+        /// <param name="item">The point to add to the <see cref="PathPointCollection{TPath, TPoint}"/>.</param>
         public void Add(TPoint item)
         {
             _list.Add(item);
@@ -107,6 +141,18 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             {
                 item.PathInternal = Parent;
             }
+        }
+
+        /// <summary>
+        /// Adds a point to the <see cref="PathPointCollection{TPath, TPoint}"/> and returns the index at which it was
+        /// added.
+        /// </summary>
+        /// <param name="value">The point to add to the <see cref="PathPointCollection{TPath, TPoint}"/>.</param>
+        /// <returns>The index at which the point was added.</returns>
+        public int Add(object value)
+        {
+            Add((TPoint)value);
+            return _list.Count - 1;
         }
 
         /// <summary>
@@ -150,6 +196,18 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
+        /// Determines whether the <see cref="PathPointCollection{TPath, TPoint}"/> contains a specific point.
+        /// </summary>
+        /// <param name="value">The point to locate in the <see cref="PathPointCollection{TPath, TPoint}"/>.
+        /// </param>
+        /// <returns><c>true</c> if the point is found in the <see cref="PathPointCollection{TPath, TPoint}"/>;
+        /// otherwise, <c>false</c>.</returns>
+        public bool Contains(object value)
+        {
+            return Contains((TPoint)value);
+        }
+
+        /// <summary>
         /// Copies the elements of the <see cref="PathPointCollection{TPath, TPoint}"/> to an <see cref="Array"/>,
         /// starting at a particular <see cref="Array"/> index.
         /// </summary>
@@ -160,6 +218,19 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         public void CopyTo(TPoint[] array, int arrayIndex)
         {
             _list.CopyTo(array, arrayIndex);
+        }
+
+        /// <summary>
+        /// Copies the elements of the <see cref="PathPointCollection{TPath, TPoint}"/> to an <see cref="Array"/>,
+        /// starting at a particular <see cref="Array"/> index.
+        /// </summary>
+        /// <param name="array">The one-dimensional <see cref="Array"/> that is the destination of the elements copied
+        /// from <see cref="PathPointCollection{TPath, TPoint}"/>. The <see cref="Array"/> must have zero-based
+        /// indexing.</param>
+        /// <param name="index">The zero-based index in <paramref name="array"/> at which copying begins.</param>
+        public void CopyTo(Array array, int index)
+        {
+            _list.CopyTo((TPoint[])array, index);
         }
 
         /// <summary>
@@ -182,6 +253,16 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
+        /// Determines the index of a specific item in the <see cref="PathPointCollection{TPath, TPoint}"/>.
+        /// </summary>
+        /// <param name="value">The object to locate in the <see cref="PathPointCollection{TPath, TPoint}"/>.</param>
+        /// <returns>The index of the point if found in the list; otherwise, -1.</returns>
+        public int IndexOf(object value)
+        {
+            return IndexOf((TPoint)value);
+        }
+
+        /// <summary>
         /// Inserts a point to the <see cref="PathPointCollection{TPath, TPoint}"/> at the specified index.
         /// </summary>
         /// <param name="index">The zero-based index at which the point should be inserted.</param>
@@ -190,6 +271,16 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         {
             _list.Insert(index, item);
             item.PathInternal = Parent;
+        }
+
+        /// <summary>
+        /// Inserts a point to the <see cref="PathPointCollection{TPath, TPoint}"/> at the specified index.
+        /// </summary>
+        /// <param name="index">The zero-based index at which the point should be inserted.</param>
+        /// <param name="value">The point to insert into the <see cref="PathPointCollection{TPath, TPoint}"/>.</param>
+        public void Insert(int index, object value)
+        {
+            Insert(index, (TPoint)value);
         }
 
         /// <summary>
@@ -211,6 +302,15 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         }
 
         /// <summary>
+        /// Removes the first occurrence of a specific point from the <see cref="PathPointCollection{TPath, TPoint}"/>.
+        /// </summary>
+        /// <param name="value">The point to remove from the <see cref="PathPointCollection{TPath, TPoint}"/>.</param>
+        public void Remove(object value)
+        {
+            Remove((TPoint)value);
+        }
+
+        /// <summary>
         /// Removes the <see cref="PathPointCollection{TPath, TPoint}"/> point at the specified index.
         /// </summary>
         /// <param name="index">The zero-based index of the point to remove.</param>
@@ -220,7 +320,7 @@ namespace Syroot.NintenTools.MarioKart8.Courses
             _list.RemoveAt(index);
             point.PathInternal = null;
         }
-
+        
         /// <summary>
         /// Returns an enumerator that iterates through a collection.
         /// </summary>

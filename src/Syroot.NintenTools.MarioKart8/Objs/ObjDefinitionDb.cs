@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using Syroot.NintenTools.Byaml;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Objs
 {
@@ -64,16 +64,24 @@ namespace Syroot.NintenTools.MarioKart8.Objs
         /// <param name="stream">The stream in which the definitions will be stored.</param>
         public void Save(Stream stream)
         {
-            dynamic node = ByamlFile.SerializeList(Definitions);
-            ByamlFile.Save(stream, node);
+            ByamlSerializer serializer = new ByamlSerializer(new ByamlSerializerSettings()
+            {
+                SupportPaths = true,
+                Version = ByamlVersion.Version1
+            });
+            serializer.Serialize(stream, Definitions);
         }
 
         // ---- METHODS (PRIVATE) --------------------------------------------------------------------------------------
 
         private void Load(Stream stream)
         {
-            dynamic node = ByamlFile.Load(stream);
-            Definitions = ByamlFile.DeserializeList<ObjDefinition>(node);
+            ByamlSerializer serializer = new ByamlSerializer(new ByamlSerializerSettings()
+            {
+                SupportPaths = true,
+                Version = ByamlVersion.Version1
+            });
+            Definitions = serializer.Deserialize<List<ObjDefinition>>(stream);
         }
     }
 }

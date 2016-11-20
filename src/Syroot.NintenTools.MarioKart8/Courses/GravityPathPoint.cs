@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
+﻿using System.Collections.Generic;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a point of a <see cref="GravityPath"/>.
     /// </summary>
+    [ByamlObject]
     public class GravityPathPoint : PathPointBase<GravityPath, GravityPathPoint>
     {
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
@@ -14,47 +14,21 @@ namespace Syroot.NintenTools.MarioKart8.Courses
         /// <summary>
         /// Gets or sets a distance possibly controlling how far from the ground the camera is positioned.
         /// </summary>
+        [ByamlMember]
         public int CameraHeight { get; set; }
 
         /// <summary>
         /// Gets or sets a value possibly indicating whether this gravity path is only effective when gliding.
         /// </summary>
+        [ByamlMember]
         public bool GlideOnly { get; set; }
 
         /// <summary>
         /// Gets or sets an unknown value.
         /// </summary>
+        [ByamlMember]
         public bool Transform { get; set; }
 
-        // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-
-        /// <summary>
-        /// Reads the data from the given dynamic BYAML node into the instance.
-        /// </summary>
-        /// <param name="node">The dynamic BYAML node to deserialize.</param>
-        /// <returns>The instance itself.</returns>
-        public override dynamic DeserializeByaml(dynamic node)
-        {
-            base.DeserializeByaml((IDictionary<string, dynamic>)node);
-            CameraHeight = node["CameraHeight"];
-            GlideOnly = node["GlideOnly"];
-            Transform = node["Transform"];
-            return this;
-        }
-
-        /// <summary>
-        /// Creates a dynamic BYAML node from the instance's data.
-        /// </summary>
-        /// <returns>The dynamic BYAML node.</returns>
-        public override dynamic SerializeByaml()
-        {
-            dynamic node = base.SerializeByaml();
-            node["CameraHeight"] = CameraHeight;
-            node["GlideOnly"] = GlideOnly;
-            node["Transform"] = Transform;
-            return node;
-        }
-        
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
 
         /// <summary>

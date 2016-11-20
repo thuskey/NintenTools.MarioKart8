@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
-using Syroot.NintenTools.Byaml;
+using Syroot.NintenTools.Byaml.Serialization;
 
 namespace Syroot.NintenTools.MarioKart8.Courses
 {
     /// <summary>
     /// Represents a point of a <see cref="GCameraPath"/>.
     /// </summary>
+    [ByamlObject]
     public class GCameraPathPoint : PathPointBase<GCameraPath, GCameraPathPoint>
     {   
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
