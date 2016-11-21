@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Syroot.NintenTools.MarioKart8.BinData;
 
@@ -20,7 +21,7 @@ namespace Syroot.NintenTools.MarioKart8.BinDumper
         private static int Main(string[] args)
         {
             // Read the parameters.
-            if (args.Length != 1)
+            if (args.Length > 2)
             {
                 return -1;
             }
@@ -55,26 +56,31 @@ namespace Syroot.NintenTools.MarioKart8.BinDumper
                 // Write info about the sections.
                 for (int sectionIndex = 0; sectionIndex < binFile.Sections.Length; sectionIndex++)
                 {
-                    BinSection section = binFile.Sections[sectionIndex];
+                    SectionBase section = binFile.Sections[sectionIndex];
                     Write(writer, 0, $"Section {sectionIndex + 1}");
-                    Write(writer, 1, "Identifier   ", section.Identifier);
-                    Write(writer, 1, "Element count", section.ElementCount);
-                    Write(writer, 1, "Group count  ", section.GroupCount);
-                    Write(writer, 1, "Unknown      ", section.Unknown);
+                    Write(writer, 1, "Identifier   ", section.Header.Identifier);
+                    Write(writer, 1, "Element count", section.Header.ElementCount);
+                    Write(writer, 1, "Group count  ", section.Header.GroupCount);
+                    Write(writer, 1, "Type ID      ", section.Header.TypeID);
                     writer.WriteLine();
 
                     // Dump the groups.
-                    for (int groupIndex = 0; groupIndex < section.GroupCount; groupIndex++)
+                    IntArraySection intArray = section as IntArraySection;
+                    if (intArray != null)
                     {
-                        List<byte[]> group = section.Groups[groupIndex];
-                        Write(writer, 1, $"Group {groupIndex + 1}");
-                        for (int elementIndex = 0; elementIndex < section.ElementCount; elementIndex++)
+                        for (int groupIndex = 0; groupIndex < section.Header.GroupCount; groupIndex++)
                         {
-                            byte[] element = group[elementIndex];
-                            Write(writer, 1, BitConverter.ToString(element).Replace('-', _csvSeparator));
+                            List<int[]> group = intArray.Groups[groupIndex];
+                            Write(writer, 1, $"Group {groupIndex + 1}");
+                            for (int elementIndex = 0; elementIndex < section.Header.ElementCount; elementIndex++)
+                            {
+                                int[] element = group[elementIndex];
+                                Write(writer, 1, String.Join(" ", element.Select(x => x.ToString().PadLeft(5))));
+                            }
+                            writer.WriteLine();
                         }
-                        writer.WriteLine();
                     }
+                    // TODO: Dump other group types.
                 }
                 writer.Flush();
             }
