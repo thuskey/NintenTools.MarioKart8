@@ -1,0 +1,481 @@
+//------------------------------------------------
+//--- 010 Editor v7.0.2 Binary Template
+//
+//      File: MK8_BIN.bt
+//   Authors: Syroot
+//   Version: 0.1
+//   Purpose: Parse Mario Kart 8 BIN files.
+//  Category: Software
+// File Mask: *.bt
+//  ID Bytes: 
+//   History: 
+//   0.2   2016-11-23  Parse string arrays.
+//                     Add named Item.bin and Performance.bin structures.
+//                     Optimized int array support.
+//   0.1   2016-11-21  Parse int arrays.
+//------------------------------------------------
+
+//------------------------------------------------
+// General files
+
+// Int Arrays
+
+typedef struct(int elementLength)
+{
+    int values[elementLength];
+} IntArrayElement;
+
+typedef struct(int elementCount, int elementLength)
+{
+    IntArrayElement elements(elementLength)[elementCount] <optimize=true>;
+} IntArrayGroup <bgcolor=0xCCFFFF>;
+
+// String arrays
+
+typedef struct
+{
+    string text;
+} StringArrayElement <read=StringArrayElement_Read>;
+
+string StringArrayElement_Read(StringArrayElement& v)
+{
+    return v.text;
+}
+
+local int saI;
+local int64 saPosAfterOffsets;
+typedef struct(int elementCount)
+{
+    int offsets[elementCount];
+    saPosAfterOffsets = FTell();
+    for (saI = 0; saI < elementCount; saI++)
+    {
+        FSeek(saPosAfterOffsets + offsets[saI]);
+        StringArrayElement text;
+    }
+    byte padding[(-FTell() % 4 + 4) % 4] <fgcolor=0xCCCCCC>;
+} StringArrayGroup <bgcolor=0xCCFFCC>;
+
+//------------------------------------------------
+// Item.bin
+
+// ITST, ITS2, ITS3, ITS4
+
+typedef struct
+{
+    int banana;
+    int greenShell;
+    int redShell;
+    int mushroom;
+    int bobOmb;
+    int blooper;
+    int blueShell;
+    int threeMushrooms;
+    int star;
+    int bulletBill;
+    int lightning;
+    int goldMushroom;
+    int fireFlower;
+    int piranhaPlant;
+    int superHorn;
+    int boomerang;
+    int coins;
+    int threeBananas;
+    int threeShells;
+    int threeRedShells;
+    int crazyEight;
+} ItstElement <bgcolor=0xBBFFFF>;
+
+typedef struct(int elementCount)
+{
+    ItstElement probabilities[elementCount];
+} ItstGroup <bgcolor=0xBBFFFF>;
+
+// ITDS Item Distances
+
+typedef struct(int elementCount)
+{
+    int distances[elementCount];
+} ItemDistancesGroup <bgcolor=0xBBFFFF>;
+
+// ITRT
+
+typedef struct
+{
+    int threeMin_3balloons;
+    int threeMin_2balloons;
+    int threeMin_1balloon;
+    int twoMin_3balloons;
+    int twoMin_2balloons;
+    int twoMin_1balloon;
+    int oneMin_3balloons;
+    int oneMin_2balloons;
+    int oneMin_1balloon;
+    int noBalloons;
+} ItrtElement;
+
+typedef struct(int elementCount)
+{
+    ItrtElement elements[elementCount];
+} ItrtGroup <bgcolor=0xBBFFFF>;
+
+//------------------------------------------------
+// Performance.bin
+
+// PRWG, PRAC, PRON, PROF, PRMT
+
+typedef struct
+{
+    float bumped;
+    float bumping;
+    float unknown;
+} PerfWeightElement <bgcolor=0xFFFFBB>;
+
+typedef struct
+{
+    float first;
+    float second;
+} PerfAccelerationElement <bgcolor=0xFFFFBB>;
+
+typedef struct
+{
+    float strength;
+} PerfOuterslipElement <bgcolor=0xFFFFBB>;
+
+typedef struct
+{
+    float weakOffroad;
+    float mediumOffroad;
+    float heavyOffroad;
+} PerfTractionTriplet;
+
+typedef struct
+{
+    PerfTractionTriplet triplet1;
+    PerfTractionTriplet triplet2;
+    PerfTractionTriplet triplet3;
+    PerfTractionTriplet triplet4;
+    PerfTractionTriplet triplet5;
+    PerfTractionTriplet triplet6;
+} PerfTractionElement <bgcolor=0xFFFFBB>;
+
+typedef struct
+{
+    int miniTurboFrames;
+    int superTurboFrames;
+} PerfTurboElement <bgcolor=0xBBFFFF>;
+
+// PRSL, PRSW, PRSA, PRSG
+
+typedef struct
+{
+    float speed;
+    float maxSpeed;
+} PerfSpeedElement <bgcolor=0xBBFFFF>;
+
+typedef struct
+{
+    float speed;
+} PerfSpeedAirElement <bgcolor=0xBBFFFF>;
+
+// PRTL, PRTW, PRTA, PRTG
+
+typedef struct
+{
+    float handling;
+    float drift;
+    float autoDrift;
+} PerfHandlingElement <bgcolor=0xBBFFFF>;
+
+typedef struct
+{
+    float handling;
+    float drift;
+} PerfHandlingAirElement <bgcolor=0xBBFFFF>;
+
+// PTBD, PTDV, PTTR, PTWG
+
+typedef struct
+{
+    int weight;
+    int acceleration;
+    int unknown;
+    int traction;
+    int miniTurbo;
+    int speedGround;
+    int speedWater;
+    int speedAntiGravity;
+    int speedAir;
+    int handlingGround;
+    int handlingWater;
+    int handlingAntiGravity;
+    int handlingAir;
+} PerfPointsElement <bgcolor=0xBBFFFF>;
+
+typedef struct
+{
+    PerfPointsElement standardKart;
+    PerfPointsElement pipeFrame;
+    PerfPointsElement mach8;
+    PerfPointsElement steelDriver;
+    PerfPointsElement catCruiser;
+    PerfPointsElement circuitSpecial;
+    PerfPointsElement triSpeeder;
+    PerfPointsElement badwagon;
+    PerfPointsElement prancer;
+    PerfPointsElement biddybuggy;
+    PerfPointsElement landship;
+    PerfPointsElement sneeker;
+    PerfPointsElement sportsCoupe;
+    PerfPointsElement goldStandard;
+    PerfPointsElement standardBike;
+    PerfPointsElement comet;
+    PerfPointsElement sportBike;
+    PerfPointsElement theDuke;
+    PerfPointsElement flameRider;
+    PerfPointsElement varmint;
+    PerfPointsElement mrScooty;
+    PerfPointsElement jetBike;
+    PerfPointsElement yoshiBike;
+    PerfPointsElement standardAtv;
+    PerfPointsElement wildWiggler;
+    PerfPointsElement teddyBuggy;
+    PerfPointsElement mercGla;
+    PerfPointsElement mercSilverArrow;
+    PerfPointsElement mercSlRoadster;
+    PerfPointsElement blueFalcon;
+    PerfPointsElement tanookiKart;
+    PerfPointsElement bDasher;
+    PerfPointsElement masterCycle;
+    PerfPointsElement unused1;
+    PerfPointsElement unused2;
+    PerfPointsElement streetle;
+    PerfPointsElement pWing;
+    PerfPointsElement cityTripper;
+    PerfPointsElement boneRattler;
+} PerfPointsBodyGroup;
+
+typedef struct
+{
+    PerfPointsElement mario;
+    PerfPointsElement luigi;
+    PerfPointsElement peach;
+    PerfPointsElement daisy;
+    PerfPointsElement yoshi;
+    PerfPointsElement toad;
+    PerfPointsElement toadette;
+    PerfPointsElement koopaTroopa;
+    PerfPointsElement bowser;
+    PerfPointsElement donkeyKong;
+    PerfPointsElement wario;
+    PerfPointsElement waluigi;
+    PerfPointsElement rosalina;
+    PerfPointsElement metalMario;
+    PerfPointsElement pinkGoldPeach;
+    PerfPointsElement lakitu;
+    PerfPointsElement shyGuy;
+    PerfPointsElement babyMario;
+    PerfPointsElement babyLuigi;
+    PerfPointsElement babyPeach;
+    PerfPointsElement babyDaisy;
+    PerfPointsElement babyRosalina;
+    PerfPointsElement larry;
+    PerfPointsElement lemmy;
+    PerfPointsElement wendy;
+    PerfPointsElement ludwig;
+    PerfPointsElement iggy;
+    PerfPointsElement roy;
+    PerfPointsElement morton;
+    PerfPointsElement mii;
+    PerfPointsElement tanookiMario;
+    PerfPointsElement link;
+    PerfPointsElement villagerMale;
+    PerfPointsElement isabelle;
+    PerfPointsElement catPeach;
+    PerfPointsElement dryBowser;
+    PerfPointsElement villagerFemale;
+} PerfPointsDriverGroup <bgcolor=0xBBFFFF>;
+
+typedef struct
+{
+    PerfPointsElement standard;
+    PerfPointsElement monster;
+    PerfPointsElement roller;
+    PerfPointsElement slim;
+    PerfPointsElement slick;
+    PerfPointsElement metal;
+    PerfPointsElement button;
+    PerfPointsElement offRoad;
+    PerfPointsElement sponge;
+    PerfPointsElement wood;
+    PerfPointsElement cushion;
+    PerfPointsElement blueStandard;
+    PerfPointsElement hotMonster;
+    PerfPointsElement azureRoller;
+    PerfPointsElement crimsonSlim;
+    PerfPointsElement cyberSlick;
+    PerfPointsElement retroOffRoad;
+    PerfPointsElement goldTires;
+    PerfPointsElement glaTires;
+    PerfPointsElement triforceTires;
+    PerfPointsElement leafTires;
+} PerfPointsTireGroup <bgcolor=0xBBFFFF>;
+
+typedef struct
+{
+    PerfPointsElement superGlider;
+    PerfPointsElement cloudGlider;
+    PerfPointsElement warioWing;
+    PerfPointsElement waddleWing;
+    PerfPointsElement peachParasol;
+    PerfPointsElement parachute;
+    PerfPointsElement parafoil;
+    PerfPointsElement flowerGlider;
+    PerfPointsElement bowserKite;
+    PerfPointsElement planeGlider;
+    PerfPointsElement mktvParafoil;
+    PerfPointsElement goldGlider;
+    PerfPointsElement hylianKite;
+    PerfPointsElement paperGlider;
+} PerfPointsGliderGroup <bgcolor=0xBBFFFF>;
+
+//------------------------------------------------
+// Main structures
+
+typedef struct
+{
+    char   id[4] <fgcolor=0x0000FF>;
+    int    fileSize; // Might be slightly off
+    short  sectionCount;
+    short  unknown;
+    int    version; // Always seems 0x00001000
+    int    sectionOffsets[sectionCount] <format=hex>;
+} MainHeader <bgcolor=0xBBBBFF, read=MainHeader_Read>;
+
+string MainHeader_Read(MainHeader& v)
+{
+    return v.id;
+}
+
+typedef struct(int sectionSize)
+{
+    char id[4] <fgcolor=0x0000FF>;
+    short elementCount;
+    short groupCount;
+    int typeId;
+
+    switch (typeId)
+    {
+        case 0x00000000:
+            switch (id)
+            {
+                // Item.bin
+                case "ITST": case "ITS2": case "ITS3": case "ITS4":
+                    ItstGroup groups(elementCount)[groupCount] <optimize=true>;
+                    break;
+                case "ITDS":
+                    ItemDistancesGroup groups(elementCount)[groupCount] <optimize=true>;
+                    break;
+                case "ITRT":
+                    ItrtGroup groups(elementCount)[groupCount] <optimize=true>;
+                    break;
+                // Performance.bin
+                case "PRWG":
+                    PerfWeightElement points[elementCount] <optimize=true>;
+                    break;
+                case "PRAC":
+                    PerfAccelerationElement points[elementCount] <optimize=true>;
+                    break;
+                case "PRON":
+                    PerfOuterslipElement points[elementCount] <optimize=true>;
+                    break;
+                case "PROF":
+                    PerfTractionElement points[elementCount] <optimize=true>;
+                    break;
+                case "PRMT":
+                    PerfTurboElement points[elementCount] <optimize=true>;
+                    break;
+                case "PRSL":
+                    PerfSpeedElement pointsGround[elementCount] <optimize=true>;
+                    break;
+                case "PRSW":
+                    PerfSpeedElement pointsWater[elementCount] <optimize=true>;
+                    break;
+                case "PRSA":
+                    PerfSpeedElement pointsAntiGravity[elementCount] <optimize=true>;
+                    break;
+                case "PRSG":
+                    PerfSpeedAirElement pointsAir[elementCount] <optimize=true>;
+                    break;
+                case "PRTL":
+                    PerfHandlingElement pointsGround[elementCount] <optimize=true>;
+                    break;
+                case "PRTW":
+                    PerfHandlingElement pointsWater[elementCount] <optimize=true>;
+                    break;
+                case "PRTA":
+                    PerfHandlingElement pointsAntiGravity[elementCount] <optimize=true>;
+                    break;
+                case "PRTG":
+                    PerfHandlingAirElement pointsAir[elementCount] <optimize=true>;
+                    break;
+                case "PTBD":
+                    PerfPointsBodyGroup perfPointsBodyGroup;
+                    break;
+                case "PTDV":
+                    PerfPointsDriverGroup perfPointsDriverGroup;
+                    break;
+                case "PTTR":
+                    PerfPointsTireGroup perfPointsTireGroup;
+                    break;
+                case "PTWG":
+                    PerfPointsGliderGroup perfPointsGliderGroup;
+                    break;
+                // General
+                default:
+                    // Might also be of float type, but this is uncertain here.
+                    IntArrayGroup groups(elementCount, sectionSize / elementCount / 4)[groupCount] <optimize=true>;
+                    break;
+            }
+            break;
+        case 0x000000A0:
+            StringArrayGroup groups(elementCount) <optimize=false>;
+            break;
+        default:
+            Warning("Unknown section header type ID encountered.");
+            break;
+    }
+} Section <bgcolor=0xDDDDFF, read=Section_Read>;
+
+string Section_Read(Section& v)
+{
+    return v.id;
+}
+
+//------------------------------------------------
+// File Layout
+
+BigEndian();
+
+// Main header.
+MainHeader mainHeader;
+local int64 mainHeaderSize = FTell();
+
+// Sections.
+local int i;
+local int64 dataStart, dataSize, dataEnd;
+for (i = 0; i < mainHeader.sectionCount; i++)
+{
+    // Compute the size of data in this section.
+    dataStart = mainHeaderSize + mainHeader.sectionOffsets[i] + 12/*size of struct header*/;
+    if (i < mainHeader.sectionCount - 1)
+    {
+        dataEnd = mainHeaderSize + mainHeader.sectionOffsets[i + 1];
+    }
+    else
+    {
+        dataEnd = FileSize();
+    }
+    FSeek(mainHeaderSize + mainHeader.sectionOffsets[i]);
+    Section section(dataEnd - dataStart);
+}

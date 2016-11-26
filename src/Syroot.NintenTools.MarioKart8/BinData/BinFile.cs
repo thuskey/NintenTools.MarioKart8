@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
 using System.Text;
 using Syroot.IO;
@@ -7,7 +6,7 @@ using Syroot.IO;
 namespace Syroot.NintenTools.MarioKart8.BinData
 {
     /// <summary>
-    /// Represents the untyped contents of a *.bin file. Such files consist of several <see cref="SectionBase"/>
+    /// Represents the untyped contents of a *.bin file. Such files consist of several <see cref="Section"/>
     /// instances which consist of a set number of groups (sometimes just 1). Those in turn contain several elements,
     /// all of same structure per section.
     /// </summary>
@@ -16,7 +15,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData
     /// which it also determines the size of each such element. Thanks to the main header containing the offsets to each
     /// section, the size of the elements can be computed by this class to provide at least untyped byte arrays.
     /// </remarks>
-    [DebuggerDisplay("BinFile Identifier={Identifier}")]
+    [DebuggerDisplay("{Identifier}")]
     public class BinFile
     {
         // ---- CONSTRUCTORS & DESTRUCTOR ------------------------------------------------------------------------------
@@ -50,24 +49,19 @@ namespace Syroot.NintenTools.MarioKart8.BinData
         public string Identifier { get; set; }
 
         /// <summary>
-        /// Gets the reported size of the file in bytes. Might not be accurate.
-        /// </summary>
-        public int FileSize { get; set; }
-
-        /// <summary>
         /// Gets or sets an unknown value.
         /// </summary>
         public short Unknown { get; set; }
 
         /// <summary>
-        /// Gets or sets the version of the file format. Only 0x1000 is known.
+        /// Gets or sets the version of the file format. Only 1000 is known.
         /// </summary>
         public int Version { get; set; }
 
         /// <summary>
-        /// Gets or sets the <see cref="SectionBase"/> instances following the header.
+        /// Gets or sets the <see cref="Section"/> instances following the header.
         /// </summary>
-        public SectionBase[] Sections { get; set; }
+        public SectionCollection Sections { get; set; }
 
         // ---- METHODS (PRIVATE) --------------------------------------------------------------------------------------
 
@@ -79,21 +73,21 @@ namespace Syroot.NintenTools.MarioKart8.BinData
 
                 // Read the file header providing information about the section count and offsets.
                 Identifier = reader.ReadString(4);
-                FileSize = reader.ReadInt32();
-                Sections = new SectionBase[reader.ReadInt16()];
+                int fileSize = reader.ReadInt32(); // Slightly off at times. Not stored in the class.
+                int sectionCount = reader.ReadInt16();
                 Unknown = reader.ReadInt16();
                 Version = reader.ReadInt32();
-                int[] sectionOffsets = reader.ReadInt32s(Sections.Length); // All possibly 4-byte aligned.
-
-                int fileHeaderSize = (int)reader.Position;
-
+                int[] sectionOffsets = reader.ReadInt32s(sectionCount);
+                
                 // Read in all the sections.
-                for (int i = 0; i < Sections.Length; i++)
+                Sections = new SectionCollection();
+                int fileHeaderSize = (int)reader.Position;
+                for (int i = 0; i < sectionCount; i++)
                 {
                     // Compute the length of the section data (without its header) and instantiate it.
                     int dataStart = fileHeaderSize + sectionOffsets[i] + SectionHeader.SizeInBytes;
                     int dataEnd;
-                    if (i < Sections.Length - 1)
+                    if (i < sectionCount - 1)
                     {
                         dataEnd = fileHeaderSize + sectionOffsets[i + 1];
                     }
@@ -101,26 +95,9 @@ namespace Syroot.NintenTools.MarioKart8.BinData
                     {
                         dataEnd = (int)reader.Length;
                     }
-                    int dataSize = dataEnd - dataStart;
-                    Sections[i] = LoadSection(reader, dataSize);
+                    SectionHeader header = new SectionHeader(reader);
+                    Sections.Add(new Section(reader, header, dataEnd - dataStart));
                 }
-            }
-        }
-
-        private SectionBase LoadSection(BinaryDataReader reader, int dataSize)
-        {
-            // Read the section header.
-            SectionHeader header = new SectionHeader(reader);
-
-            // Instantiate a section of the correct type.
-            switch (header.TypeID)
-            {
-                case IntArraySection.TypeID:
-                    return new IntArraySection(reader, header, dataSize);
-                case StringSection.TypeID:
-                    return new StringSection(reader, header, dataSize);
-                default:
-                    throw new NotImplementedException($"Unknown section type {header.TypeID}.");
             }
         }
     }

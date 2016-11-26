@@ -1,10 +1,13 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using Syroot.IO;
 
 namespace Syroot.NintenTools.MarioKart8.BinData
 {
     /// <summary>
-    /// Represents the header of any <see cref="SectionBase"/> in a <see cref="BinFile"/>, providing the required
+    /// Represents the header of any <see cref="Section"/> in a <see cref="BinFile"/>, providing the required
     /// information to load it into memory.
     /// </summary>
     [DebuggerDisplay("BinSectionHeader Identifier={Identifier}")]
@@ -20,16 +23,16 @@ namespace Syroot.NintenTools.MarioKart8.BinData
         // ---- CONSTRUCTORS & DESTRUCTOR ------------------------------------------------------------------------------
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SectionBase"/> class, read from the given
+        /// Initializes a new instance of the <see cref="Section"/> class, read from the given
         /// <paramref name="reader"/> and having the provided size in bytes.
         /// </summary>
         /// <param name="reader">The <see cref="BinaryDataReader"/> to read the section from.</param>
         public SectionHeader(BinaryDataReader reader)
         {
-            Identifier = reader.ReadString(4);
+            Name = reader.ReadString(4);
             ElementCount = reader.ReadInt16();
             GroupCount = reader.ReadInt16();
-            TypeID = reader.ReadInt32();
+            SectionType = (SectionType)reader.ReadInt32();
         }
 
         // ---- PROPERTIES ---------------------------------------------------------------------------------------------
@@ -37,12 +40,12 @@ namespace Syroot.NintenTools.MarioKart8.BinData
         /// <summary>
         /// Gets or sets a 4 character long ASCII section identifier. It basically determines the type of the entries.
         /// </summary>
-        public string Identifier { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets an unknown value which always seems to be 0.
+        /// Gets or sets a value determining the section data type.
         /// </summary>
-        public int TypeID { get; set; }
+        public SectionType SectionType { get; set; }
 
         /// <summary>
         /// Gets or sets the number of groups this section must have. This number is not enforced in the API, but must

@@ -2,7 +2,7 @@
     "version": "1.0.0-*",
 
     "frameworks": {
-        "net45": {},
+        "net451": {},
         "netcoreapp1.0": {
             "dependencies": {
                 "Microsoft.NETCore.App": {
@@ -15,7 +15,7 @@
     },
 
     "dependencies": {
-        "Syroot.NintenTools.MarioKart8": "0.1.1-alpha"
+        "Syroot.NintenTools.MarioKart8": "0.2.0-alpha"
     },
 
     "buildOptions": {
