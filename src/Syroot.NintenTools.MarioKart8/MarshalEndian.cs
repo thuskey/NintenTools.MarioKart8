@@ -21,7 +21,7 @@ namespace Syroot.NintenTools.MarioKart8
         /// <param name="bytes">The raw bytes to convert.</param>
         /// <param name="byteOrder">The <see cref="ByteOrder"/> to respect.</param>
         /// <returns>The converted structure instance.</returns>
-        public static T BytesToStruct<T>(byte[] bytes, ByteOrder byteOrder) where T : struct
+        public static T BytesToStruct<T>(byte[] bytes, ByteOrder byteOrder)
         {
             AdjustByteOrder(typeof(T), bytes, byteOrder);
             
@@ -40,7 +40,7 @@ namespace Syroot.NintenTools.MarioKart8
         /// <param name="instance">The structure instance to convert.</param>
         /// <param name="byteOrder">The <see cref="ByteOrder"/> to respect.</param>
         /// <returns>The converted byte array.</returns>
-        public static byte[] StructToBytes<T>(T instance, ByteOrder byteOrder) where T : struct
+        public static byte[] StructToBytes<T>(T instance, ByteOrder byteOrder)
         {
             byte[] bytes = new byte[Marshal.SizeOf(instance)];
             GCHandle handle = GCHandle.Alloc(bytes, GCHandleType.Pinned);

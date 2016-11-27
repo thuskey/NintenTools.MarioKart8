@@ -8,7 +8,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
     /// &quot;Performance.bin&quot; file.
     /// </summary>
     [StructLayout(LayoutKind.Explicit, Size = 12, Pack = 1)]
-    public struct WeightStat
+    public class WeightStat
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 

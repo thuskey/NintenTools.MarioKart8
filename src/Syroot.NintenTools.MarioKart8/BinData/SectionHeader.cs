@@ -10,7 +10,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData
     /// Represents the header of any <see cref="Section"/> in a <see cref="BinFile"/>, providing the required
     /// information to load it into memory.
     /// </summary>
-    [DebuggerDisplay("BinSectionHeader Identifier={Identifier}")]
+    [DebuggerDisplay("Name={Name}")]
     public struct SectionHeader
     {
         // ---- CONSTANTS ----------------------------------------------------------------------------------------------

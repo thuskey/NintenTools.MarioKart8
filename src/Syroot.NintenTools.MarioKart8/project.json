@@ -5,7 +5,7 @@
     "language": "en-US",
     "name": "Syroot.NintenTools.MarioKart8",
     "title": "NintenTools.MarioKart8",
-    "version": "0.2.0-alpha",
+    "version": "0.2.0-alpha4",
 
     "packOptions": {
         "iconUrl": "https://raw.githubusercontent.com/Syroot/NintenTools.MarioKart8/master/res/Logo.png",
@@ -52,11 +52,11 @@
                 "xmlDoc": true
             }
         }
-    }
+    },
 
-    //"scripts": {
-    //    "postcompile": [
-    //        "dotnet pack --no-build --configuration %compile:Configuration%"
-    //    ]
-    //}
+    "scripts": {
+        "postcompile": [
+            "dotnet pack --no-build --configuration %compile:Configuration%"
+        ]
+    }
 }

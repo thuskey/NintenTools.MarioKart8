@@ -8,7 +8,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
     /// total points in the PRTG section of the &quot;Performance.bin&quot; file.
     /// </summary>
     [StructLayout(LayoutKind.Explicit, Size = 8, Pack = 1)]
-    public struct HandlingAirStat
+    public class HandlingAirStat
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 

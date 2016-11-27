@@ -48,9 +48,9 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
         public OuterslipStat[] OuterslipStats { get; set; }
 
         /// <summary>
-        /// Gets or sets the 21 <see cref="TractionStat"/> instances.
+        /// Gets or sets the 21 <see cref="OffroadStat"/> instances.
         /// </summary>
-        public TractionStat[] OffroadStats { get; set; }
+        public OffroadStat[] OffroadStats { get; set; }
 
         /// <summary>
         /// Gets or sets the 21 <see cref="TurboStat"/> instances.
@@ -125,7 +125,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
             WeightStats = ((ByteArraysGroup)binFile.Sections["PRWG"].Groups[0]).ToStructArray<WeightStat>();
             AccelerationStats = ((ByteArraysGroup)binFile.Sections["PRAC"].Groups[0]).ToStructArray<AccelerationStat>();
             OuterslipStats = ((ByteArraysGroup)binFile.Sections["PRON"].Groups[0]).ToStructArray<OuterslipStat>();
-            OffroadStats = ((ByteArraysGroup)binFile.Sections["PROF"].Groups[0]).ToStructArray<TractionStat>();
+            OffroadStats = ((ByteArraysGroup)binFile.Sections["PROF"].Groups[0]).ToStructArray<OffroadStat>();
             TurboStats = ((ByteArraysGroup)binFile.Sections["PRMT"].Groups[0]).ToStructArray<TurboStat>();
             SpeedGroundStats = ((ByteArraysGroup)binFile.Sections["PRSL"].Groups[0]).ToStructArray<SpeedStat>();
             SpeedWaterStats = ((ByteArraysGroup)binFile.Sections["PRSW"].Groups[0]).ToStructArray<SpeedStat>();

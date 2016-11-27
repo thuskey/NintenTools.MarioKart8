@@ -8,7 +8,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
     /// &quot;Performance.bin&quot; file.
     /// </summary>
     [StructLayout(LayoutKind.Explicit, Size = 4, Pack = 1)]
-    public struct OuterslipStat
+    public class OuterslipStat
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
         /// The strength of the outerslip.
         /// </summary>
         [FieldOffset(0)]
-        public float Strength;
+        public float Factor;
         
         // ---- OPERATORS ----------------------------------------------------------------------------------------------
 
@@ -31,7 +31,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
             {
                 switch (index)
                 {
-                    case 0: return Strength;
+                    case 0: return Factor;
                     default: throw new ArgumentOutOfRangeException(nameof(index));
                 }
             }
@@ -39,7 +39,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
             {
                 switch (index)
                 {
-                    case 0: Strength = value; break;
+                    case 0: Factor = value; break;
                     default: throw new ArgumentOutOfRangeException(nameof(index));
                 }
             }

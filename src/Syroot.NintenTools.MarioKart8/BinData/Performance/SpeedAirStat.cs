@@ -8,7 +8,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
     /// &quot;Performance.bin&quot; file.
     /// </summary>
     [StructLayout(LayoutKind.Explicit, Size = 4, Pack = 1)]
-    public struct SpeedAirStat
+    public class SpeedAirStat
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 

@@ -17,7 +17,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData
         /// </summary>
         /// <typeparam name="T">The type of the struct to convert to.</typeparam>
         /// <returns>An array of struct instances created from the byte array elements.</returns>
-        public T[] ToStructArray<T>() where T : struct
+        public T[] ToStructArray<T>()
         {
             T[] structs = new T[Elements.Count];
 

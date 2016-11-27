@@ -7,7 +7,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
     /// Represents the set of points a driver, kart body, wheel or glider provides to the sum of performance points.
     /// </summary>
     [StructLayout(LayoutKind.Explicit, Size = 52, Pack = 1)]
-    public struct PointSet
+    public class PointSet
     {
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
