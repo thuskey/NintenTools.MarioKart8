@@ -15,8 +15,8 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 
         public HandlingAirDataGridView()
         {
-            AddColumn("Auto-Drift");
-            AddColumn("Drift");
+            AddColumn("Roll");
+            AddColumn("Move");
             AddPointRankRows();
         }
 

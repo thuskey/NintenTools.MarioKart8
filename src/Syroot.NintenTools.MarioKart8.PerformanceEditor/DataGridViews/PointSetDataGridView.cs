@@ -23,7 +23,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 
             AddColumn("Weight");
             AddColumn("Acceleration");
-            AddColumn("Unknown");
+            AddColumn("Outerslip");
             AddColumn("Traction");
             AddColumn("Turbo");
             AddColumn($"Speed{Environment.NewLine}Ground");

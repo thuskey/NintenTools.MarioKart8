@@ -24,10 +24,10 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
         public int Acceleration;
 
         /// <summary>
-        /// The points attributed to an unknown value.
+        /// The points attributed to outerslip.
         /// </summary>
         [FieldOffset(8)]
-        public int Unknown;
+        public int Outerslip;
 
         /// <summary>
         /// The points attributed to traction.
@@ -104,7 +104,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
                 {
                     case 0: return Weight;
                     case 1: return Acceleration;
-                    case 2: return Unknown;
+                    case 2: return Outerslip;
                     case 3: return Traction;
                     case 4: return MiniTurbo;
                     case 5: return SpeedGround;
@@ -124,7 +124,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
                 {
                     case 0: Weight = value; break;
                     case 1: Acceleration = value; break;
-                    case 2: Unknown = value; break;
+                    case 2: Outerslip = value; break;
                     case 3: Traction = value; break;
                     case 4: MiniTurbo = value; break;
                     case 5: SpeedGround = value; break;

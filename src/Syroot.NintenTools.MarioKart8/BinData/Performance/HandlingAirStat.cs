@@ -13,16 +13,16 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
         // ---- MEMBERS ------------------------------------------------------------------------------------------------
 
         /// <summary>
-        /// The highest turn rate achievable when not drifting.
+        /// The highest turn rate achievable when rolling.
         /// </summary>
         [FieldOffset(0)]
-        public float Normal;
+        public float Roll;
 
         /// <summary>
-        /// The highest turn rate achievable when drifting.
+        /// The highest turn rate achievable when moving.
         /// </summary>
         [FieldOffset(4)]
-        public float Drift;
+        public float Move;
         
         // ---- OPERATORS ----------------------------------------------------------------------------------------------
 
@@ -37,8 +37,8 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
             {
                 switch (index)
                 {
-                    case 0: return Normal;
-                    case 1: return Drift;
+                    case 0: return Roll;
+                    case 1: return Move;
                     default: throw new ArgumentOutOfRangeException(nameof(index));
                 }
             }
@@ -46,8 +46,8 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
             {
                 switch (index)
                 {
-                    case 0: Normal = value; break;
-                    case 1: Drift = value; break;
+                    case 0: Roll = value; break;
+                    case 1: Move = value; break;
                     default: throw new ArgumentOutOfRangeException(nameof(index));
                 }
             }
