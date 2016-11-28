@@ -52,6 +52,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
         {
             if (_controller.PerformanceData == null)
             {
+                Text = Application.ProductName;
                 _btSave.Enabled = false;
                 _btSaveAs.Enabled = false;
                 _ccPhysics.Enabled = false;
@@ -62,6 +63,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             }
             else
             {
+                Text = $"{_controller.FileName} - {Application.ProductName}";
                 _btSave.Enabled = true;
                 _btSaveAs.Enabled = true;
                 _ccPhysics.Enabled = true;
@@ -75,7 +77,8 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 
         private void _btNew_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("This feature is coming soon.", Application.ProductName, MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
 
         private void _btOpen_Click(object sender, EventArgs e)
@@ -84,7 +87,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             {
                 openFileDialog.Title = "Open File";
                 openFileDialog.FileName = _controller.FileName;
-                openFileDialog.Filter = "Performance Files|performance.bin|All BIN Files|*.bin|All Files|*.*";
+                openFileDialog.Filter = "All BIN Files|*.bin|All Files|*.*";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     _controller.OpenFile(openFileDialog.FileName);
@@ -103,10 +106,111 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             {
                 saveFileDialog.Title = "Save File";
                 saveFileDialog.FileName = _controller.FileName;
-                saveFileDialog.Filter = "Performance.bin Files|performance.bin|All BIN Files|*.bin|All Files|*.*";
+                saveFileDialog.Filter = "All BIN Files|*.bin|All Files|*.*";
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     _controller.SaveFile(saveFileDialog.FileName);
+                }
+            }
+        }
+
+        private void _cmsGridAdd_Click(object sender, EventArgs e)
+        {
+            DataGridView dataGridView = _cmsGrid.SourceControl as DataGridView;
+            bool isFloatGrid = dataGridView is FloatSectionDataGridView;
+
+            float? value = FormCalculation.Show("Add", isFloatGrid, 0);
+            if (value != null)
+            {
+                if (isFloatGrid)
+                {
+                    foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+                    {
+                        cell.Value = (float)cell.Value + value;
+                    }
+                }
+                else
+                {
+                    foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+                    {
+                        cell.Value = (int)cell.Value + (int)value;
+                    }
+                }
+            }
+        }
+
+        private void _cmsGridSubtract_Click(object sender, EventArgs e)
+        {
+            DataGridView dataGridView = _cmsGrid.SourceControl as DataGridView;
+            bool isFloatGrid = dataGridView is FloatSectionDataGridView;
+
+            float? value = FormCalculation.Show("Subtract", isFloatGrid, 0);
+            if (value != null)
+            {
+                if (isFloatGrid)
+                {
+                    foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+                    {
+                        cell.Value = (float)cell.Value - value;
+                    }
+                }
+                else
+                {
+                    foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+                    {
+                        cell.Value = (int)cell.Value - (int)value;
+                    }
+                }
+            }
+
+        }
+
+        private void _cmsGridMultiply_Click(object sender, EventArgs e)
+        {
+            DataGridView dataGridView = _cmsGrid.SourceControl as DataGridView;
+            bool isFloatGrid = dataGridView is FloatSectionDataGridView;
+
+            float? value = FormCalculation.Show("Multiply", isFloatGrid, 0);
+            if (value != null)
+            {
+                if (isFloatGrid)
+                {
+                    foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+                    {
+                        cell.Value = (float)cell.Value * value;
+                    }
+                }
+                else
+                {
+                    foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+                    {
+                        cell.Value = (int)cell.Value * (int)value;
+                    }
+                }
+            }
+        }
+
+        private void _cmsGridDivide_Click(object sender, EventArgs e)
+        {
+            DataGridView dataGridView = _cmsGrid.SourceControl as DataGridView;
+            bool isFloatGrid = dataGridView is FloatSectionDataGridView;
+
+            float? value = FormCalculation.Show("Divide", isFloatGrid, 0);
+            if (value != null)
+            {
+                if (isFloatGrid)
+                {
+                    foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+                    {
+                        cell.Value = (float)cell.Value / value;
+                    }
+                }
+                else
+                {
+                    foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+                    {
+                        cell.Value = (int)cell.Value / (int)value;
+                    }
                 }
             }
         }

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace Syroot.NintenTools.MarioKart8.BinData.Performance
 {
@@ -117,6 +118,47 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
         /// </summary>
         public GliderPoints GliderPoints { get; set; }
 
+        // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Saves the data into the file with the given name.
+        /// </summary>
+        /// <param name="fileName">The name of the file in which the data will be stored.</param>
+        public void Save(string fileName)
+        {
+            using (FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                Save(stream);
+            }
+        }
+
+        /// <summary>
+        /// Saves the data into the the given stream.
+        /// </summary>
+        /// <param name="stream">The stream in which the data will be stored.</param>
+        public void Save(Stream stream)
+        {
+            BinFile binFile = new BinFile("PERF", 84, 1000);
+            binFile.Sections.Add(CreateSection("PRWG", WeightStats));
+            binFile.Sections.Add(CreateSection("PRAC", AccelerationStats));
+            binFile.Sections.Add(CreateSection("PRON", OuterslipStats));
+            binFile.Sections.Add(CreateSection("PROF", OffroadStats));
+            binFile.Sections.Add(CreateSection("PRMT", TurboStats));
+            binFile.Sections.Add(CreateSection("PRSL", SpeedGroundStats));
+            binFile.Sections.Add(CreateSection("PRSW", SpeedWaterStats));
+            binFile.Sections.Add(CreateSection("PRSA", SpeedAntigravityStats));
+            binFile.Sections.Add(CreateSection("PRSG", SpeedAirStats));
+            binFile.Sections.Add(CreateSection("PRTL", HandlingGroundStats));
+            binFile.Sections.Add(CreateSection("PRTW", HandlingWaterStats));
+            binFile.Sections.Add(CreateSection("PRTA", HandlingAntigravityStats));
+            binFile.Sections.Add(CreateSection("PRTG", HandlingAirStats));
+            binFile.Sections.Add(CreateSection("PTBD", KartPoints.ToPointSetArray()));
+            binFile.Sections.Add(CreateSection("PTDV", DriverPoints.ToPointSetArray()));
+            binFile.Sections.Add(CreateSection("PTTR", TirePoints.ToPointSetArray()));
+            binFile.Sections.Add(CreateSection("PTWG", GliderPoints.ToPointSetArray()));
+            binFile.Save(stream);
+        }
+
         // ---- METHODS (PRIVATE) --------------------------------------------------------------------------------------
 
         private void Load(Stream stream)
@@ -139,6 +181,15 @@ namespace Syroot.NintenTools.MarioKart8.BinData.Performance
             DriverPoints = new DriverPoints((ByteArraysGroup)binFile.Sections["PTDV"].Groups[0]);
             TirePoints = new TirePoints((ByteArraysGroup)binFile.Sections["PTTR"].Groups[0]);
             GliderPoints = new GliderPoints((ByteArraysGroup)binFile.Sections["PTWG"].Groups[0]);
+        }
+
+        private Section CreateSection<T>(string name, T[] instances)
+        {
+            Section section = new Section(name, SectionType.ByteArrays);
+            ByteArraysGroup group = new ByteArraysGroup();
+            group.FromStructArray(instances);
+            section.Groups.Add(group);
+            return section;
         }
     }
 }

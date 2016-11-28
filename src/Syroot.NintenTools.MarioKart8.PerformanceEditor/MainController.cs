@@ -34,14 +34,15 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 
         internal void OpenFile(string fileName)
         {
+            FileName = fileName;
             PerformanceData = new PerformanceData(fileName);
             FileChanged?.Invoke(this, EventArgs.Empty);
         }
 
         internal void SaveFile(string fileName)
         {
-            //PerformanceData = new PerformanceData(fileName);
-            //FileChanged?.Invoke(this, EventArgs.Empty);
+            PerformanceData.Save(fileName);
+            OpenFile(fileName);
         }
     }
 }

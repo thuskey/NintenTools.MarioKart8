@@ -15,7 +15,8 @@
         public PointSetCollection(ByteArraysGroup group)
         {
             PointSet[] pointSets = group.ToStructArray<PointSet>();
-            for (int i = 0; i < pointSets.Length; i++)
+            PointSetCount = pointSets.Length;
+            for (int i = 0; i < PointSetCount; i++)
             {
                 this[i] = pointSets[i];
             }
@@ -31,6 +32,33 @@
         public abstract PointSet this[int index]
         {
             get; set;
+        }
+
+        // ---- PROPERTIES ---------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Gets or sets the number of <see cref="PointSet"/> instances.
+        /// </summary>
+        public int PointSetCount
+        {
+            get;
+            private set;
+        }
+
+        // ---- METHODS (INTERNAL) -------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Converts the data found in this collection back to a <see cref="PointSet"/> array.
+        /// </summary>
+        /// <returns>The <see cref="PointSet"/> array.</returns>
+        internal PointSet[] ToPointSetArray()
+        {
+            PointSet[] pointSets = new PointSet[PointSetCount];
+            for (int i = 0; i < pointSets.Length; i++)
+            {
+                pointSets[i] = this[i];
+            }
+            return pointSets;
         }
     }
 }

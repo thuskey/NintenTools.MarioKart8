@@ -33,12 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Logo.ico</ApplicationIcon>
+    <ApplicationIcon>Properties\Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Syroot.IO.BinaryData, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syroot.IO.BinaryData.1.0.3\lib\net45\Syroot.IO.BinaryData.dll</HintPath>
+    <Reference Include="Syroot.IO.BinaryData, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syroot.IO.BinaryData.1.1.0\lib\net45\Syroot.IO.BinaryData.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syroot.Maths, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -49,13 +49,15 @@
       <HintPath>..\..\packages\Syroot.NintenTools.Byaml.2.0.0\lib\net45\Syroot.NintenTools.Byaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Syroot.NintenTools.MarioKart8, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syroot.NintenTools.MarioKart8.0.2.1-alpha1\lib\net451\Syroot.NintenTools.MarioKart8.dll</HintPath>
+    <Reference Include="Syroot.NintenTools.MarioKart8, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syroot.NintenTools.MarioKart8.0.3.0-alpha4\lib\net451\Syroot.NintenTools.MarioKart8.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryControl.cs">
@@ -127,11 +129,22 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCalculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalculation.Designer.cs">
+      <DependentUpon>FormCalculation.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisualStudioColorTable.cs" />
+    <Compile Include="VisualStudioRenderer.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalculation.resx">
+      <DependentUpon>FormCalculation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -158,7 +171,11 @@
     <None Include="Properties\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Logo.ico" />
+    <Content Include="Properties\Logo.ico" />
+    <None Include="Properties\Resources\Multiply.png" />
+    <None Include="Properties\Resources\Add.png" />
+    <None Include="Properties\Resources\Subtract.png" />
+    <None Include="Properties\Resources\Divide.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

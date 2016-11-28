@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
 using Syroot.IO;
 
 namespace Syroot.NintenTools.MarioKart8.BinData
@@ -11,7 +11,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData
     public class ByteArraysGroup : GroupBase<byte[]>
     {
         // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
-        
+
         /// <summary>
         /// Converts the byte arrays to a struct with fixed format.
         /// </summary>
@@ -29,6 +29,42 @@ namespace Syroot.NintenTools.MarioKart8.BinData
             }
 
             return structs;
+        }
+
+        /// <summary>
+        /// Converts the given array with a structure of fixed format to the data of this byte array.
+        /// </summary>
+        /// <typeparam name="T">The type of the struct to convert to.</typeparam>
+        public void FromStructArray<T>(T[] instances)
+        {
+            Elements = new List<byte[]>(instances.Length);
+            foreach (T instance in instances)
+            {
+                Elements.Add(MarshalEndian.StructToBytes<T>(instance, ByteOrder.BigEndian));
+            }
+        }
+
+        /// <summary>
+        /// Gets the raw data of this group as a byte array.
+        /// </summary>
+        /// <returns>The data of this group.</returns>
+        public override byte[] GetData()
+        {
+            int size = 0;
+            for (int i = 0; i < Elements.Count; i++)
+            {
+                size += Elements[i].Length;
+            }
+
+            byte[] data = new byte[size];
+            int offset = 0;
+            for (int i = 0; i < Elements.Count; i++)
+            {
+                Buffer.BlockCopy(Elements[i], 0, data, offset, Elements[i].Length);
+                offset += Elements[i].Length;
+            }
+
+            return data;
         }
 
         // ---- METHODS (PROTECTED INTERNAL) ---------------------------------------------------------------------------

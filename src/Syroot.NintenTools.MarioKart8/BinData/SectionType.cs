@@ -56,6 +56,7 @@ namespace Syroot.NintenTools.MarioKart8.BinData
             }
             else
             {
+                // TODO: This might be instantiated as a raw byte array "section".
                 throw new InvalidDataException($"Cannot instantiate unknown section type {sectionType}.");
             }
         }

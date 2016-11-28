@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -202,6 +203,90 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle172 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle173 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle174 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle175 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle176 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle177 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle178 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle179 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle180 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle181 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle182 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle183 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle184 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle185 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle186 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle187 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle188 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle189 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle190 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle191 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle192 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle193 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle194 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle195 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle196 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle197 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle198 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle199 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle200 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle201 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle202 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle203 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle204 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle205 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle206 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle207 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle208 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle209 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle210 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle211 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle212 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle213 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle214 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle215 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle216 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle217 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle218 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle219 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle220 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle221 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle222 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle223 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle224 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle225 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle226 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle227 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle228 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle229 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle230 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle231 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle232 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle233 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle234 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle235 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle236 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle237 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle238 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle239 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle240 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle241 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle242 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle243 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle244 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle245 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle246 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle247 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle248 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle249 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle250 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle251 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle252 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle253 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle254 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle255 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle256 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle257 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle258 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -270,9 +355,6 @@
             this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._ccMain = new Syroot.NintenTools.MarioKart8.PerformanceEditor.CategoryControl();
-            this._ccPoints = new Syroot.NintenTools.MarioKart8.PerformanceEditor.CategoryControl();
-            this._dgvPointsKarts = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PointKartsDataGridView();
             this.dataGridViewTextBoxColumn208 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn209 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn210 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -286,7 +368,6 @@
             this.dataGridViewTextBoxColumn218 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn219 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn220 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvPointsDrivers = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PointDriversDataGridView();
             this.dataGridViewTextBoxColumn221 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn222 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn223 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -300,39 +381,26 @@
             this.dataGridViewTextBoxColumn231 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn232 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn233 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._ccHandling = new Syroot.NintenTools.MarioKart8.PerformanceEditor.CategoryControl();
-            this._dgvHandlingGliding = new Syroot.NintenTools.MarioKart8.PerformanceEditor.HandlingAirDataGridView();
             this.dataGridViewTextBoxColumn234 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn235 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvHandlingAntigravity = new Syroot.NintenTools.MarioKart8.PerformanceEditor.HandlingDataGridView();
             this.dataGridViewTextBoxColumn236 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn237 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn238 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvHandlingWater = new Syroot.NintenTools.MarioKart8.PerformanceEditor.HandlingDataGridView();
             this.dataGridViewTextBoxColumn239 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn240 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn241 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvHandlingGround = new Syroot.NintenTools.MarioKart8.PerformanceEditor.HandlingDataGridView();
             this.dataGridViewTextBoxColumn242 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn243 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn244 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._ccSpeed = new Syroot.NintenTools.MarioKart8.PerformanceEditor.CategoryControl();
-            this._dgvSpeedGliding = new Syroot.NintenTools.MarioKart8.PerformanceEditor.SpeedAirDataGridView();
             this.dataGridViewTextBoxColumn245 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvSpeedAntigravity = new Syroot.NintenTools.MarioKart8.PerformanceEditor.SpeedDataGridView();
             this.dataGridViewTextBoxColumn246 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn247 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvSpeedWater = new Syroot.NintenTools.MarioKart8.PerformanceEditor.SpeedDataGridView();
             this.dataGridViewTextBoxColumn248 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn249 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvSpeedGround = new Syroot.NintenTools.MarioKart8.PerformanceEditor.SpeedDataGridView();
             this.dataGridViewTextBoxColumn250 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn251 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._ccPhysics = new Syroot.NintenTools.MarioKart8.PerformanceEditor.CategoryControl();
-            this._dgvPhysicsTurbo = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsTurboDataGridView();
             this.dataGridViewTextBoxColumn252 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn253 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvPhysicsOffroadSlip = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsOffroadSlipDataGridView();
             this.dataGridViewTextBoxColumn254 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn255 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn256 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -342,7 +410,6 @@
             this.dataGridViewTextBoxColumn260 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn261 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn262 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvPhysicsOffroadBrake = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsOffroadBrakeDataGridView();
             this.dataGridViewTextBoxColumn263 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn264 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn265 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -352,20 +419,12 @@
             this.dataGridViewTextBoxColumn269 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn270 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn271 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvPhysicsOuterslip = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsOuterslipDataGridView();
             this.dataGridViewTextBoxColumn272 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvPhysicsAcceleration = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsAccelerationDataGridView();
             this.dataGridViewTextBoxColumn273 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn274 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvPhysicsWeight = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsWeightDataGridView();
             this.dataGridViewTextBoxColumn275 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn276 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn277 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._tlpFile = new System.Windows.Forms.TableLayoutPanel();
-            this._btSaveAs = new System.Windows.Forms.Button();
-            this._btSave = new System.Windows.Forms.Button();
-            this._btOpen = new System.Windows.Forms.Button();
-            this._btNew = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn138 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn139 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn140 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -506,7 +565,6 @@
             this.dataGridViewTextBoxColumn135 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn136 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn137 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvPointsTires = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PointTiresDataGridView();
             this.dataGridViewTextBoxColumn278 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn279 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn280 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -520,7 +578,6 @@
             this.dataGridViewTextBoxColumn288 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn289 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn290 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._dgvPointsGliders = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PointGlidersDataGridView();
             this.dataGridViewTextBoxColumn291 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn292 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn293 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -534,8 +591,236 @@
             this.dataGridViewTextBoxColumn301 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn302 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn303 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._cmsGrid = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this._cmsGridAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this._cmsGridSubtract = new System.Windows.Forms.ToolStripMenuItem();
+            this._cmsGridMultiply = new System.Windows.Forms.ToolStripMenuItem();
+            this._cmsGridDivide = new System.Windows.Forms.ToolStripMenuItem();
+            this._ccMain = new Syroot.NintenTools.MarioKart8.PerformanceEditor.CategoryControl();
+            this._ccPoints = new Syroot.NintenTools.MarioKart8.PerformanceEditor.CategoryControl();
+            this._dgvPointsGliders = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PointGlidersDataGridView();
+            this.dataGridViewTextBoxColumn400 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn401 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn402 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn403 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn404 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn405 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn406 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn407 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn408 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn409 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn410 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn411 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn412 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvPointsTires = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PointTiresDataGridView();
+            this.dataGridViewTextBoxColumn413 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn414 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn415 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn416 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn417 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn418 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn419 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn420 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn421 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn422 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn423 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn424 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn425 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvPointsKarts = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PointKartsDataGridView();
+            this.dataGridViewTextBoxColumn426 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn427 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn428 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn429 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn430 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn431 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn432 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn433 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn434 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn435 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn436 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn437 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn438 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvPointsDrivers = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PointDriversDataGridView();
+            this.dataGridViewTextBoxColumn439 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn440 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn441 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn442 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn443 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn444 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn445 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn446 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn447 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn448 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn449 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn450 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn451 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._ccHandling = new Syroot.NintenTools.MarioKart8.PerformanceEditor.CategoryControl();
+            this._dgvHandlingGliding = new Syroot.NintenTools.MarioKart8.PerformanceEditor.HandlingAirDataGridView();
+            this.dataGridViewTextBoxColumn452 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn453 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvHandlingAntigravity = new Syroot.NintenTools.MarioKart8.PerformanceEditor.HandlingDataGridView();
+            this.dataGridViewTextBoxColumn454 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn455 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn456 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvHandlingWater = new Syroot.NintenTools.MarioKart8.PerformanceEditor.HandlingDataGridView();
+            this.dataGridViewTextBoxColumn457 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn458 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn459 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvHandlingGround = new Syroot.NintenTools.MarioKart8.PerformanceEditor.HandlingDataGridView();
+            this.dataGridViewTextBoxColumn460 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn461 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn462 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._ccSpeed = new Syroot.NintenTools.MarioKart8.PerformanceEditor.CategoryControl();
+            this._dgvSpeedGliding = new Syroot.NintenTools.MarioKart8.PerformanceEditor.SpeedAirDataGridView();
+            this.dataGridViewTextBoxColumn463 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvSpeedAntigravity = new Syroot.NintenTools.MarioKart8.PerformanceEditor.SpeedDataGridView();
+            this.dataGridViewTextBoxColumn464 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn465 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvSpeedWater = new Syroot.NintenTools.MarioKart8.PerformanceEditor.SpeedDataGridView();
+            this.dataGridViewTextBoxColumn466 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn467 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvSpeedGround = new Syroot.NintenTools.MarioKart8.PerformanceEditor.SpeedDataGridView();
+            this.dataGridViewTextBoxColumn468 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn469 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._ccPhysics = new Syroot.NintenTools.MarioKart8.PerformanceEditor.CategoryControl();
+            this._dgvPhysicsTurbo = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsTurboDataGridView();
+            this.dataGridViewTextBoxColumn470 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn471 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvPhysicsOffroadSlip = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsOffroadSlipDataGridView();
+            this.dataGridViewTextBoxColumn472 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn473 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn474 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn475 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn476 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn477 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn478 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn479 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn480 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvPhysicsOffroadBrake = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsOffroadBrakeDataGridView();
+            this.dataGridViewTextBoxColumn481 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn482 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn483 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn484 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn485 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn486 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn487 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn488 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn489 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvPhysicsOuterslip = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsOuterslipDataGridView();
+            this.dataGridViewTextBoxColumn490 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvPhysicsAcceleration = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsAccelerationDataGridView();
+            this.dataGridViewTextBoxColumn491 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn492 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._dgvPhysicsWeight = new Syroot.NintenTools.MarioKart8.PerformanceEditor.PhysicsWeightDataGridView();
+            this.dataGridViewTextBoxColumn493 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn494 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn495 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._tlpFile = new System.Windows.Forms.TableLayoutPanel();
+            this._btSaveAs = new System.Windows.Forms.Button();
+            this._btSave = new System.Windows.Forms.Button();
+            this._btOpen = new System.Windows.Forms.Button();
+            this._btNew = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn304 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn305 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn306 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn307 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn308 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn309 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn310 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn311 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn312 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn313 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn314 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn315 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn316 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn317 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn318 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn319 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn320 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn321 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn322 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn323 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn324 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn325 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn326 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn327 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn328 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn329 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn330 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn331 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn332 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn333 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn334 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn335 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn336 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn337 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn338 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn339 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn340 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn341 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn342 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn343 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn344 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn345 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn346 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn347 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn348 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn349 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn350 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn351 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn352 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn353 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn354 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn355 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn356 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn357 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn358 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn359 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn360 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn361 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn362 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn363 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn364 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn365 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn366 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn367 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn368 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn369 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn370 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn371 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn372 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn373 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn374 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn375 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn376 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn377 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn378 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn379 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn380 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn381 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn382 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn383 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn384 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn385 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn386 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn387 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn388 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn389 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn390 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn391 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn392 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn393 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn394 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn395 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn396 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn397 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn398 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn399 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._cmsGrid.SuspendLayout();
             this._ccMain.SuspendLayout();
             this._ccPoints.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvPointsGliders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvPointsTires)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._dgvPointsKarts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._dgvPointsDrivers)).BeginInit();
             this._ccHandling.SuspendLayout();
@@ -556,8 +841,6 @@
             ((System.ComponentModel.ISupportInitialize)(this._dgvPhysicsAcceleration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._dgvPhysicsWeight)).BeginInit();
             this._tlpFile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._dgvPointsTires)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._dgvPointsGliders)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewTextBoxColumn4
@@ -1052,57 +1335,6 @@
             this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
             this.dataGridViewTextBoxColumn67.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // _ccMain
-            // 
-            this._ccMain.BackColor = System.Drawing.Color.White;
-            this._ccMain.Controls.Add(this._ccPoints);
-            this._ccMain.Controls.Add(this._ccHandling);
-            this._ccMain.Controls.Add(this._ccSpeed);
-            this._ccMain.Controls.Add(this._ccPhysics);
-            this._ccMain.Controls.Add(this._tlpFile);
-            this._ccMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._ccMain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._ccMain.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this._ccMain.HeaderDisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this._ccMain.HeaderForeColor = System.Drawing.Color.White;
-            this._ccMain.HeaderHoveredBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this._ccMain.HeaderSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(200)))));
-            this._ccMain.Location = new System.Drawing.Point(0, 0);
-            this._ccMain.Margin = new System.Windows.Forms.Padding(0);
-            this._ccMain.Name = "_ccMain";
-            this._ccMain.SelectedControl = this._tlpFile;
-            this._ccMain.Size = new System.Drawing.Size(984, 561);
-            this._ccMain.TabIndex = 2;
-            // 
-            // _ccPoints
-            // 
-            this._ccPoints.Controls.Add(this._dgvPointsGliders);
-            this._ccPoints.Controls.Add(this._dgvPointsTires);
-            this._ccPoints.Controls.Add(this._dgvPointsKarts);
-            this._ccPoints.Controls.Add(this._dgvPointsDrivers);
-            this._ccPoints.Enabled = false;
-            this._ccPoints.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._ccPoints.HeaderDisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this._ccPoints.HeaderForeColor = System.Drawing.Color.White;
-            this._ccPoints.HeaderHoveredBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this._ccPoints.HeaderSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this._ccPoints.Location = new System.Drawing.Point(784, 30);
-            this._ccPoints.Margin = new System.Windows.Forms.Padding(0);
-            this._ccPoints.Name = "_ccPoints";
-            this._ccPoints.SelectedControl = this._dgvPointsDrivers;
-            this._ccPoints.Size = new System.Drawing.Size(200, 531);
-            this._ccPoints.TabIndex = 8;
-            this._ccMain.SetTitle(this._ccPoints, "Points");
-            // 
-            // _dgvPointsKarts
-            // 
-            this._dgvPointsKarts.Location = new System.Drawing.Point(0, 105);
-            this._dgvPointsKarts.Name = "_dgvPointsKarts";
-            this._dgvPointsKarts.RowTemplate.Height = 30;
-            this._dgvPointsKarts.Size = new System.Drawing.Size(200, 75);
-            this._dgvPointsKarts.TabIndex = 1;
-            this._ccPoints.SetTitle(this._dgvPointsKarts, "Karts");
-            // 
             // dataGridViewTextBoxColumn208
             // 
             this.dataGridViewTextBoxColumn208.HeaderText = "Weight";
@@ -1180,15 +1412,6 @@
             this.dataGridViewTextBoxColumn220.HeaderText = "Handling\r\nGliding";
             this.dataGridViewTextBoxColumn220.Name = "dataGridViewTextBoxColumn220";
             this.dataGridViewTextBoxColumn220.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _dgvPointsDrivers
-            // 
-            this._dgvPointsDrivers.Location = new System.Drawing.Point(0, 30);
-            this._dgvPointsDrivers.Name = "_dgvPointsDrivers";
-            this._dgvPointsDrivers.RowTemplate.Height = 30;
-            this._dgvPointsDrivers.Size = new System.Drawing.Size(200, 75);
-            this._dgvPointsDrivers.TabIndex = 0;
-            this._ccPoints.SetTitle(this._dgvPointsDrivers, "Drivers");
             // 
             // dataGridViewTextBoxColumn221
             // 
@@ -1268,35 +1491,6 @@
             this.dataGridViewTextBoxColumn233.Name = "dataGridViewTextBoxColumn233";
             this.dataGridViewTextBoxColumn233.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // _ccHandling
-            // 
-            this._ccHandling.Controls.Add(this._dgvHandlingGliding);
-            this._ccHandling.Controls.Add(this._dgvHandlingAntigravity);
-            this._ccHandling.Controls.Add(this._dgvHandlingWater);
-            this._ccHandling.Controls.Add(this._dgvHandlingGround);
-            this._ccHandling.Enabled = false;
-            this._ccHandling.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._ccHandling.HeaderDisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this._ccHandling.HeaderForeColor = System.Drawing.Color.White;
-            this._ccHandling.HeaderHoveredBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this._ccHandling.HeaderSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this._ccHandling.Location = new System.Drawing.Point(584, 30);
-            this._ccHandling.Margin = new System.Windows.Forms.Padding(0);
-            this._ccHandling.Name = "_ccHandling";
-            this._ccHandling.SelectedControl = this._dgvHandlingGround;
-            this._ccHandling.Size = new System.Drawing.Size(200, 531);
-            this._ccHandling.TabIndex = 7;
-            this._ccMain.SetTitle(this._ccHandling, "Handling");
-            // 
-            // _dgvHandlingGliding
-            // 
-            this._dgvHandlingGliding.Location = new System.Drawing.Point(0, 255);
-            this._dgvHandlingGliding.Name = "_dgvHandlingGliding";
-            this._dgvHandlingGliding.RowTemplate.Height = 30;
-            this._dgvHandlingGliding.Size = new System.Drawing.Size(200, 75);
-            this._dgvHandlingGliding.TabIndex = 3;
-            this._ccHandling.SetTitle(this._dgvHandlingGliding, "Gliding");
-            // 
             // dataGridViewTextBoxColumn234
             // 
             dataGridViewCellStyle49.Format = "0.0000";
@@ -1312,16 +1506,6 @@
             this.dataGridViewTextBoxColumn235.HeaderText = "Drift";
             this.dataGridViewTextBoxColumn235.Name = "dataGridViewTextBoxColumn235";
             this.dataGridViewTextBoxColumn235.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _dgvHandlingAntigravity
-            // 
-            this._dgvHandlingAntigravity.Location = new System.Drawing.Point(0, 180);
-            this._dgvHandlingAntigravity.Name = "_dgvHandlingAntigravity";
-            this._dgvHandlingAntigravity.RowTemplate.Height = 30;
-            this._dgvHandlingAntigravity.SectionToDisplay = "PRTA";
-            this._dgvHandlingAntigravity.Size = new System.Drawing.Size(200, 75);
-            this._dgvHandlingAntigravity.TabIndex = 2;
-            this._ccHandling.SetTitle(this._dgvHandlingAntigravity, "Anti-Gravity");
             // 
             // dataGridViewTextBoxColumn236
             // 
@@ -1347,16 +1531,6 @@
             this.dataGridViewTextBoxColumn238.Name = "dataGridViewTextBoxColumn238";
             this.dataGridViewTextBoxColumn238.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // _dgvHandlingWater
-            // 
-            this._dgvHandlingWater.Location = new System.Drawing.Point(0, 105);
-            this._dgvHandlingWater.Name = "_dgvHandlingWater";
-            this._dgvHandlingWater.RowTemplate.Height = 30;
-            this._dgvHandlingWater.SectionToDisplay = "PRTW";
-            this._dgvHandlingWater.Size = new System.Drawing.Size(200, 75);
-            this._dgvHandlingWater.TabIndex = 1;
-            this._ccHandling.SetTitle(this._dgvHandlingWater, "Water");
-            // 
             // dataGridViewTextBoxColumn239
             // 
             dataGridViewCellStyle54.Format = "0.0000";
@@ -1380,16 +1554,6 @@
             this.dataGridViewTextBoxColumn241.HeaderText = "Normal";
             this.dataGridViewTextBoxColumn241.Name = "dataGridViewTextBoxColumn241";
             this.dataGridViewTextBoxColumn241.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _dgvHandlingGround
-            // 
-            this._dgvHandlingGround.Location = new System.Drawing.Point(0, 30);
-            this._dgvHandlingGround.Name = "_dgvHandlingGround";
-            this._dgvHandlingGround.RowTemplate.Height = 30;
-            this._dgvHandlingGround.SectionToDisplay = "PRTL";
-            this._dgvHandlingGround.Size = new System.Drawing.Size(200, 75);
-            this._dgvHandlingGround.TabIndex = 0;
-            this._ccHandling.SetTitle(this._dgvHandlingGround, "Ground");
             // 
             // dataGridViewTextBoxColumn242
             // 
@@ -1415,35 +1579,6 @@
             this.dataGridViewTextBoxColumn244.Name = "dataGridViewTextBoxColumn244";
             this.dataGridViewTextBoxColumn244.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // _ccSpeed
-            // 
-            this._ccSpeed.Controls.Add(this._dgvSpeedGliding);
-            this._ccSpeed.Controls.Add(this._dgvSpeedAntigravity);
-            this._ccSpeed.Controls.Add(this._dgvSpeedWater);
-            this._ccSpeed.Controls.Add(this._dgvSpeedGround);
-            this._ccSpeed.Enabled = false;
-            this._ccSpeed.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._ccSpeed.HeaderDisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this._ccSpeed.HeaderForeColor = System.Drawing.Color.White;
-            this._ccSpeed.HeaderHoveredBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this._ccSpeed.HeaderSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this._ccSpeed.Location = new System.Drawing.Point(384, 30);
-            this._ccSpeed.Margin = new System.Windows.Forms.Padding(0);
-            this._ccSpeed.Name = "_ccSpeed";
-            this._ccSpeed.SelectedControl = this._dgvSpeedGround;
-            this._ccSpeed.Size = new System.Drawing.Size(200, 531);
-            this._ccSpeed.TabIndex = 4;
-            this._ccMain.SetTitle(this._ccSpeed, "Speed");
-            // 
-            // _dgvSpeedGliding
-            // 
-            this._dgvSpeedGliding.Location = new System.Drawing.Point(0, 255);
-            this._dgvSpeedGliding.Name = "_dgvSpeedGliding";
-            this._dgvSpeedGliding.RowTemplate.Height = 30;
-            this._dgvSpeedGliding.Size = new System.Drawing.Size(200, 75);
-            this._dgvSpeedGliding.TabIndex = 3;
-            this._ccSpeed.SetTitle(this._dgvSpeedGliding, "Gliding");
-            // 
             // dataGridViewTextBoxColumn245
             // 
             dataGridViewCellStyle60.Format = "0.0000";
@@ -1451,16 +1586,6 @@
             this.dataGridViewTextBoxColumn245.HeaderText = "Any Coins";
             this.dataGridViewTextBoxColumn245.Name = "dataGridViewTextBoxColumn245";
             this.dataGridViewTextBoxColumn245.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _dgvSpeedAntigravity
-            // 
-            this._dgvSpeedAntigravity.Location = new System.Drawing.Point(0, 180);
-            this._dgvSpeedAntigravity.Name = "_dgvSpeedAntigravity";
-            this._dgvSpeedAntigravity.RowTemplate.Height = 30;
-            this._dgvSpeedAntigravity.SectionToDisplay = "PRSA";
-            this._dgvSpeedAntigravity.Size = new System.Drawing.Size(200, 75);
-            this._dgvSpeedAntigravity.TabIndex = 2;
-            this._ccSpeed.SetTitle(this._dgvSpeedAntigravity, "Anti-Gravity");
             // 
             // dataGridViewTextBoxColumn246
             // 
@@ -1478,16 +1603,6 @@
             this.dataGridViewTextBoxColumn247.Name = "dataGridViewTextBoxColumn247";
             this.dataGridViewTextBoxColumn247.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // _dgvSpeedWater
-            // 
-            this._dgvSpeedWater.Location = new System.Drawing.Point(0, 105);
-            this._dgvSpeedWater.Name = "_dgvSpeedWater";
-            this._dgvSpeedWater.RowTemplate.Height = 30;
-            this._dgvSpeedWater.SectionToDisplay = "PRSW";
-            this._dgvSpeedWater.Size = new System.Drawing.Size(200, 75);
-            this._dgvSpeedWater.TabIndex = 1;
-            this._ccSpeed.SetTitle(this._dgvSpeedWater, "Water");
-            // 
             // dataGridViewTextBoxColumn248
             // 
             dataGridViewCellStyle63.Format = "0.0000";
@@ -1503,16 +1618,6 @@
             this.dataGridViewTextBoxColumn249.HeaderText = "10 Coins";
             this.dataGridViewTextBoxColumn249.Name = "dataGridViewTextBoxColumn249";
             this.dataGridViewTextBoxColumn249.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _dgvSpeedGround
-            // 
-            this._dgvSpeedGround.Location = new System.Drawing.Point(0, 30);
-            this._dgvSpeedGround.Name = "_dgvSpeedGround";
-            this._dgvSpeedGround.RowTemplate.Height = 30;
-            this._dgvSpeedGround.SectionToDisplay = "PRSL";
-            this._dgvSpeedGround.Size = new System.Drawing.Size(200, 75);
-            this._dgvSpeedGround.TabIndex = 0;
-            this._ccSpeed.SetTitle(this._dgvSpeedGround, "Ground");
             // 
             // dataGridViewTextBoxColumn250
             // 
@@ -1530,37 +1635,6 @@
             this.dataGridViewTextBoxColumn251.Name = "dataGridViewTextBoxColumn251";
             this.dataGridViewTextBoxColumn251.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // _ccPhysics
-            // 
-            this._ccPhysics.Controls.Add(this._dgvPhysicsTurbo);
-            this._ccPhysics.Controls.Add(this._dgvPhysicsOffroadSlip);
-            this._ccPhysics.Controls.Add(this._dgvPhysicsOffroadBrake);
-            this._ccPhysics.Controls.Add(this._dgvPhysicsOuterslip);
-            this._ccPhysics.Controls.Add(this._dgvPhysicsAcceleration);
-            this._ccPhysics.Controls.Add(this._dgvPhysicsWeight);
-            this._ccPhysics.Enabled = false;
-            this._ccPhysics.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this._ccPhysics.HeaderDisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this._ccPhysics.HeaderForeColor = System.Drawing.Color.White;
-            this._ccPhysics.HeaderHoveredBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this._ccPhysics.HeaderSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this._ccPhysics.Location = new System.Drawing.Point(184, 30);
-            this._ccPhysics.Margin = new System.Windows.Forms.Padding(0);
-            this._ccPhysics.Name = "_ccPhysics";
-            this._ccPhysics.SelectedControl = this._dgvPhysicsWeight;
-            this._ccPhysics.Size = new System.Drawing.Size(200, 531);
-            this._ccPhysics.TabIndex = 3;
-            this._ccMain.SetTitle(this._ccPhysics, "Physics");
-            // 
-            // _dgvPhysicsTurbo
-            // 
-            this._dgvPhysicsTurbo.Location = new System.Drawing.Point(0, 405);
-            this._dgvPhysicsTurbo.Name = "_dgvPhysicsTurbo";
-            this._dgvPhysicsTurbo.RowTemplate.Height = 30;
-            this._dgvPhysicsTurbo.Size = new System.Drawing.Size(200, 75);
-            this._dgvPhysicsTurbo.TabIndex = 5;
-            this._ccPhysics.SetTitle(this._dgvPhysicsTurbo, "Turbo");
-            // 
             // dataGridViewTextBoxColumn252
             // 
             this.dataGridViewTextBoxColumn252.HeaderText = "Mini-Turbo Frames";
@@ -1572,15 +1646,6 @@
             this.dataGridViewTextBoxColumn253.HeaderText = "Super-Turbo Frames";
             this.dataGridViewTextBoxColumn253.Name = "dataGridViewTextBoxColumn253";
             this.dataGridViewTextBoxColumn253.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _dgvPhysicsOffroadSlip
-            // 
-            this._dgvPhysicsOffroadSlip.Location = new System.Drawing.Point(0, 330);
-            this._dgvPhysicsOffroadSlip.Name = "_dgvPhysicsOffroadSlip";
-            this._dgvPhysicsOffroadSlip.RowTemplate.Height = 30;
-            this._dgvPhysicsOffroadSlip.Size = new System.Drawing.Size(200, 75);
-            this._dgvPhysicsOffroadSlip.TabIndex = 4;
-            this._ccPhysics.SetTitle(this._dgvPhysicsOffroadSlip, "Off-Road Slip");
             // 
             // dataGridViewTextBoxColumn254
             // 
@@ -1654,15 +1719,6 @@
             this.dataGridViewTextBoxColumn262.Name = "dataGridViewTextBoxColumn262";
             this.dataGridViewTextBoxColumn262.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // _dgvPhysicsOffroadBrake
-            // 
-            this._dgvPhysicsOffroadBrake.Location = new System.Drawing.Point(0, 255);
-            this._dgvPhysicsOffroadBrake.Name = "_dgvPhysicsOffroadBrake";
-            this._dgvPhysicsOffroadBrake.RowTemplate.Height = 30;
-            this._dgvPhysicsOffroadBrake.Size = new System.Drawing.Size(200, 75);
-            this._dgvPhysicsOffroadBrake.TabIndex = 3;
-            this._ccPhysics.SetTitle(this._dgvPhysicsOffroadBrake, "Off-Road Brake");
-            // 
             // dataGridViewTextBoxColumn263
             // 
             dataGridViewCellStyle76.Format = "0.0000";
@@ -1735,15 +1791,6 @@
             this.dataGridViewTextBoxColumn271.Name = "dataGridViewTextBoxColumn271";
             this.dataGridViewTextBoxColumn271.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // _dgvPhysicsOuterslip
-            // 
-            this._dgvPhysicsOuterslip.Location = new System.Drawing.Point(0, 180);
-            this._dgvPhysicsOuterslip.Name = "_dgvPhysicsOuterslip";
-            this._dgvPhysicsOuterslip.RowTemplate.Height = 30;
-            this._dgvPhysicsOuterslip.Size = new System.Drawing.Size(200, 75);
-            this._dgvPhysicsOuterslip.TabIndex = 2;
-            this._ccPhysics.SetTitle(this._dgvPhysicsOuterslip, "Outerslip");
-            // 
             // dataGridViewTextBoxColumn272
             // 
             dataGridViewCellStyle85.Format = "0.0000";
@@ -1751,15 +1798,6 @@
             this.dataGridViewTextBoxColumn272.HeaderText = "Factor";
             this.dataGridViewTextBoxColumn272.Name = "dataGridViewTextBoxColumn272";
             this.dataGridViewTextBoxColumn272.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _dgvPhysicsAcceleration
-            // 
-            this._dgvPhysicsAcceleration.Location = new System.Drawing.Point(0, 105);
-            this._dgvPhysicsAcceleration.Name = "_dgvPhysicsAcceleration";
-            this._dgvPhysicsAcceleration.RowTemplate.Height = 30;
-            this._dgvPhysicsAcceleration.Size = new System.Drawing.Size(200, 75);
-            this._dgvPhysicsAcceleration.TabIndex = 1;
-            this._ccPhysics.SetTitle(this._dgvPhysicsAcceleration, "Acceleration");
             // 
             // dataGridViewTextBoxColumn273
             // 
@@ -1776,14 +1814,6 @@
             this.dataGridViewTextBoxColumn274.HeaderText = "Second Value";
             this.dataGridViewTextBoxColumn274.Name = "dataGridViewTextBoxColumn274";
             this.dataGridViewTextBoxColumn274.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _dgvPhysicsWeight
-            // 
-            this._dgvPhysicsWeight.Location = new System.Drawing.Point(0, 30);
-            this._dgvPhysicsWeight.Name = "_dgvPhysicsWeight";
-            this._dgvPhysicsWeight.Size = new System.Drawing.Size(200, 75);
-            this._dgvPhysicsWeight.TabIndex = 0;
-            this._ccPhysics.SetTitle(this._dgvPhysicsWeight, "Weight");
             // 
             // dataGridViewTextBoxColumn275
             // 
@@ -1808,77 +1838,6 @@
             this.dataGridViewTextBoxColumn277.HeaderText = "Unknown";
             this.dataGridViewTextBoxColumn277.Name = "dataGridViewTextBoxColumn277";
             this.dataGridViewTextBoxColumn277.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _tlpFile
-            // 
-            this._tlpFile.ColumnCount = 1;
-            this._tlpFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this._tlpFile.Controls.Add(this._btSaveAs, 0, 3);
-            this._tlpFile.Controls.Add(this._btSave, 0, 2);
-            this._tlpFile.Controls.Add(this._btOpen, 0, 1);
-            this._tlpFile.Controls.Add(this._btNew, 0, 0);
-            this._tlpFile.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this._tlpFile.Location = new System.Drawing.Point(0, 30);
-            this._tlpFile.Margin = new System.Windows.Forms.Padding(10);
-            this._tlpFile.Name = "_tlpFile";
-            this._tlpFile.RowCount = 4;
-            this._tlpFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this._tlpFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this._tlpFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this._tlpFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this._tlpFile.Size = new System.Drawing.Size(184, 531);
-            this._tlpFile.TabIndex = 0;
-            this._ccMain.SetTitle(this._tlpFile, "File");
-            // 
-            // _btSaveAs
-            // 
-            this._btSaveAs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._btSaveAs.Enabled = false;
-            this._btSaveAs.Location = new System.Drawing.Point(10, 406);
-            this._btSaveAs.Margin = new System.Windows.Forms.Padding(10);
-            this._btSaveAs.Name = "_btSaveAs";
-            this._btSaveAs.Size = new System.Drawing.Size(164, 115);
-            this._btSaveAs.TabIndex = 3;
-            this._btSaveAs.Text = "Save As";
-            this._btSaveAs.UseVisualStyleBackColor = true;
-            this._btSaveAs.Click += new System.EventHandler(this._btSaveAs_Click);
-            // 
-            // _btSave
-            // 
-            this._btSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._btSave.Enabled = false;
-            this._btSave.Location = new System.Drawing.Point(10, 274);
-            this._btSave.Margin = new System.Windows.Forms.Padding(10);
-            this._btSave.Name = "_btSave";
-            this._btSave.Size = new System.Drawing.Size(164, 112);
-            this._btSave.TabIndex = 2;
-            this._btSave.Text = "Save";
-            this._btSave.UseVisualStyleBackColor = true;
-            this._btSave.Click += new System.EventHandler(this._btSave_Click);
-            // 
-            // _btOpen
-            // 
-            this._btOpen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._btOpen.Location = new System.Drawing.Point(10, 142);
-            this._btOpen.Margin = new System.Windows.Forms.Padding(10);
-            this._btOpen.Name = "_btOpen";
-            this._btOpen.Size = new System.Drawing.Size(164, 112);
-            this._btOpen.TabIndex = 1;
-            this._btOpen.Text = "Open";
-            this._btOpen.UseVisualStyleBackColor = true;
-            this._btOpen.Click += new System.EventHandler(this._btOpen_Click);
-            // 
-            // _btNew
-            // 
-            this._btNew.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._btNew.Location = new System.Drawing.Point(10, 10);
-            this._btNew.Margin = new System.Windows.Forms.Padding(10);
-            this._btNew.Name = "_btNew";
-            this._btNew.Size = new System.Drawing.Size(164, 112);
-            this._btNew.TabIndex = 0;
-            this._btNew.Text = "New";
-            this._btNew.UseVisualStyleBackColor = true;
-            this._btNew.Click += new System.EventHandler(this._btNew_Click);
             // 
             // dataGridViewTextBoxColumn138
             // 
@@ -2888,15 +2847,6 @@
             this.dataGridViewTextBoxColumn137.Name = "dataGridViewTextBoxColumn137";
             this.dataGridViewTextBoxColumn137.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // _dgvPointsTires
-            // 
-            this._dgvPointsTires.Location = new System.Drawing.Point(0, 180);
-            this._dgvPointsTires.Name = "_dgvPointsTires";
-            this._dgvPointsTires.RowTemplate.Height = 30;
-            this._dgvPointsTires.Size = new System.Drawing.Size(200, 75);
-            this._dgvPointsTires.TabIndex = 2;
-            this._ccPoints.SetTitle(this._dgvPointsTires, "Tires");
-            // 
             // dataGridViewTextBoxColumn278
             // 
             this.dataGridViewTextBoxColumn278.HeaderText = "Weight";
@@ -2974,15 +2924,6 @@
             this.dataGridViewTextBoxColumn290.HeaderText = "Handling\r\nGliding";
             this.dataGridViewTextBoxColumn290.Name = "dataGridViewTextBoxColumn290";
             this.dataGridViewTextBoxColumn290.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _dgvPointsGliders
-            // 
-            this._dgvPointsGliders.Location = new System.Drawing.Point(0, 255);
-            this._dgvPointsGliders.Name = "_dgvPointsGliders";
-            this._dgvPointsGliders.RowTemplate.Height = 30;
-            this._dgvPointsGliders.Size = new System.Drawing.Size(200, 75);
-            this._dgvPointsGliders.TabIndex = 3;
-            this._ccPoints.SetTitle(this._dgvPointsGliders, "Gliders");
             // 
             // dataGridViewTextBoxColumn291
             // 
@@ -3062,6 +3003,1727 @@
             this.dataGridViewTextBoxColumn303.Name = "dataGridViewTextBoxColumn303";
             this.dataGridViewTextBoxColumn303.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // _cmsGrid
+            // 
+            this._cmsGrid.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._cmsGridAdd,
+            this._cmsGridSubtract,
+            this._cmsGridMultiply,
+            this._cmsGridDivide});
+            this._cmsGrid.Name = "_cmsGrid";
+            this._cmsGrid.Size = new System.Drawing.Size(153, 114);
+            // 
+            // _cmsGridAdd
+            // 
+            this._cmsGridAdd.Image = global::Syroot.NintenTools.MarioKart8.PerformanceEditor.Properties.Resources.Add;
+            this._cmsGridAdd.Name = "_cmsGridAdd";
+            this._cmsGridAdd.Size = new System.Drawing.Size(152, 22);
+            this._cmsGridAdd.Text = "Add...";
+            this._cmsGridAdd.Click += new System.EventHandler(this._cmsGridAdd_Click);
+            // 
+            // _cmsGridSubtract
+            // 
+            this._cmsGridSubtract.Image = global::Syroot.NintenTools.MarioKart8.PerformanceEditor.Properties.Resources.Subtract;
+            this._cmsGridSubtract.Name = "_cmsGridSubtract";
+            this._cmsGridSubtract.Size = new System.Drawing.Size(152, 22);
+            this._cmsGridSubtract.Text = "Subtract...";
+            this._cmsGridSubtract.Click += new System.EventHandler(this._cmsGridSubtract_Click);
+            // 
+            // _cmsGridMultiply
+            // 
+            this._cmsGridMultiply.Image = global::Syroot.NintenTools.MarioKart8.PerformanceEditor.Properties.Resources.Multiply;
+            this._cmsGridMultiply.Name = "_cmsGridMultiply";
+            this._cmsGridMultiply.Size = new System.Drawing.Size(152, 22);
+            this._cmsGridMultiply.Text = "Multiply...";
+            this._cmsGridMultiply.Click += new System.EventHandler(this._cmsGridMultiply_Click);
+            // 
+            // _cmsGridDivide
+            // 
+            this._cmsGridDivide.Image = global::Syroot.NintenTools.MarioKart8.PerformanceEditor.Properties.Resources.Divide;
+            this._cmsGridDivide.Name = "_cmsGridDivide";
+            this._cmsGridDivide.Size = new System.Drawing.Size(152, 22);
+            this._cmsGridDivide.Text = "Divide...";
+            this._cmsGridDivide.Click += new System.EventHandler(this._cmsGridDivide_Click);
+            // 
+            // _ccMain
+            // 
+            this._ccMain.BackColor = System.Drawing.Color.White;
+            this._ccMain.Controls.Add(this._ccPoints);
+            this._ccMain.Controls.Add(this._ccHandling);
+            this._ccMain.Controls.Add(this._ccSpeed);
+            this._ccMain.Controls.Add(this._ccPhysics);
+            this._ccMain.Controls.Add(this._tlpFile);
+            this._ccMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._ccMain.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this._ccMain.HeaderDisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._ccMain.HeaderForeColor = System.Drawing.Color.White;
+            this._ccMain.HeaderHoveredBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._ccMain.HeaderSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(200)))));
+            this._ccMain.Location = new System.Drawing.Point(0, 0);
+            this._ccMain.Margin = new System.Windows.Forms.Padding(0);
+            this._ccMain.Name = "_ccMain";
+            this._ccMain.SelectedControl = this._tlpFile;
+            this._ccMain.Size = new System.Drawing.Size(984, 561);
+            this._ccMain.TabIndex = 2;
+            // 
+            // _ccPoints
+            // 
+            this._ccPoints.Controls.Add(this._dgvPointsGliders);
+            this._ccPoints.Controls.Add(this._dgvPointsTires);
+            this._ccPoints.Controls.Add(this._dgvPointsKarts);
+            this._ccPoints.Controls.Add(this._dgvPointsDrivers);
+            this._ccPoints.Enabled = false;
+            this._ccPoints.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this._ccPoints.HeaderDisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._ccPoints.HeaderForeColor = System.Drawing.Color.White;
+            this._ccPoints.HeaderHoveredBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._ccPoints.HeaderSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this._ccPoints.Location = new System.Drawing.Point(784, 30);
+            this._ccPoints.Margin = new System.Windows.Forms.Padding(0);
+            this._ccPoints.Name = "_ccPoints";
+            this._ccPoints.SelectedControl = this._dgvPointsDrivers;
+            this._ccPoints.Size = new System.Drawing.Size(200, 531);
+            this._ccPoints.TabIndex = 8;
+            this._ccMain.SetTitle(this._ccPoints, "Points");
+            // 
+            // _dgvPointsGliders
+            // 
+            this._dgvPointsGliders.ContextMenuStrip = this._cmsGrid;
+            this._dgvPointsGliders.Location = new System.Drawing.Point(0, 255);
+            this._dgvPointsGliders.Name = "_dgvPointsGliders";
+            this._dgvPointsGliders.RowTemplate.Height = 30;
+            this._dgvPointsGliders.Size = new System.Drawing.Size(200, 75);
+            this._dgvPointsGliders.TabIndex = 3;
+            this._ccPoints.SetTitle(this._dgvPointsGliders, "Gliders");
+            // 
+            // dataGridViewTextBoxColumn400
+            // 
+            this.dataGridViewTextBoxColumn400.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn400.Name = "dataGridViewTextBoxColumn400";
+            this.dataGridViewTextBoxColumn400.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn401
+            // 
+            this.dataGridViewTextBoxColumn401.HeaderText = "Acceleration";
+            this.dataGridViewTextBoxColumn401.Name = "dataGridViewTextBoxColumn401";
+            this.dataGridViewTextBoxColumn401.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn402
+            // 
+            this.dataGridViewTextBoxColumn402.HeaderText = "Outerslip";
+            this.dataGridViewTextBoxColumn402.Name = "dataGridViewTextBoxColumn402";
+            this.dataGridViewTextBoxColumn402.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn403
+            // 
+            this.dataGridViewTextBoxColumn403.HeaderText = "Traction";
+            this.dataGridViewTextBoxColumn403.Name = "dataGridViewTextBoxColumn403";
+            this.dataGridViewTextBoxColumn403.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn404
+            // 
+            this.dataGridViewTextBoxColumn404.HeaderText = "Turbo";
+            this.dataGridViewTextBoxColumn404.Name = "dataGridViewTextBoxColumn404";
+            this.dataGridViewTextBoxColumn404.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn405
+            // 
+            this.dataGridViewTextBoxColumn405.HeaderText = "Speed\r\nGround";
+            this.dataGridViewTextBoxColumn405.Name = "dataGridViewTextBoxColumn405";
+            this.dataGridViewTextBoxColumn405.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn406
+            // 
+            this.dataGridViewTextBoxColumn406.HeaderText = "Speed\r\nWater";
+            this.dataGridViewTextBoxColumn406.Name = "dataGridViewTextBoxColumn406";
+            this.dataGridViewTextBoxColumn406.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn407
+            // 
+            this.dataGridViewTextBoxColumn407.HeaderText = "Speed\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn407.Name = "dataGridViewTextBoxColumn407";
+            this.dataGridViewTextBoxColumn407.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn408
+            // 
+            this.dataGridViewTextBoxColumn408.HeaderText = "Speed\r\nGliding";
+            this.dataGridViewTextBoxColumn408.Name = "dataGridViewTextBoxColumn408";
+            this.dataGridViewTextBoxColumn408.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn409
+            // 
+            this.dataGridViewTextBoxColumn409.HeaderText = "Handling\r\nGround";
+            this.dataGridViewTextBoxColumn409.Name = "dataGridViewTextBoxColumn409";
+            this.dataGridViewTextBoxColumn409.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn410
+            // 
+            this.dataGridViewTextBoxColumn410.HeaderText = "Handling\r\nWater";
+            this.dataGridViewTextBoxColumn410.Name = "dataGridViewTextBoxColumn410";
+            this.dataGridViewTextBoxColumn410.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn411
+            // 
+            this.dataGridViewTextBoxColumn411.HeaderText = "Handling\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn411.Name = "dataGridViewTextBoxColumn411";
+            this.dataGridViewTextBoxColumn411.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn412
+            // 
+            this.dataGridViewTextBoxColumn412.HeaderText = "Handling\r\nGliding";
+            this.dataGridViewTextBoxColumn412.Name = "dataGridViewTextBoxColumn412";
+            this.dataGridViewTextBoxColumn412.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvPointsTires
+            // 
+            this._dgvPointsTires.ContextMenuStrip = this._cmsGrid;
+            this._dgvPointsTires.Location = new System.Drawing.Point(0, 180);
+            this._dgvPointsTires.Name = "_dgvPointsTires";
+            this._dgvPointsTires.RowTemplate.Height = 30;
+            this._dgvPointsTires.Size = new System.Drawing.Size(200, 75);
+            this._dgvPointsTires.TabIndex = 2;
+            this._ccPoints.SetTitle(this._dgvPointsTires, "Tires");
+            // 
+            // dataGridViewTextBoxColumn413
+            // 
+            this.dataGridViewTextBoxColumn413.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn413.Name = "dataGridViewTextBoxColumn413";
+            this.dataGridViewTextBoxColumn413.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn414
+            // 
+            this.dataGridViewTextBoxColumn414.HeaderText = "Acceleration";
+            this.dataGridViewTextBoxColumn414.Name = "dataGridViewTextBoxColumn414";
+            this.dataGridViewTextBoxColumn414.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn415
+            // 
+            this.dataGridViewTextBoxColumn415.HeaderText = "Outerslip";
+            this.dataGridViewTextBoxColumn415.Name = "dataGridViewTextBoxColumn415";
+            this.dataGridViewTextBoxColumn415.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn416
+            // 
+            this.dataGridViewTextBoxColumn416.HeaderText = "Traction";
+            this.dataGridViewTextBoxColumn416.Name = "dataGridViewTextBoxColumn416";
+            this.dataGridViewTextBoxColumn416.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn417
+            // 
+            this.dataGridViewTextBoxColumn417.HeaderText = "Turbo";
+            this.dataGridViewTextBoxColumn417.Name = "dataGridViewTextBoxColumn417";
+            this.dataGridViewTextBoxColumn417.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn418
+            // 
+            this.dataGridViewTextBoxColumn418.HeaderText = "Speed\r\nGround";
+            this.dataGridViewTextBoxColumn418.Name = "dataGridViewTextBoxColumn418";
+            this.dataGridViewTextBoxColumn418.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn419
+            // 
+            this.dataGridViewTextBoxColumn419.HeaderText = "Speed\r\nWater";
+            this.dataGridViewTextBoxColumn419.Name = "dataGridViewTextBoxColumn419";
+            this.dataGridViewTextBoxColumn419.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn420
+            // 
+            this.dataGridViewTextBoxColumn420.HeaderText = "Speed\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn420.Name = "dataGridViewTextBoxColumn420";
+            this.dataGridViewTextBoxColumn420.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn421
+            // 
+            this.dataGridViewTextBoxColumn421.HeaderText = "Speed\r\nGliding";
+            this.dataGridViewTextBoxColumn421.Name = "dataGridViewTextBoxColumn421";
+            this.dataGridViewTextBoxColumn421.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn422
+            // 
+            this.dataGridViewTextBoxColumn422.HeaderText = "Handling\r\nGround";
+            this.dataGridViewTextBoxColumn422.Name = "dataGridViewTextBoxColumn422";
+            this.dataGridViewTextBoxColumn422.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn423
+            // 
+            this.dataGridViewTextBoxColumn423.HeaderText = "Handling\r\nWater";
+            this.dataGridViewTextBoxColumn423.Name = "dataGridViewTextBoxColumn423";
+            this.dataGridViewTextBoxColumn423.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn424
+            // 
+            this.dataGridViewTextBoxColumn424.HeaderText = "Handling\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn424.Name = "dataGridViewTextBoxColumn424";
+            this.dataGridViewTextBoxColumn424.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn425
+            // 
+            this.dataGridViewTextBoxColumn425.HeaderText = "Handling\r\nGliding";
+            this.dataGridViewTextBoxColumn425.Name = "dataGridViewTextBoxColumn425";
+            this.dataGridViewTextBoxColumn425.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvPointsKarts
+            // 
+            this._dgvPointsKarts.ContextMenuStrip = this._cmsGrid;
+            this._dgvPointsKarts.Location = new System.Drawing.Point(0, 105);
+            this._dgvPointsKarts.Name = "_dgvPointsKarts";
+            this._dgvPointsKarts.RowTemplate.Height = 30;
+            this._dgvPointsKarts.Size = new System.Drawing.Size(200, 75);
+            this._dgvPointsKarts.TabIndex = 1;
+            this._ccPoints.SetTitle(this._dgvPointsKarts, "Karts");
+            // 
+            // dataGridViewTextBoxColumn426
+            // 
+            this.dataGridViewTextBoxColumn426.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn426.Name = "dataGridViewTextBoxColumn426";
+            this.dataGridViewTextBoxColumn426.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn427
+            // 
+            this.dataGridViewTextBoxColumn427.HeaderText = "Acceleration";
+            this.dataGridViewTextBoxColumn427.Name = "dataGridViewTextBoxColumn427";
+            this.dataGridViewTextBoxColumn427.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn428
+            // 
+            this.dataGridViewTextBoxColumn428.HeaderText = "Outerslip";
+            this.dataGridViewTextBoxColumn428.Name = "dataGridViewTextBoxColumn428";
+            this.dataGridViewTextBoxColumn428.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn429
+            // 
+            this.dataGridViewTextBoxColumn429.HeaderText = "Traction";
+            this.dataGridViewTextBoxColumn429.Name = "dataGridViewTextBoxColumn429";
+            this.dataGridViewTextBoxColumn429.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn430
+            // 
+            this.dataGridViewTextBoxColumn430.HeaderText = "Turbo";
+            this.dataGridViewTextBoxColumn430.Name = "dataGridViewTextBoxColumn430";
+            this.dataGridViewTextBoxColumn430.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn431
+            // 
+            this.dataGridViewTextBoxColumn431.HeaderText = "Speed\r\nGround";
+            this.dataGridViewTextBoxColumn431.Name = "dataGridViewTextBoxColumn431";
+            this.dataGridViewTextBoxColumn431.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn432
+            // 
+            this.dataGridViewTextBoxColumn432.HeaderText = "Speed\r\nWater";
+            this.dataGridViewTextBoxColumn432.Name = "dataGridViewTextBoxColumn432";
+            this.dataGridViewTextBoxColumn432.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn433
+            // 
+            this.dataGridViewTextBoxColumn433.HeaderText = "Speed\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn433.Name = "dataGridViewTextBoxColumn433";
+            this.dataGridViewTextBoxColumn433.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn434
+            // 
+            this.dataGridViewTextBoxColumn434.HeaderText = "Speed\r\nGliding";
+            this.dataGridViewTextBoxColumn434.Name = "dataGridViewTextBoxColumn434";
+            this.dataGridViewTextBoxColumn434.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn435
+            // 
+            this.dataGridViewTextBoxColumn435.HeaderText = "Handling\r\nGround";
+            this.dataGridViewTextBoxColumn435.Name = "dataGridViewTextBoxColumn435";
+            this.dataGridViewTextBoxColumn435.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn436
+            // 
+            this.dataGridViewTextBoxColumn436.HeaderText = "Handling\r\nWater";
+            this.dataGridViewTextBoxColumn436.Name = "dataGridViewTextBoxColumn436";
+            this.dataGridViewTextBoxColumn436.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn437
+            // 
+            this.dataGridViewTextBoxColumn437.HeaderText = "Handling\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn437.Name = "dataGridViewTextBoxColumn437";
+            this.dataGridViewTextBoxColumn437.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn438
+            // 
+            this.dataGridViewTextBoxColumn438.HeaderText = "Handling\r\nGliding";
+            this.dataGridViewTextBoxColumn438.Name = "dataGridViewTextBoxColumn438";
+            this.dataGridViewTextBoxColumn438.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvPointsDrivers
+            // 
+            this._dgvPointsDrivers.ContextMenuStrip = this._cmsGrid;
+            this._dgvPointsDrivers.Location = new System.Drawing.Point(0, 30);
+            this._dgvPointsDrivers.Name = "_dgvPointsDrivers";
+            this._dgvPointsDrivers.RowTemplate.Height = 30;
+            this._dgvPointsDrivers.Size = new System.Drawing.Size(200, 75);
+            this._dgvPointsDrivers.TabIndex = 0;
+            this._ccPoints.SetTitle(this._dgvPointsDrivers, "Drivers");
+            // 
+            // dataGridViewTextBoxColumn439
+            // 
+            this.dataGridViewTextBoxColumn439.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn439.Name = "dataGridViewTextBoxColumn439";
+            this.dataGridViewTextBoxColumn439.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn440
+            // 
+            this.dataGridViewTextBoxColumn440.HeaderText = "Acceleration";
+            this.dataGridViewTextBoxColumn440.Name = "dataGridViewTextBoxColumn440";
+            this.dataGridViewTextBoxColumn440.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn441
+            // 
+            this.dataGridViewTextBoxColumn441.HeaderText = "Outerslip";
+            this.dataGridViewTextBoxColumn441.Name = "dataGridViewTextBoxColumn441";
+            this.dataGridViewTextBoxColumn441.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn442
+            // 
+            this.dataGridViewTextBoxColumn442.HeaderText = "Traction";
+            this.dataGridViewTextBoxColumn442.Name = "dataGridViewTextBoxColumn442";
+            this.dataGridViewTextBoxColumn442.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn443
+            // 
+            this.dataGridViewTextBoxColumn443.HeaderText = "Turbo";
+            this.dataGridViewTextBoxColumn443.Name = "dataGridViewTextBoxColumn443";
+            this.dataGridViewTextBoxColumn443.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn444
+            // 
+            this.dataGridViewTextBoxColumn444.HeaderText = "Speed\r\nGround";
+            this.dataGridViewTextBoxColumn444.Name = "dataGridViewTextBoxColumn444";
+            this.dataGridViewTextBoxColumn444.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn445
+            // 
+            this.dataGridViewTextBoxColumn445.HeaderText = "Speed\r\nWater";
+            this.dataGridViewTextBoxColumn445.Name = "dataGridViewTextBoxColumn445";
+            this.dataGridViewTextBoxColumn445.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn446
+            // 
+            this.dataGridViewTextBoxColumn446.HeaderText = "Speed\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn446.Name = "dataGridViewTextBoxColumn446";
+            this.dataGridViewTextBoxColumn446.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn447
+            // 
+            this.dataGridViewTextBoxColumn447.HeaderText = "Speed\r\nGliding";
+            this.dataGridViewTextBoxColumn447.Name = "dataGridViewTextBoxColumn447";
+            this.dataGridViewTextBoxColumn447.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn448
+            // 
+            this.dataGridViewTextBoxColumn448.HeaderText = "Handling\r\nGround";
+            this.dataGridViewTextBoxColumn448.Name = "dataGridViewTextBoxColumn448";
+            this.dataGridViewTextBoxColumn448.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn449
+            // 
+            this.dataGridViewTextBoxColumn449.HeaderText = "Handling\r\nWater";
+            this.dataGridViewTextBoxColumn449.Name = "dataGridViewTextBoxColumn449";
+            this.dataGridViewTextBoxColumn449.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn450
+            // 
+            this.dataGridViewTextBoxColumn450.HeaderText = "Handling\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn450.Name = "dataGridViewTextBoxColumn450";
+            this.dataGridViewTextBoxColumn450.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn451
+            // 
+            this.dataGridViewTextBoxColumn451.HeaderText = "Handling\r\nGliding";
+            this.dataGridViewTextBoxColumn451.Name = "dataGridViewTextBoxColumn451";
+            this.dataGridViewTextBoxColumn451.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _ccHandling
+            // 
+            this._ccHandling.Controls.Add(this._dgvHandlingGliding);
+            this._ccHandling.Controls.Add(this._dgvHandlingAntigravity);
+            this._ccHandling.Controls.Add(this._dgvHandlingWater);
+            this._ccHandling.Controls.Add(this._dgvHandlingGround);
+            this._ccHandling.Enabled = false;
+            this._ccHandling.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this._ccHandling.HeaderDisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._ccHandling.HeaderForeColor = System.Drawing.Color.White;
+            this._ccHandling.HeaderHoveredBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._ccHandling.HeaderSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this._ccHandling.Location = new System.Drawing.Point(584, 30);
+            this._ccHandling.Margin = new System.Windows.Forms.Padding(0);
+            this._ccHandling.Name = "_ccHandling";
+            this._ccHandling.SelectedControl = this._dgvHandlingGround;
+            this._ccHandling.Size = new System.Drawing.Size(200, 531);
+            this._ccHandling.TabIndex = 7;
+            this._ccMain.SetTitle(this._ccHandling, "Handling");
+            // 
+            // _dgvHandlingGliding
+            // 
+            this._dgvHandlingGliding.ContextMenuStrip = this._cmsGrid;
+            this._dgvHandlingGliding.Location = new System.Drawing.Point(0, 255);
+            this._dgvHandlingGliding.Name = "_dgvHandlingGliding";
+            this._dgvHandlingGliding.RowTemplate.Height = 30;
+            this._dgvHandlingGliding.Size = new System.Drawing.Size(200, 75);
+            this._dgvHandlingGliding.TabIndex = 3;
+            this._ccHandling.SetTitle(this._dgvHandlingGliding, "Gliding");
+            // 
+            // dataGridViewTextBoxColumn452
+            // 
+            dataGridViewCellStyle175.Format = "0.0000";
+            this.dataGridViewTextBoxColumn452.DefaultCellStyle = dataGridViewCellStyle175;
+            this.dataGridViewTextBoxColumn452.HeaderText = "Roll";
+            this.dataGridViewTextBoxColumn452.Name = "dataGridViewTextBoxColumn452";
+            this.dataGridViewTextBoxColumn452.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn453
+            // 
+            dataGridViewCellStyle176.Format = "0.0000";
+            this.dataGridViewTextBoxColumn453.DefaultCellStyle = dataGridViewCellStyle176;
+            this.dataGridViewTextBoxColumn453.HeaderText = "Move";
+            this.dataGridViewTextBoxColumn453.Name = "dataGridViewTextBoxColumn453";
+            this.dataGridViewTextBoxColumn453.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvHandlingAntigravity
+            // 
+            this._dgvHandlingAntigravity.ContextMenuStrip = this._cmsGrid;
+            this._dgvHandlingAntigravity.Location = new System.Drawing.Point(0, 180);
+            this._dgvHandlingAntigravity.Name = "_dgvHandlingAntigravity";
+            this._dgvHandlingAntigravity.RowTemplate.Height = 30;
+            this._dgvHandlingAntigravity.SectionToDisplay = "PRTA";
+            this._dgvHandlingAntigravity.Size = new System.Drawing.Size(200, 75);
+            this._dgvHandlingAntigravity.TabIndex = 2;
+            this._ccHandling.SetTitle(this._dgvHandlingAntigravity, "Anti-Gravity");
+            // 
+            // dataGridViewTextBoxColumn454
+            // 
+            dataGridViewCellStyle177.Format = "0.0000";
+            this.dataGridViewTextBoxColumn454.DefaultCellStyle = dataGridViewCellStyle177;
+            this.dataGridViewTextBoxColumn454.HeaderText = "Auto-Drift";
+            this.dataGridViewTextBoxColumn454.Name = "dataGridViewTextBoxColumn454";
+            this.dataGridViewTextBoxColumn454.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn455
+            // 
+            dataGridViewCellStyle178.Format = "0.0000";
+            this.dataGridViewTextBoxColumn455.DefaultCellStyle = dataGridViewCellStyle178;
+            this.dataGridViewTextBoxColumn455.HeaderText = "Drift";
+            this.dataGridViewTextBoxColumn455.Name = "dataGridViewTextBoxColumn455";
+            this.dataGridViewTextBoxColumn455.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn456
+            // 
+            dataGridViewCellStyle179.Format = "0.0000";
+            this.dataGridViewTextBoxColumn456.DefaultCellStyle = dataGridViewCellStyle179;
+            this.dataGridViewTextBoxColumn456.HeaderText = "Normal";
+            this.dataGridViewTextBoxColumn456.Name = "dataGridViewTextBoxColumn456";
+            this.dataGridViewTextBoxColumn456.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvHandlingWater
+            // 
+            this._dgvHandlingWater.ContextMenuStrip = this._cmsGrid;
+            this._dgvHandlingWater.Location = new System.Drawing.Point(0, 105);
+            this._dgvHandlingWater.Name = "_dgvHandlingWater";
+            this._dgvHandlingWater.RowTemplate.Height = 30;
+            this._dgvHandlingWater.SectionToDisplay = "PRTW";
+            this._dgvHandlingWater.Size = new System.Drawing.Size(200, 75);
+            this._dgvHandlingWater.TabIndex = 1;
+            this._ccHandling.SetTitle(this._dgvHandlingWater, "Water");
+            // 
+            // dataGridViewTextBoxColumn457
+            // 
+            dataGridViewCellStyle180.Format = "0.0000";
+            this.dataGridViewTextBoxColumn457.DefaultCellStyle = dataGridViewCellStyle180;
+            this.dataGridViewTextBoxColumn457.HeaderText = "Auto-Drift";
+            this.dataGridViewTextBoxColumn457.Name = "dataGridViewTextBoxColumn457";
+            this.dataGridViewTextBoxColumn457.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn458
+            // 
+            dataGridViewCellStyle181.Format = "0.0000";
+            this.dataGridViewTextBoxColumn458.DefaultCellStyle = dataGridViewCellStyle181;
+            this.dataGridViewTextBoxColumn458.HeaderText = "Drift";
+            this.dataGridViewTextBoxColumn458.Name = "dataGridViewTextBoxColumn458";
+            this.dataGridViewTextBoxColumn458.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn459
+            // 
+            dataGridViewCellStyle182.Format = "0.0000";
+            this.dataGridViewTextBoxColumn459.DefaultCellStyle = dataGridViewCellStyle182;
+            this.dataGridViewTextBoxColumn459.HeaderText = "Normal";
+            this.dataGridViewTextBoxColumn459.Name = "dataGridViewTextBoxColumn459";
+            this.dataGridViewTextBoxColumn459.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvHandlingGround
+            // 
+            this._dgvHandlingGround.ContextMenuStrip = this._cmsGrid;
+            this._dgvHandlingGround.Location = new System.Drawing.Point(0, 30);
+            this._dgvHandlingGround.Name = "_dgvHandlingGround";
+            this._dgvHandlingGround.RowTemplate.Height = 30;
+            this._dgvHandlingGround.SectionToDisplay = "PRTL";
+            this._dgvHandlingGround.Size = new System.Drawing.Size(200, 75);
+            this._dgvHandlingGround.TabIndex = 0;
+            this._ccHandling.SetTitle(this._dgvHandlingGround, "Ground");
+            // 
+            // dataGridViewTextBoxColumn460
+            // 
+            dataGridViewCellStyle183.Format = "0.0000";
+            this.dataGridViewTextBoxColumn460.DefaultCellStyle = dataGridViewCellStyle183;
+            this.dataGridViewTextBoxColumn460.HeaderText = "Auto-Drift";
+            this.dataGridViewTextBoxColumn460.Name = "dataGridViewTextBoxColumn460";
+            this.dataGridViewTextBoxColumn460.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn461
+            // 
+            dataGridViewCellStyle184.Format = "0.0000";
+            this.dataGridViewTextBoxColumn461.DefaultCellStyle = dataGridViewCellStyle184;
+            this.dataGridViewTextBoxColumn461.HeaderText = "Drift";
+            this.dataGridViewTextBoxColumn461.Name = "dataGridViewTextBoxColumn461";
+            this.dataGridViewTextBoxColumn461.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn462
+            // 
+            dataGridViewCellStyle185.Format = "0.0000";
+            this.dataGridViewTextBoxColumn462.DefaultCellStyle = dataGridViewCellStyle185;
+            this.dataGridViewTextBoxColumn462.HeaderText = "Normal";
+            this.dataGridViewTextBoxColumn462.Name = "dataGridViewTextBoxColumn462";
+            this.dataGridViewTextBoxColumn462.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _ccSpeed
+            // 
+            this._ccSpeed.Controls.Add(this._dgvSpeedGliding);
+            this._ccSpeed.Controls.Add(this._dgvSpeedAntigravity);
+            this._ccSpeed.Controls.Add(this._dgvSpeedWater);
+            this._ccSpeed.Controls.Add(this._dgvSpeedGround);
+            this._ccSpeed.Enabled = false;
+            this._ccSpeed.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this._ccSpeed.HeaderDisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._ccSpeed.HeaderForeColor = System.Drawing.Color.White;
+            this._ccSpeed.HeaderHoveredBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._ccSpeed.HeaderSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this._ccSpeed.Location = new System.Drawing.Point(384, 30);
+            this._ccSpeed.Margin = new System.Windows.Forms.Padding(0);
+            this._ccSpeed.Name = "_ccSpeed";
+            this._ccSpeed.SelectedControl = this._dgvSpeedGround;
+            this._ccSpeed.Size = new System.Drawing.Size(200, 531);
+            this._ccSpeed.TabIndex = 4;
+            this._ccMain.SetTitle(this._ccSpeed, "Speed");
+            // 
+            // _dgvSpeedGliding
+            // 
+            this._dgvSpeedGliding.ContextMenuStrip = this._cmsGrid;
+            this._dgvSpeedGliding.Location = new System.Drawing.Point(0, 255);
+            this._dgvSpeedGliding.Name = "_dgvSpeedGliding";
+            this._dgvSpeedGliding.RowTemplate.Height = 30;
+            this._dgvSpeedGliding.Size = new System.Drawing.Size(200, 75);
+            this._dgvSpeedGliding.TabIndex = 3;
+            this._ccSpeed.SetTitle(this._dgvSpeedGliding, "Gliding");
+            // 
+            // dataGridViewTextBoxColumn463
+            // 
+            dataGridViewCellStyle186.Format = "0.0000";
+            this.dataGridViewTextBoxColumn463.DefaultCellStyle = dataGridViewCellStyle186;
+            this.dataGridViewTextBoxColumn463.HeaderText = "Any Coins";
+            this.dataGridViewTextBoxColumn463.Name = "dataGridViewTextBoxColumn463";
+            this.dataGridViewTextBoxColumn463.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvSpeedAntigravity
+            // 
+            this._dgvSpeedAntigravity.ContextMenuStrip = this._cmsGrid;
+            this._dgvSpeedAntigravity.Location = new System.Drawing.Point(0, 180);
+            this._dgvSpeedAntigravity.Name = "_dgvSpeedAntigravity";
+            this._dgvSpeedAntigravity.RowTemplate.Height = 30;
+            this._dgvSpeedAntigravity.SectionToDisplay = "PRSA";
+            this._dgvSpeedAntigravity.Size = new System.Drawing.Size(200, 75);
+            this._dgvSpeedAntigravity.TabIndex = 2;
+            this._ccSpeed.SetTitle(this._dgvSpeedAntigravity, "Anti-Gravity");
+            // 
+            // dataGridViewTextBoxColumn464
+            // 
+            dataGridViewCellStyle187.Format = "0.0000";
+            this.dataGridViewTextBoxColumn464.DefaultCellStyle = dataGridViewCellStyle187;
+            this.dataGridViewTextBoxColumn464.HeaderText = "No Coins";
+            this.dataGridViewTextBoxColumn464.Name = "dataGridViewTextBoxColumn464";
+            this.dataGridViewTextBoxColumn464.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn465
+            // 
+            dataGridViewCellStyle188.Format = "0.0000";
+            this.dataGridViewTextBoxColumn465.DefaultCellStyle = dataGridViewCellStyle188;
+            this.dataGridViewTextBoxColumn465.HeaderText = "10 Coins";
+            this.dataGridViewTextBoxColumn465.Name = "dataGridViewTextBoxColumn465";
+            this.dataGridViewTextBoxColumn465.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvSpeedWater
+            // 
+            this._dgvSpeedWater.ContextMenuStrip = this._cmsGrid;
+            this._dgvSpeedWater.Location = new System.Drawing.Point(0, 105);
+            this._dgvSpeedWater.Name = "_dgvSpeedWater";
+            this._dgvSpeedWater.RowTemplate.Height = 30;
+            this._dgvSpeedWater.SectionToDisplay = "PRSW";
+            this._dgvSpeedWater.Size = new System.Drawing.Size(200, 75);
+            this._dgvSpeedWater.TabIndex = 1;
+            this._ccSpeed.SetTitle(this._dgvSpeedWater, "Water");
+            // 
+            // dataGridViewTextBoxColumn466
+            // 
+            dataGridViewCellStyle189.Format = "0.0000";
+            this.dataGridViewTextBoxColumn466.DefaultCellStyle = dataGridViewCellStyle189;
+            this.dataGridViewTextBoxColumn466.HeaderText = "No Coins";
+            this.dataGridViewTextBoxColumn466.Name = "dataGridViewTextBoxColumn466";
+            this.dataGridViewTextBoxColumn466.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn467
+            // 
+            dataGridViewCellStyle190.Format = "0.0000";
+            this.dataGridViewTextBoxColumn467.DefaultCellStyle = dataGridViewCellStyle190;
+            this.dataGridViewTextBoxColumn467.HeaderText = "10 Coins";
+            this.dataGridViewTextBoxColumn467.Name = "dataGridViewTextBoxColumn467";
+            this.dataGridViewTextBoxColumn467.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvSpeedGround
+            // 
+            this._dgvSpeedGround.ContextMenuStrip = this._cmsGrid;
+            this._dgvSpeedGround.Location = new System.Drawing.Point(0, 30);
+            this._dgvSpeedGround.Name = "_dgvSpeedGround";
+            this._dgvSpeedGround.RowTemplate.Height = 30;
+            this._dgvSpeedGround.SectionToDisplay = "PRSL";
+            this._dgvSpeedGround.Size = new System.Drawing.Size(200, 75);
+            this._dgvSpeedGround.TabIndex = 0;
+            this._ccSpeed.SetTitle(this._dgvSpeedGround, "Ground");
+            // 
+            // dataGridViewTextBoxColumn468
+            // 
+            dataGridViewCellStyle191.Format = "0.0000";
+            this.dataGridViewTextBoxColumn468.DefaultCellStyle = dataGridViewCellStyle191;
+            this.dataGridViewTextBoxColumn468.HeaderText = "No Coins";
+            this.dataGridViewTextBoxColumn468.Name = "dataGridViewTextBoxColumn468";
+            this.dataGridViewTextBoxColumn468.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn469
+            // 
+            dataGridViewCellStyle192.Format = "0.0000";
+            this.dataGridViewTextBoxColumn469.DefaultCellStyle = dataGridViewCellStyle192;
+            this.dataGridViewTextBoxColumn469.HeaderText = "10 Coins";
+            this.dataGridViewTextBoxColumn469.Name = "dataGridViewTextBoxColumn469";
+            this.dataGridViewTextBoxColumn469.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _ccPhysics
+            // 
+            this._ccPhysics.Controls.Add(this._dgvPhysicsTurbo);
+            this._ccPhysics.Controls.Add(this._dgvPhysicsOffroadSlip);
+            this._ccPhysics.Controls.Add(this._dgvPhysicsOffroadBrake);
+            this._ccPhysics.Controls.Add(this._dgvPhysicsOuterslip);
+            this._ccPhysics.Controls.Add(this._dgvPhysicsAcceleration);
+            this._ccPhysics.Controls.Add(this._dgvPhysicsWeight);
+            this._ccPhysics.Enabled = false;
+            this._ccPhysics.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this._ccPhysics.HeaderDisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._ccPhysics.HeaderForeColor = System.Drawing.Color.White;
+            this._ccPhysics.HeaderHoveredBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this._ccPhysics.HeaderSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this._ccPhysics.Location = new System.Drawing.Point(184, 30);
+            this._ccPhysics.Margin = new System.Windows.Forms.Padding(0);
+            this._ccPhysics.Name = "_ccPhysics";
+            this._ccPhysics.SelectedControl = this._dgvPhysicsWeight;
+            this._ccPhysics.Size = new System.Drawing.Size(200, 531);
+            this._ccPhysics.TabIndex = 3;
+            this._ccMain.SetTitle(this._ccPhysics, "Physics");
+            // 
+            // _dgvPhysicsTurbo
+            // 
+            this._dgvPhysicsTurbo.ContextMenuStrip = this._cmsGrid;
+            this._dgvPhysicsTurbo.Location = new System.Drawing.Point(0, 405);
+            this._dgvPhysicsTurbo.Name = "_dgvPhysicsTurbo";
+            this._dgvPhysicsTurbo.RowTemplate.Height = 30;
+            this._dgvPhysicsTurbo.Size = new System.Drawing.Size(200, 75);
+            this._dgvPhysicsTurbo.TabIndex = 5;
+            this._ccPhysics.SetTitle(this._dgvPhysicsTurbo, "Turbo");
+            // 
+            // dataGridViewTextBoxColumn470
+            // 
+            this.dataGridViewTextBoxColumn470.HeaderText = "Mini-Turbo Frames";
+            this.dataGridViewTextBoxColumn470.Name = "dataGridViewTextBoxColumn470";
+            this.dataGridViewTextBoxColumn470.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn471
+            // 
+            this.dataGridViewTextBoxColumn471.HeaderText = "Super-Turbo Frames";
+            this.dataGridViewTextBoxColumn471.Name = "dataGridViewTextBoxColumn471";
+            this.dataGridViewTextBoxColumn471.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvPhysicsOffroadSlip
+            // 
+            this._dgvPhysicsOffroadSlip.ContextMenuStrip = this._cmsGrid;
+            this._dgvPhysicsOffroadSlip.Location = new System.Drawing.Point(0, 330);
+            this._dgvPhysicsOffroadSlip.Name = "_dgvPhysicsOffroadSlip";
+            this._dgvPhysicsOffroadSlip.RowTemplate.Height = 30;
+            this._dgvPhysicsOffroadSlip.Size = new System.Drawing.Size(200, 75);
+            this._dgvPhysicsOffroadSlip.TabIndex = 4;
+            this._ccPhysics.SetTitle(this._dgvPhysicsOffroadSlip, "Off-Road Slip");
+            // 
+            // dataGridViewTextBoxColumn472
+            // 
+            dataGridViewCellStyle193.Format = "0.0000";
+            this.dataGridViewTextBoxColumn472.DefaultCellStyle = dataGridViewCellStyle193;
+            this.dataGridViewTextBoxColumn472.HeaderText = "Light Dirt";
+            this.dataGridViewTextBoxColumn472.Name = "dataGridViewTextBoxColumn472";
+            this.dataGridViewTextBoxColumn472.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn473
+            // 
+            dataGridViewCellStyle194.Format = "0.0000";
+            this.dataGridViewTextBoxColumn473.DefaultCellStyle = dataGridViewCellStyle194;
+            this.dataGridViewTextBoxColumn473.HeaderText = "Medium Dirt";
+            this.dataGridViewTextBoxColumn473.Name = "dataGridViewTextBoxColumn473";
+            this.dataGridViewTextBoxColumn473.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn474
+            // 
+            dataGridViewCellStyle195.Format = "0.0000";
+            this.dataGridViewTextBoxColumn474.DefaultCellStyle = dataGridViewCellStyle195;
+            this.dataGridViewTextBoxColumn474.HeaderText = "Heavy Dirt";
+            this.dataGridViewTextBoxColumn474.Name = "dataGridViewTextBoxColumn474";
+            this.dataGridViewTextBoxColumn474.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn475
+            // 
+            dataGridViewCellStyle196.Format = "0.0000";
+            this.dataGridViewTextBoxColumn475.DefaultCellStyle = dataGridViewCellStyle196;
+            this.dataGridViewTextBoxColumn475.HeaderText = "Light Sand";
+            this.dataGridViewTextBoxColumn475.Name = "dataGridViewTextBoxColumn475";
+            this.dataGridViewTextBoxColumn475.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn476
+            // 
+            dataGridViewCellStyle197.Format = "0.0000";
+            this.dataGridViewTextBoxColumn476.DefaultCellStyle = dataGridViewCellStyle197;
+            this.dataGridViewTextBoxColumn476.HeaderText = "Medium Sand";
+            this.dataGridViewTextBoxColumn476.Name = "dataGridViewTextBoxColumn476";
+            this.dataGridViewTextBoxColumn476.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn477
+            // 
+            dataGridViewCellStyle198.Format = "0.0000";
+            this.dataGridViewTextBoxColumn477.DefaultCellStyle = dataGridViewCellStyle198;
+            this.dataGridViewTextBoxColumn477.HeaderText = "Heavy Sand";
+            this.dataGridViewTextBoxColumn477.Name = "dataGridViewTextBoxColumn477";
+            this.dataGridViewTextBoxColumn477.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn478
+            // 
+            dataGridViewCellStyle199.Format = "0.0000";
+            this.dataGridViewTextBoxColumn478.DefaultCellStyle = dataGridViewCellStyle199;
+            this.dataGridViewTextBoxColumn478.HeaderText = "Light Ice";
+            this.dataGridViewTextBoxColumn478.Name = "dataGridViewTextBoxColumn478";
+            this.dataGridViewTextBoxColumn478.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn479
+            // 
+            dataGridViewCellStyle200.Format = "0.0000";
+            this.dataGridViewTextBoxColumn479.DefaultCellStyle = dataGridViewCellStyle200;
+            this.dataGridViewTextBoxColumn479.HeaderText = "Medium Ice";
+            this.dataGridViewTextBoxColumn479.Name = "dataGridViewTextBoxColumn479";
+            this.dataGridViewTextBoxColumn479.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn480
+            // 
+            dataGridViewCellStyle201.Format = "0.0000";
+            this.dataGridViewTextBoxColumn480.DefaultCellStyle = dataGridViewCellStyle201;
+            this.dataGridViewTextBoxColumn480.HeaderText = "Heavy Ice";
+            this.dataGridViewTextBoxColumn480.Name = "dataGridViewTextBoxColumn480";
+            this.dataGridViewTextBoxColumn480.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvPhysicsOffroadBrake
+            // 
+            this._dgvPhysicsOffroadBrake.ContextMenuStrip = this._cmsGrid;
+            this._dgvPhysicsOffroadBrake.Location = new System.Drawing.Point(0, 255);
+            this._dgvPhysicsOffroadBrake.Name = "_dgvPhysicsOffroadBrake";
+            this._dgvPhysicsOffroadBrake.RowTemplate.Height = 30;
+            this._dgvPhysicsOffroadBrake.Size = new System.Drawing.Size(200, 75);
+            this._dgvPhysicsOffroadBrake.TabIndex = 3;
+            this._ccPhysics.SetTitle(this._dgvPhysicsOffroadBrake, "Off-Road Brake");
+            // 
+            // dataGridViewTextBoxColumn481
+            // 
+            dataGridViewCellStyle202.Format = "0.0000";
+            this.dataGridViewTextBoxColumn481.DefaultCellStyle = dataGridViewCellStyle202;
+            this.dataGridViewTextBoxColumn481.HeaderText = "Light Dirt";
+            this.dataGridViewTextBoxColumn481.Name = "dataGridViewTextBoxColumn481";
+            this.dataGridViewTextBoxColumn481.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn482
+            // 
+            dataGridViewCellStyle203.Format = "0.0000";
+            this.dataGridViewTextBoxColumn482.DefaultCellStyle = dataGridViewCellStyle203;
+            this.dataGridViewTextBoxColumn482.HeaderText = "Medium Dirt";
+            this.dataGridViewTextBoxColumn482.Name = "dataGridViewTextBoxColumn482";
+            this.dataGridViewTextBoxColumn482.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn483
+            // 
+            dataGridViewCellStyle204.Format = "0.0000";
+            this.dataGridViewTextBoxColumn483.DefaultCellStyle = dataGridViewCellStyle204;
+            this.dataGridViewTextBoxColumn483.HeaderText = "Heavy Dirt";
+            this.dataGridViewTextBoxColumn483.Name = "dataGridViewTextBoxColumn483";
+            this.dataGridViewTextBoxColumn483.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn484
+            // 
+            dataGridViewCellStyle205.Format = "0.0000";
+            this.dataGridViewTextBoxColumn484.DefaultCellStyle = dataGridViewCellStyle205;
+            this.dataGridViewTextBoxColumn484.HeaderText = "Light Sand";
+            this.dataGridViewTextBoxColumn484.Name = "dataGridViewTextBoxColumn484";
+            this.dataGridViewTextBoxColumn484.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn485
+            // 
+            dataGridViewCellStyle206.Format = "0.0000";
+            this.dataGridViewTextBoxColumn485.DefaultCellStyle = dataGridViewCellStyle206;
+            this.dataGridViewTextBoxColumn485.HeaderText = "Medium Sand";
+            this.dataGridViewTextBoxColumn485.Name = "dataGridViewTextBoxColumn485";
+            this.dataGridViewTextBoxColumn485.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn486
+            // 
+            dataGridViewCellStyle207.Format = "0.0000";
+            this.dataGridViewTextBoxColumn486.DefaultCellStyle = dataGridViewCellStyle207;
+            this.dataGridViewTextBoxColumn486.HeaderText = "Heavy Sand";
+            this.dataGridViewTextBoxColumn486.Name = "dataGridViewTextBoxColumn486";
+            this.dataGridViewTextBoxColumn486.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn487
+            // 
+            dataGridViewCellStyle208.Format = "0.0000";
+            this.dataGridViewTextBoxColumn487.DefaultCellStyle = dataGridViewCellStyle208;
+            this.dataGridViewTextBoxColumn487.HeaderText = "Light Ice";
+            this.dataGridViewTextBoxColumn487.Name = "dataGridViewTextBoxColumn487";
+            this.dataGridViewTextBoxColumn487.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn488
+            // 
+            dataGridViewCellStyle209.Format = "0.0000";
+            this.dataGridViewTextBoxColumn488.DefaultCellStyle = dataGridViewCellStyle209;
+            this.dataGridViewTextBoxColumn488.HeaderText = "Medium Ice";
+            this.dataGridViewTextBoxColumn488.Name = "dataGridViewTextBoxColumn488";
+            this.dataGridViewTextBoxColumn488.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn489
+            // 
+            dataGridViewCellStyle210.Format = "0.0000";
+            this.dataGridViewTextBoxColumn489.DefaultCellStyle = dataGridViewCellStyle210;
+            this.dataGridViewTextBoxColumn489.HeaderText = "Heavy Ice";
+            this.dataGridViewTextBoxColumn489.Name = "dataGridViewTextBoxColumn489";
+            this.dataGridViewTextBoxColumn489.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvPhysicsOuterslip
+            // 
+            this._dgvPhysicsOuterslip.ContextMenuStrip = this._cmsGrid;
+            this._dgvPhysicsOuterslip.Location = new System.Drawing.Point(0, 180);
+            this._dgvPhysicsOuterslip.Name = "_dgvPhysicsOuterslip";
+            this._dgvPhysicsOuterslip.RowTemplate.Height = 30;
+            this._dgvPhysicsOuterslip.Size = new System.Drawing.Size(200, 75);
+            this._dgvPhysicsOuterslip.TabIndex = 2;
+            this._ccPhysics.SetTitle(this._dgvPhysicsOuterslip, "Outerslip");
+            // 
+            // dataGridViewTextBoxColumn490
+            // 
+            dataGridViewCellStyle211.Format = "0.0000";
+            this.dataGridViewTextBoxColumn490.DefaultCellStyle = dataGridViewCellStyle211;
+            this.dataGridViewTextBoxColumn490.HeaderText = "Factor";
+            this.dataGridViewTextBoxColumn490.Name = "dataGridViewTextBoxColumn490";
+            this.dataGridViewTextBoxColumn490.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvPhysicsAcceleration
+            // 
+            this._dgvPhysicsAcceleration.ContextMenuStrip = this._cmsGrid;
+            this._dgvPhysicsAcceleration.Location = new System.Drawing.Point(0, 105);
+            this._dgvPhysicsAcceleration.Name = "_dgvPhysicsAcceleration";
+            this._dgvPhysicsAcceleration.RowTemplate.Height = 30;
+            this._dgvPhysicsAcceleration.Size = new System.Drawing.Size(200, 75);
+            this._dgvPhysicsAcceleration.TabIndex = 1;
+            this._ccPhysics.SetTitle(this._dgvPhysicsAcceleration, "Acceleration");
+            // 
+            // dataGridViewTextBoxColumn491
+            // 
+            dataGridViewCellStyle212.Format = "0.0000";
+            this.dataGridViewTextBoxColumn491.DefaultCellStyle = dataGridViewCellStyle212;
+            this.dataGridViewTextBoxColumn491.HeaderText = "First Value";
+            this.dataGridViewTextBoxColumn491.Name = "dataGridViewTextBoxColumn491";
+            this.dataGridViewTextBoxColumn491.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn492
+            // 
+            dataGridViewCellStyle213.Format = "0.0000";
+            this.dataGridViewTextBoxColumn492.DefaultCellStyle = dataGridViewCellStyle213;
+            this.dataGridViewTextBoxColumn492.HeaderText = "Second Value";
+            this.dataGridViewTextBoxColumn492.Name = "dataGridViewTextBoxColumn492";
+            this.dataGridViewTextBoxColumn492.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _dgvPhysicsWeight
+            // 
+            this._dgvPhysicsWeight.ContextMenuStrip = this._cmsGrid;
+            this._dgvPhysicsWeight.Location = new System.Drawing.Point(0, 30);
+            this._dgvPhysicsWeight.Name = "_dgvPhysicsWeight";
+            this._dgvPhysicsWeight.Size = new System.Drawing.Size(200, 75);
+            this._dgvPhysicsWeight.TabIndex = 0;
+            this._ccPhysics.SetTitle(this._dgvPhysicsWeight, "Weight");
+            // 
+            // dataGridViewTextBoxColumn493
+            // 
+            dataGridViewCellStyle214.Format = "0.0000";
+            this.dataGridViewTextBoxColumn493.DefaultCellStyle = dataGridViewCellStyle214;
+            this.dataGridViewTextBoxColumn493.HeaderText = "Bumped";
+            this.dataGridViewTextBoxColumn493.Name = "dataGridViewTextBoxColumn493";
+            this.dataGridViewTextBoxColumn493.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn494
+            // 
+            dataGridViewCellStyle215.Format = "0.0000";
+            this.dataGridViewTextBoxColumn494.DefaultCellStyle = dataGridViewCellStyle215;
+            this.dataGridViewTextBoxColumn494.HeaderText = "Bumping";
+            this.dataGridViewTextBoxColumn494.Name = "dataGridViewTextBoxColumn494";
+            this.dataGridViewTextBoxColumn494.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn495
+            // 
+            dataGridViewCellStyle216.Format = "0.0000";
+            this.dataGridViewTextBoxColumn495.DefaultCellStyle = dataGridViewCellStyle216;
+            this.dataGridViewTextBoxColumn495.HeaderText = "Unknown";
+            this.dataGridViewTextBoxColumn495.Name = "dataGridViewTextBoxColumn495";
+            this.dataGridViewTextBoxColumn495.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _tlpFile
+            // 
+            this._tlpFile.ColumnCount = 1;
+            this._tlpFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this._tlpFile.Controls.Add(this._btSaveAs, 0, 3);
+            this._tlpFile.Controls.Add(this._btSave, 0, 2);
+            this._tlpFile.Controls.Add(this._btOpen, 0, 1);
+            this._tlpFile.Controls.Add(this._btNew, 0, 0);
+            this._tlpFile.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this._tlpFile.Location = new System.Drawing.Point(0, 30);
+            this._tlpFile.Margin = new System.Windows.Forms.Padding(10);
+            this._tlpFile.Name = "_tlpFile";
+            this._tlpFile.RowCount = 4;
+            this._tlpFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this._tlpFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this._tlpFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this._tlpFile.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this._tlpFile.Size = new System.Drawing.Size(184, 531);
+            this._tlpFile.TabIndex = 0;
+            this._ccMain.SetTitle(this._tlpFile, "File");
+            // 
+            // _btSaveAs
+            // 
+            this._btSaveAs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._btSaveAs.Enabled = false;
+            this._btSaveAs.Location = new System.Drawing.Point(10, 406);
+            this._btSaveAs.Margin = new System.Windows.Forms.Padding(10);
+            this._btSaveAs.Name = "_btSaveAs";
+            this._btSaveAs.Size = new System.Drawing.Size(164, 115);
+            this._btSaveAs.TabIndex = 3;
+            this._btSaveAs.Text = "Save As";
+            this._btSaveAs.UseVisualStyleBackColor = true;
+            this._btSaveAs.Click += new System.EventHandler(this._btSaveAs_Click);
+            // 
+            // _btSave
+            // 
+            this._btSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._btSave.Enabled = false;
+            this._btSave.Location = new System.Drawing.Point(10, 274);
+            this._btSave.Margin = new System.Windows.Forms.Padding(10);
+            this._btSave.Name = "_btSave";
+            this._btSave.Size = new System.Drawing.Size(164, 112);
+            this._btSave.TabIndex = 2;
+            this._btSave.Text = "Save";
+            this._btSave.UseVisualStyleBackColor = true;
+            this._btSave.Click += new System.EventHandler(this._btSave_Click);
+            // 
+            // _btOpen
+            // 
+            this._btOpen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._btOpen.Location = new System.Drawing.Point(10, 142);
+            this._btOpen.Margin = new System.Windows.Forms.Padding(10);
+            this._btOpen.Name = "_btOpen";
+            this._btOpen.Size = new System.Drawing.Size(164, 112);
+            this._btOpen.TabIndex = 1;
+            this._btOpen.Text = "Open";
+            this._btOpen.UseVisualStyleBackColor = true;
+            this._btOpen.Click += new System.EventHandler(this._btOpen_Click);
+            // 
+            // _btNew
+            // 
+            this._btNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._btNew.Location = new System.Drawing.Point(10, 10);
+            this._btNew.Margin = new System.Windows.Forms.Padding(10);
+            this._btNew.Name = "_btNew";
+            this._btNew.Size = new System.Drawing.Size(164, 112);
+            this._btNew.TabIndex = 0;
+            this._btNew.Text = "New";
+            this._btNew.UseVisualStyleBackColor = true;
+            this._btNew.Click += new System.EventHandler(this._btNew_Click);
+            // 
+            // dataGridViewTextBoxColumn304
+            // 
+            this.dataGridViewTextBoxColumn304.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn304.Name = "dataGridViewTextBoxColumn304";
+            this.dataGridViewTextBoxColumn304.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn305
+            // 
+            this.dataGridViewTextBoxColumn305.HeaderText = "Acceleration";
+            this.dataGridViewTextBoxColumn305.Name = "dataGridViewTextBoxColumn305";
+            this.dataGridViewTextBoxColumn305.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn306
+            // 
+            this.dataGridViewTextBoxColumn306.HeaderText = "Outerslip";
+            this.dataGridViewTextBoxColumn306.Name = "dataGridViewTextBoxColumn306";
+            this.dataGridViewTextBoxColumn306.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn307
+            // 
+            this.dataGridViewTextBoxColumn307.HeaderText = "Traction";
+            this.dataGridViewTextBoxColumn307.Name = "dataGridViewTextBoxColumn307";
+            this.dataGridViewTextBoxColumn307.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn308
+            // 
+            this.dataGridViewTextBoxColumn308.HeaderText = "Turbo";
+            this.dataGridViewTextBoxColumn308.Name = "dataGridViewTextBoxColumn308";
+            this.dataGridViewTextBoxColumn308.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn309
+            // 
+            this.dataGridViewTextBoxColumn309.HeaderText = "Speed\r\nGround";
+            this.dataGridViewTextBoxColumn309.Name = "dataGridViewTextBoxColumn309";
+            this.dataGridViewTextBoxColumn309.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn310
+            // 
+            this.dataGridViewTextBoxColumn310.HeaderText = "Speed\r\nWater";
+            this.dataGridViewTextBoxColumn310.Name = "dataGridViewTextBoxColumn310";
+            this.dataGridViewTextBoxColumn310.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn311
+            // 
+            this.dataGridViewTextBoxColumn311.HeaderText = "Speed\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn311.Name = "dataGridViewTextBoxColumn311";
+            this.dataGridViewTextBoxColumn311.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn312
+            // 
+            this.dataGridViewTextBoxColumn312.HeaderText = "Speed\r\nGliding";
+            this.dataGridViewTextBoxColumn312.Name = "dataGridViewTextBoxColumn312";
+            this.dataGridViewTextBoxColumn312.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn313
+            // 
+            this.dataGridViewTextBoxColumn313.HeaderText = "Handling\r\nGround";
+            this.dataGridViewTextBoxColumn313.Name = "dataGridViewTextBoxColumn313";
+            this.dataGridViewTextBoxColumn313.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn314
+            // 
+            this.dataGridViewTextBoxColumn314.HeaderText = "Handling\r\nWater";
+            this.dataGridViewTextBoxColumn314.Name = "dataGridViewTextBoxColumn314";
+            this.dataGridViewTextBoxColumn314.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn315
+            // 
+            this.dataGridViewTextBoxColumn315.HeaderText = "Handling\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn315.Name = "dataGridViewTextBoxColumn315";
+            this.dataGridViewTextBoxColumn315.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn316
+            // 
+            this.dataGridViewTextBoxColumn316.HeaderText = "Handling\r\nGliding";
+            this.dataGridViewTextBoxColumn316.Name = "dataGridViewTextBoxColumn316";
+            this.dataGridViewTextBoxColumn316.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn317
+            // 
+            this.dataGridViewTextBoxColumn317.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn317.Name = "dataGridViewTextBoxColumn317";
+            this.dataGridViewTextBoxColumn317.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn318
+            // 
+            this.dataGridViewTextBoxColumn318.HeaderText = "Acceleration";
+            this.dataGridViewTextBoxColumn318.Name = "dataGridViewTextBoxColumn318";
+            this.dataGridViewTextBoxColumn318.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn319
+            // 
+            this.dataGridViewTextBoxColumn319.HeaderText = "Outerslip";
+            this.dataGridViewTextBoxColumn319.Name = "dataGridViewTextBoxColumn319";
+            this.dataGridViewTextBoxColumn319.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn320
+            // 
+            this.dataGridViewTextBoxColumn320.HeaderText = "Traction";
+            this.dataGridViewTextBoxColumn320.Name = "dataGridViewTextBoxColumn320";
+            this.dataGridViewTextBoxColumn320.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn321
+            // 
+            this.dataGridViewTextBoxColumn321.HeaderText = "Turbo";
+            this.dataGridViewTextBoxColumn321.Name = "dataGridViewTextBoxColumn321";
+            this.dataGridViewTextBoxColumn321.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn322
+            // 
+            this.dataGridViewTextBoxColumn322.HeaderText = "Speed\r\nGround";
+            this.dataGridViewTextBoxColumn322.Name = "dataGridViewTextBoxColumn322";
+            this.dataGridViewTextBoxColumn322.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn323
+            // 
+            this.dataGridViewTextBoxColumn323.HeaderText = "Speed\r\nWater";
+            this.dataGridViewTextBoxColumn323.Name = "dataGridViewTextBoxColumn323";
+            this.dataGridViewTextBoxColumn323.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn324
+            // 
+            this.dataGridViewTextBoxColumn324.HeaderText = "Speed\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn324.Name = "dataGridViewTextBoxColumn324";
+            this.dataGridViewTextBoxColumn324.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn325
+            // 
+            this.dataGridViewTextBoxColumn325.HeaderText = "Speed\r\nGliding";
+            this.dataGridViewTextBoxColumn325.Name = "dataGridViewTextBoxColumn325";
+            this.dataGridViewTextBoxColumn325.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn326
+            // 
+            this.dataGridViewTextBoxColumn326.HeaderText = "Handling\r\nGround";
+            this.dataGridViewTextBoxColumn326.Name = "dataGridViewTextBoxColumn326";
+            this.dataGridViewTextBoxColumn326.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn327
+            // 
+            this.dataGridViewTextBoxColumn327.HeaderText = "Handling\r\nWater";
+            this.dataGridViewTextBoxColumn327.Name = "dataGridViewTextBoxColumn327";
+            this.dataGridViewTextBoxColumn327.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn328
+            // 
+            this.dataGridViewTextBoxColumn328.HeaderText = "Handling\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn328.Name = "dataGridViewTextBoxColumn328";
+            this.dataGridViewTextBoxColumn328.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn329
+            // 
+            this.dataGridViewTextBoxColumn329.HeaderText = "Handling\r\nGliding";
+            this.dataGridViewTextBoxColumn329.Name = "dataGridViewTextBoxColumn329";
+            this.dataGridViewTextBoxColumn329.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn330
+            // 
+            this.dataGridViewTextBoxColumn330.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn330.Name = "dataGridViewTextBoxColumn330";
+            this.dataGridViewTextBoxColumn330.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn331
+            // 
+            this.dataGridViewTextBoxColumn331.HeaderText = "Acceleration";
+            this.dataGridViewTextBoxColumn331.Name = "dataGridViewTextBoxColumn331";
+            this.dataGridViewTextBoxColumn331.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn332
+            // 
+            this.dataGridViewTextBoxColumn332.HeaderText = "Outerslip";
+            this.dataGridViewTextBoxColumn332.Name = "dataGridViewTextBoxColumn332";
+            this.dataGridViewTextBoxColumn332.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn333
+            // 
+            this.dataGridViewTextBoxColumn333.HeaderText = "Traction";
+            this.dataGridViewTextBoxColumn333.Name = "dataGridViewTextBoxColumn333";
+            this.dataGridViewTextBoxColumn333.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn334
+            // 
+            this.dataGridViewTextBoxColumn334.HeaderText = "Turbo";
+            this.dataGridViewTextBoxColumn334.Name = "dataGridViewTextBoxColumn334";
+            this.dataGridViewTextBoxColumn334.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn335
+            // 
+            this.dataGridViewTextBoxColumn335.HeaderText = "Speed\r\nGround";
+            this.dataGridViewTextBoxColumn335.Name = "dataGridViewTextBoxColumn335";
+            this.dataGridViewTextBoxColumn335.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn336
+            // 
+            this.dataGridViewTextBoxColumn336.HeaderText = "Speed\r\nWater";
+            this.dataGridViewTextBoxColumn336.Name = "dataGridViewTextBoxColumn336";
+            this.dataGridViewTextBoxColumn336.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn337
+            // 
+            this.dataGridViewTextBoxColumn337.HeaderText = "Speed\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn337.Name = "dataGridViewTextBoxColumn337";
+            this.dataGridViewTextBoxColumn337.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn338
+            // 
+            this.dataGridViewTextBoxColumn338.HeaderText = "Speed\r\nGliding";
+            this.dataGridViewTextBoxColumn338.Name = "dataGridViewTextBoxColumn338";
+            this.dataGridViewTextBoxColumn338.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn339
+            // 
+            this.dataGridViewTextBoxColumn339.HeaderText = "Handling\r\nGround";
+            this.dataGridViewTextBoxColumn339.Name = "dataGridViewTextBoxColumn339";
+            this.dataGridViewTextBoxColumn339.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn340
+            // 
+            this.dataGridViewTextBoxColumn340.HeaderText = "Handling\r\nWater";
+            this.dataGridViewTextBoxColumn340.Name = "dataGridViewTextBoxColumn340";
+            this.dataGridViewTextBoxColumn340.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn341
+            // 
+            this.dataGridViewTextBoxColumn341.HeaderText = "Handling\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn341.Name = "dataGridViewTextBoxColumn341";
+            this.dataGridViewTextBoxColumn341.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn342
+            // 
+            this.dataGridViewTextBoxColumn342.HeaderText = "Handling\r\nGliding";
+            this.dataGridViewTextBoxColumn342.Name = "dataGridViewTextBoxColumn342";
+            this.dataGridViewTextBoxColumn342.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn343
+            // 
+            this.dataGridViewTextBoxColumn343.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn343.Name = "dataGridViewTextBoxColumn343";
+            this.dataGridViewTextBoxColumn343.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn344
+            // 
+            this.dataGridViewTextBoxColumn344.HeaderText = "Acceleration";
+            this.dataGridViewTextBoxColumn344.Name = "dataGridViewTextBoxColumn344";
+            this.dataGridViewTextBoxColumn344.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn345
+            // 
+            this.dataGridViewTextBoxColumn345.HeaderText = "Outerslip";
+            this.dataGridViewTextBoxColumn345.Name = "dataGridViewTextBoxColumn345";
+            this.dataGridViewTextBoxColumn345.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn346
+            // 
+            this.dataGridViewTextBoxColumn346.HeaderText = "Traction";
+            this.dataGridViewTextBoxColumn346.Name = "dataGridViewTextBoxColumn346";
+            this.dataGridViewTextBoxColumn346.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn347
+            // 
+            this.dataGridViewTextBoxColumn347.HeaderText = "Turbo";
+            this.dataGridViewTextBoxColumn347.Name = "dataGridViewTextBoxColumn347";
+            this.dataGridViewTextBoxColumn347.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn348
+            // 
+            this.dataGridViewTextBoxColumn348.HeaderText = "Speed\r\nGround";
+            this.dataGridViewTextBoxColumn348.Name = "dataGridViewTextBoxColumn348";
+            this.dataGridViewTextBoxColumn348.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn349
+            // 
+            this.dataGridViewTextBoxColumn349.HeaderText = "Speed\r\nWater";
+            this.dataGridViewTextBoxColumn349.Name = "dataGridViewTextBoxColumn349";
+            this.dataGridViewTextBoxColumn349.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn350
+            // 
+            this.dataGridViewTextBoxColumn350.HeaderText = "Speed\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn350.Name = "dataGridViewTextBoxColumn350";
+            this.dataGridViewTextBoxColumn350.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn351
+            // 
+            this.dataGridViewTextBoxColumn351.HeaderText = "Speed\r\nGliding";
+            this.dataGridViewTextBoxColumn351.Name = "dataGridViewTextBoxColumn351";
+            this.dataGridViewTextBoxColumn351.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn352
+            // 
+            this.dataGridViewTextBoxColumn352.HeaderText = "Handling\r\nGround";
+            this.dataGridViewTextBoxColumn352.Name = "dataGridViewTextBoxColumn352";
+            this.dataGridViewTextBoxColumn352.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn353
+            // 
+            this.dataGridViewTextBoxColumn353.HeaderText = "Handling\r\nWater";
+            this.dataGridViewTextBoxColumn353.Name = "dataGridViewTextBoxColumn353";
+            this.dataGridViewTextBoxColumn353.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn354
+            // 
+            this.dataGridViewTextBoxColumn354.HeaderText = "Handling\r\nAnti-Gravity";
+            this.dataGridViewTextBoxColumn354.Name = "dataGridViewTextBoxColumn354";
+            this.dataGridViewTextBoxColumn354.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn355
+            // 
+            this.dataGridViewTextBoxColumn355.HeaderText = "Handling\r\nGliding";
+            this.dataGridViewTextBoxColumn355.Name = "dataGridViewTextBoxColumn355";
+            this.dataGridViewTextBoxColumn355.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn356
+            // 
+            dataGridViewCellStyle217.Format = "0.0000";
+            this.dataGridViewTextBoxColumn356.DefaultCellStyle = dataGridViewCellStyle217;
+            this.dataGridViewTextBoxColumn356.HeaderText = "Roll";
+            this.dataGridViewTextBoxColumn356.Name = "dataGridViewTextBoxColumn356";
+            this.dataGridViewTextBoxColumn356.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn357
+            // 
+            dataGridViewCellStyle218.Format = "0.0000";
+            this.dataGridViewTextBoxColumn357.DefaultCellStyle = dataGridViewCellStyle218;
+            this.dataGridViewTextBoxColumn357.HeaderText = "Move";
+            this.dataGridViewTextBoxColumn357.Name = "dataGridViewTextBoxColumn357";
+            this.dataGridViewTextBoxColumn357.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn358
+            // 
+            dataGridViewCellStyle219.Format = "0.0000";
+            this.dataGridViewTextBoxColumn358.DefaultCellStyle = dataGridViewCellStyle219;
+            this.dataGridViewTextBoxColumn358.HeaderText = "Auto-Drift";
+            this.dataGridViewTextBoxColumn358.Name = "dataGridViewTextBoxColumn358";
+            this.dataGridViewTextBoxColumn358.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn359
+            // 
+            dataGridViewCellStyle220.Format = "0.0000";
+            this.dataGridViewTextBoxColumn359.DefaultCellStyle = dataGridViewCellStyle220;
+            this.dataGridViewTextBoxColumn359.HeaderText = "Drift";
+            this.dataGridViewTextBoxColumn359.Name = "dataGridViewTextBoxColumn359";
+            this.dataGridViewTextBoxColumn359.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn360
+            // 
+            dataGridViewCellStyle221.Format = "0.0000";
+            this.dataGridViewTextBoxColumn360.DefaultCellStyle = dataGridViewCellStyle221;
+            this.dataGridViewTextBoxColumn360.HeaderText = "Normal";
+            this.dataGridViewTextBoxColumn360.Name = "dataGridViewTextBoxColumn360";
+            this.dataGridViewTextBoxColumn360.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn361
+            // 
+            dataGridViewCellStyle222.Format = "0.0000";
+            this.dataGridViewTextBoxColumn361.DefaultCellStyle = dataGridViewCellStyle222;
+            this.dataGridViewTextBoxColumn361.HeaderText = "Auto-Drift";
+            this.dataGridViewTextBoxColumn361.Name = "dataGridViewTextBoxColumn361";
+            this.dataGridViewTextBoxColumn361.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn362
+            // 
+            dataGridViewCellStyle223.Format = "0.0000";
+            this.dataGridViewTextBoxColumn362.DefaultCellStyle = dataGridViewCellStyle223;
+            this.dataGridViewTextBoxColumn362.HeaderText = "Drift";
+            this.dataGridViewTextBoxColumn362.Name = "dataGridViewTextBoxColumn362";
+            this.dataGridViewTextBoxColumn362.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn363
+            // 
+            dataGridViewCellStyle224.Format = "0.0000";
+            this.dataGridViewTextBoxColumn363.DefaultCellStyle = dataGridViewCellStyle224;
+            this.dataGridViewTextBoxColumn363.HeaderText = "Normal";
+            this.dataGridViewTextBoxColumn363.Name = "dataGridViewTextBoxColumn363";
+            this.dataGridViewTextBoxColumn363.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn364
+            // 
+            dataGridViewCellStyle225.Format = "0.0000";
+            this.dataGridViewTextBoxColumn364.DefaultCellStyle = dataGridViewCellStyle225;
+            this.dataGridViewTextBoxColumn364.HeaderText = "Auto-Drift";
+            this.dataGridViewTextBoxColumn364.Name = "dataGridViewTextBoxColumn364";
+            this.dataGridViewTextBoxColumn364.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn365
+            // 
+            dataGridViewCellStyle226.Format = "0.0000";
+            this.dataGridViewTextBoxColumn365.DefaultCellStyle = dataGridViewCellStyle226;
+            this.dataGridViewTextBoxColumn365.HeaderText = "Drift";
+            this.dataGridViewTextBoxColumn365.Name = "dataGridViewTextBoxColumn365";
+            this.dataGridViewTextBoxColumn365.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn366
+            // 
+            dataGridViewCellStyle227.Format = "0.0000";
+            this.dataGridViewTextBoxColumn366.DefaultCellStyle = dataGridViewCellStyle227;
+            this.dataGridViewTextBoxColumn366.HeaderText = "Normal";
+            this.dataGridViewTextBoxColumn366.Name = "dataGridViewTextBoxColumn366";
+            this.dataGridViewTextBoxColumn366.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn367
+            // 
+            dataGridViewCellStyle228.Format = "0.0000";
+            this.dataGridViewTextBoxColumn367.DefaultCellStyle = dataGridViewCellStyle228;
+            this.dataGridViewTextBoxColumn367.HeaderText = "Any Coins";
+            this.dataGridViewTextBoxColumn367.Name = "dataGridViewTextBoxColumn367";
+            this.dataGridViewTextBoxColumn367.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn368
+            // 
+            dataGridViewCellStyle229.Format = "0.0000";
+            this.dataGridViewTextBoxColumn368.DefaultCellStyle = dataGridViewCellStyle229;
+            this.dataGridViewTextBoxColumn368.HeaderText = "No Coins";
+            this.dataGridViewTextBoxColumn368.Name = "dataGridViewTextBoxColumn368";
+            this.dataGridViewTextBoxColumn368.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn369
+            // 
+            dataGridViewCellStyle230.Format = "0.0000";
+            this.dataGridViewTextBoxColumn369.DefaultCellStyle = dataGridViewCellStyle230;
+            this.dataGridViewTextBoxColumn369.HeaderText = "10 Coins";
+            this.dataGridViewTextBoxColumn369.Name = "dataGridViewTextBoxColumn369";
+            this.dataGridViewTextBoxColumn369.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn370
+            // 
+            dataGridViewCellStyle231.Format = "0.0000";
+            this.dataGridViewTextBoxColumn370.DefaultCellStyle = dataGridViewCellStyle231;
+            this.dataGridViewTextBoxColumn370.HeaderText = "No Coins";
+            this.dataGridViewTextBoxColumn370.Name = "dataGridViewTextBoxColumn370";
+            this.dataGridViewTextBoxColumn370.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn371
+            // 
+            dataGridViewCellStyle232.Format = "0.0000";
+            this.dataGridViewTextBoxColumn371.DefaultCellStyle = dataGridViewCellStyle232;
+            this.dataGridViewTextBoxColumn371.HeaderText = "10 Coins";
+            this.dataGridViewTextBoxColumn371.Name = "dataGridViewTextBoxColumn371";
+            this.dataGridViewTextBoxColumn371.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn372
+            // 
+            dataGridViewCellStyle233.Format = "0.0000";
+            this.dataGridViewTextBoxColumn372.DefaultCellStyle = dataGridViewCellStyle233;
+            this.dataGridViewTextBoxColumn372.HeaderText = "No Coins";
+            this.dataGridViewTextBoxColumn372.Name = "dataGridViewTextBoxColumn372";
+            this.dataGridViewTextBoxColumn372.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn373
+            // 
+            dataGridViewCellStyle234.Format = "0.0000";
+            this.dataGridViewTextBoxColumn373.DefaultCellStyle = dataGridViewCellStyle234;
+            this.dataGridViewTextBoxColumn373.HeaderText = "10 Coins";
+            this.dataGridViewTextBoxColumn373.Name = "dataGridViewTextBoxColumn373";
+            this.dataGridViewTextBoxColumn373.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn374
+            // 
+            this.dataGridViewTextBoxColumn374.HeaderText = "Mini-Turbo Frames";
+            this.dataGridViewTextBoxColumn374.Name = "dataGridViewTextBoxColumn374";
+            this.dataGridViewTextBoxColumn374.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn375
+            // 
+            this.dataGridViewTextBoxColumn375.HeaderText = "Super-Turbo Frames";
+            this.dataGridViewTextBoxColumn375.Name = "dataGridViewTextBoxColumn375";
+            this.dataGridViewTextBoxColumn375.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn376
+            // 
+            dataGridViewCellStyle235.Format = "0.0000";
+            this.dataGridViewTextBoxColumn376.DefaultCellStyle = dataGridViewCellStyle235;
+            this.dataGridViewTextBoxColumn376.HeaderText = "Light Dirt";
+            this.dataGridViewTextBoxColumn376.Name = "dataGridViewTextBoxColumn376";
+            this.dataGridViewTextBoxColumn376.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn377
+            // 
+            dataGridViewCellStyle236.Format = "0.0000";
+            this.dataGridViewTextBoxColumn377.DefaultCellStyle = dataGridViewCellStyle236;
+            this.dataGridViewTextBoxColumn377.HeaderText = "Medium Dirt";
+            this.dataGridViewTextBoxColumn377.Name = "dataGridViewTextBoxColumn377";
+            this.dataGridViewTextBoxColumn377.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn378
+            // 
+            dataGridViewCellStyle237.Format = "0.0000";
+            this.dataGridViewTextBoxColumn378.DefaultCellStyle = dataGridViewCellStyle237;
+            this.dataGridViewTextBoxColumn378.HeaderText = "Heavy Dirt";
+            this.dataGridViewTextBoxColumn378.Name = "dataGridViewTextBoxColumn378";
+            this.dataGridViewTextBoxColumn378.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn379
+            // 
+            dataGridViewCellStyle238.Format = "0.0000";
+            this.dataGridViewTextBoxColumn379.DefaultCellStyle = dataGridViewCellStyle238;
+            this.dataGridViewTextBoxColumn379.HeaderText = "Light Sand";
+            this.dataGridViewTextBoxColumn379.Name = "dataGridViewTextBoxColumn379";
+            this.dataGridViewTextBoxColumn379.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn380
+            // 
+            dataGridViewCellStyle239.Format = "0.0000";
+            this.dataGridViewTextBoxColumn380.DefaultCellStyle = dataGridViewCellStyle239;
+            this.dataGridViewTextBoxColumn380.HeaderText = "Medium Sand";
+            this.dataGridViewTextBoxColumn380.Name = "dataGridViewTextBoxColumn380";
+            this.dataGridViewTextBoxColumn380.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn381
+            // 
+            dataGridViewCellStyle240.Format = "0.0000";
+            this.dataGridViewTextBoxColumn381.DefaultCellStyle = dataGridViewCellStyle240;
+            this.dataGridViewTextBoxColumn381.HeaderText = "Heavy Sand";
+            this.dataGridViewTextBoxColumn381.Name = "dataGridViewTextBoxColumn381";
+            this.dataGridViewTextBoxColumn381.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn382
+            // 
+            dataGridViewCellStyle241.Format = "0.0000";
+            this.dataGridViewTextBoxColumn382.DefaultCellStyle = dataGridViewCellStyle241;
+            this.dataGridViewTextBoxColumn382.HeaderText = "Light Ice";
+            this.dataGridViewTextBoxColumn382.Name = "dataGridViewTextBoxColumn382";
+            this.dataGridViewTextBoxColumn382.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn383
+            // 
+            dataGridViewCellStyle242.Format = "0.0000";
+            this.dataGridViewTextBoxColumn383.DefaultCellStyle = dataGridViewCellStyle242;
+            this.dataGridViewTextBoxColumn383.HeaderText = "Medium Ice";
+            this.dataGridViewTextBoxColumn383.Name = "dataGridViewTextBoxColumn383";
+            this.dataGridViewTextBoxColumn383.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn384
+            // 
+            dataGridViewCellStyle243.Format = "0.0000";
+            this.dataGridViewTextBoxColumn384.DefaultCellStyle = dataGridViewCellStyle243;
+            this.dataGridViewTextBoxColumn384.HeaderText = "Heavy Ice";
+            this.dataGridViewTextBoxColumn384.Name = "dataGridViewTextBoxColumn384";
+            this.dataGridViewTextBoxColumn384.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn385
+            // 
+            dataGridViewCellStyle244.Format = "0.0000";
+            this.dataGridViewTextBoxColumn385.DefaultCellStyle = dataGridViewCellStyle244;
+            this.dataGridViewTextBoxColumn385.HeaderText = "Light Dirt";
+            this.dataGridViewTextBoxColumn385.Name = "dataGridViewTextBoxColumn385";
+            this.dataGridViewTextBoxColumn385.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn386
+            // 
+            dataGridViewCellStyle245.Format = "0.0000";
+            this.dataGridViewTextBoxColumn386.DefaultCellStyle = dataGridViewCellStyle245;
+            this.dataGridViewTextBoxColumn386.HeaderText = "Medium Dirt";
+            this.dataGridViewTextBoxColumn386.Name = "dataGridViewTextBoxColumn386";
+            this.dataGridViewTextBoxColumn386.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn387
+            // 
+            dataGridViewCellStyle246.Format = "0.0000";
+            this.dataGridViewTextBoxColumn387.DefaultCellStyle = dataGridViewCellStyle246;
+            this.dataGridViewTextBoxColumn387.HeaderText = "Heavy Dirt";
+            this.dataGridViewTextBoxColumn387.Name = "dataGridViewTextBoxColumn387";
+            this.dataGridViewTextBoxColumn387.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn388
+            // 
+            dataGridViewCellStyle247.Format = "0.0000";
+            this.dataGridViewTextBoxColumn388.DefaultCellStyle = dataGridViewCellStyle247;
+            this.dataGridViewTextBoxColumn388.HeaderText = "Light Sand";
+            this.dataGridViewTextBoxColumn388.Name = "dataGridViewTextBoxColumn388";
+            this.dataGridViewTextBoxColumn388.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn389
+            // 
+            dataGridViewCellStyle248.Format = "0.0000";
+            this.dataGridViewTextBoxColumn389.DefaultCellStyle = dataGridViewCellStyle248;
+            this.dataGridViewTextBoxColumn389.HeaderText = "Medium Sand";
+            this.dataGridViewTextBoxColumn389.Name = "dataGridViewTextBoxColumn389";
+            this.dataGridViewTextBoxColumn389.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn390
+            // 
+            dataGridViewCellStyle249.Format = "0.0000";
+            this.dataGridViewTextBoxColumn390.DefaultCellStyle = dataGridViewCellStyle249;
+            this.dataGridViewTextBoxColumn390.HeaderText = "Heavy Sand";
+            this.dataGridViewTextBoxColumn390.Name = "dataGridViewTextBoxColumn390";
+            this.dataGridViewTextBoxColumn390.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn391
+            // 
+            dataGridViewCellStyle250.Format = "0.0000";
+            this.dataGridViewTextBoxColumn391.DefaultCellStyle = dataGridViewCellStyle250;
+            this.dataGridViewTextBoxColumn391.HeaderText = "Light Ice";
+            this.dataGridViewTextBoxColumn391.Name = "dataGridViewTextBoxColumn391";
+            this.dataGridViewTextBoxColumn391.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn392
+            // 
+            dataGridViewCellStyle251.Format = "0.0000";
+            this.dataGridViewTextBoxColumn392.DefaultCellStyle = dataGridViewCellStyle251;
+            this.dataGridViewTextBoxColumn392.HeaderText = "Medium Ice";
+            this.dataGridViewTextBoxColumn392.Name = "dataGridViewTextBoxColumn392";
+            this.dataGridViewTextBoxColumn392.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn393
+            // 
+            dataGridViewCellStyle252.Format = "0.0000";
+            this.dataGridViewTextBoxColumn393.DefaultCellStyle = dataGridViewCellStyle252;
+            this.dataGridViewTextBoxColumn393.HeaderText = "Heavy Ice";
+            this.dataGridViewTextBoxColumn393.Name = "dataGridViewTextBoxColumn393";
+            this.dataGridViewTextBoxColumn393.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn394
+            // 
+            dataGridViewCellStyle253.Format = "0.0000";
+            this.dataGridViewTextBoxColumn394.DefaultCellStyle = dataGridViewCellStyle253;
+            this.dataGridViewTextBoxColumn394.HeaderText = "Factor";
+            this.dataGridViewTextBoxColumn394.Name = "dataGridViewTextBoxColumn394";
+            this.dataGridViewTextBoxColumn394.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn395
+            // 
+            dataGridViewCellStyle254.Format = "0.0000";
+            this.dataGridViewTextBoxColumn395.DefaultCellStyle = dataGridViewCellStyle254;
+            this.dataGridViewTextBoxColumn395.HeaderText = "First Value";
+            this.dataGridViewTextBoxColumn395.Name = "dataGridViewTextBoxColumn395";
+            this.dataGridViewTextBoxColumn395.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn396
+            // 
+            dataGridViewCellStyle255.Format = "0.0000";
+            this.dataGridViewTextBoxColumn396.DefaultCellStyle = dataGridViewCellStyle255;
+            this.dataGridViewTextBoxColumn396.HeaderText = "Second Value";
+            this.dataGridViewTextBoxColumn396.Name = "dataGridViewTextBoxColumn396";
+            this.dataGridViewTextBoxColumn396.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn397
+            // 
+            dataGridViewCellStyle256.Format = "0.0000";
+            this.dataGridViewTextBoxColumn397.DefaultCellStyle = dataGridViewCellStyle256;
+            this.dataGridViewTextBoxColumn397.HeaderText = "Bumped";
+            this.dataGridViewTextBoxColumn397.Name = "dataGridViewTextBoxColumn397";
+            this.dataGridViewTextBoxColumn397.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn398
+            // 
+            dataGridViewCellStyle257.Format = "0.0000";
+            this.dataGridViewTextBoxColumn398.DefaultCellStyle = dataGridViewCellStyle257;
+            this.dataGridViewTextBoxColumn398.HeaderText = "Bumping";
+            this.dataGridViewTextBoxColumn398.Name = "dataGridViewTextBoxColumn398";
+            this.dataGridViewTextBoxColumn398.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn399
+            // 
+            dataGridViewCellStyle258.Format = "0.0000";
+            this.dataGridViewTextBoxColumn399.DefaultCellStyle = dataGridViewCellStyle258;
+            this.dataGridViewTextBoxColumn399.HeaderText = "Unknown";
+            this.dataGridViewTextBoxColumn399.Name = "dataGridViewTextBoxColumn399";
+            this.dataGridViewTextBoxColumn399.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -3075,8 +4737,11 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mario Kart 8 Performance Editor";
+            this._cmsGrid.ResumeLayout(false);
             this._ccMain.ResumeLayout(false);
             this._ccPoints.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._dgvPointsGliders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dgvPointsTires)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._dgvPointsKarts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._dgvPointsDrivers)).EndInit();
             this._ccHandling.ResumeLayout(false);
@@ -3097,8 +4762,6 @@
             ((System.ComponentModel.ISupportInitialize)(this._dgvPhysicsAcceleration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._dgvPhysicsWeight)).EndInit();
             this._tlpFile.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._dgvPointsTires)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._dgvPointsGliders)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3435,6 +5098,203 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn301;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn302;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn303;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn304;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn305;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn306;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn307;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn308;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn309;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn310;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn311;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn312;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn313;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn314;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn315;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn316;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn317;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn318;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn319;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn320;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn321;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn322;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn323;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn324;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn325;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn326;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn327;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn328;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn329;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn330;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn331;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn332;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn333;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn334;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn335;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn336;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn337;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn338;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn339;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn340;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn341;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn342;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn343;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn344;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn345;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn346;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn347;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn348;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn349;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn350;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn351;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn352;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn353;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn354;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn355;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn356;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn357;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn358;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn359;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn360;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn361;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn362;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn363;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn364;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn365;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn366;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn367;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn368;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn369;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn370;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn371;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn372;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn373;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn374;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn375;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn376;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn377;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn378;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn379;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn380;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn381;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn382;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn383;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn384;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn385;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn386;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn387;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn388;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn389;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn390;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn391;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn392;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn393;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn394;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn395;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn396;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn397;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn398;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn399;
+        private System.Windows.Forms.ContextMenuStrip _cmsGrid;
+        private System.Windows.Forms.ToolStripMenuItem _cmsGridAdd;
+        private System.Windows.Forms.ToolStripMenuItem _cmsGridSubtract;
+        private System.Windows.Forms.ToolStripMenuItem _cmsGridMultiply;
+        private System.Windows.Forms.ToolStripMenuItem _cmsGridDivide;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn400;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn401;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn402;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn403;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn404;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn405;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn406;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn407;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn408;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn409;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn410;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn411;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn412;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn413;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn414;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn415;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn416;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn417;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn418;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn419;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn420;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn421;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn422;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn423;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn424;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn425;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn426;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn427;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn428;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn429;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn430;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn431;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn432;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn433;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn434;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn435;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn436;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn437;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn438;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn439;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn440;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn441;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn442;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn443;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn444;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn445;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn446;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn447;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn448;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn449;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn450;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn451;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn452;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn453;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn454;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn455;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn456;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn457;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn458;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn459;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn460;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn461;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn462;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn463;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn464;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn465;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn466;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn467;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn468;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn469;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn470;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn471;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn472;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn473;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn474;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn475;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn476;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn477;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn478;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn479;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn480;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn481;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn482;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn483;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn484;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn485;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn486;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn487;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn488;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn489;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn490;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn491;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn492;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn493;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn494;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn495;
     }
 }
 

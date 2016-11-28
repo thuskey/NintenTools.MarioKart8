@@ -5,7 +5,7 @@
     "language": "en-US",
     "name": "Syroot.NintenTools.MarioKart8",
     "title": "NintenTools.MarioKart8",
-    "version": "0.2.1-alpha1",
+    "version": "0.3.0-alpha4",
 
     "packOptions": {
         "iconUrl": "https://raw.githubusercontent.com/Syroot/NintenTools.MarioKart8/master/res/Logo.png",
@@ -32,6 +32,7 @@
     },
 
     "dependencies": {
+        "Syroot.IO.BinaryData": "1.1.0",
         "Syroot.NintenTools.Byaml": "2.*"
     },
 

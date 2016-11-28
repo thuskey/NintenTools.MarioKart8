@@ -21,6 +21,18 @@ namespace Syroot.NintenTools.MarioKart8.BinData
         // ---- CONSTRUCTORS & DESTRUCTOR ------------------------------------------------------------------------------
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="BinFile"/> class with the given <paramref name="identifier"/>,
+        /// <paramref name="unknown"/> value and <paramref name="version"/>.
+        /// </summary>
+        public BinFile(string identifier, short unknown, int version)
+        {
+            Identifier = identifier;
+            Unknown = unknown;
+            Version = version;
+            Sections = new SectionCollection();
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="BinFile"/> class from the file with the given name.
         /// </summary>
         /// <param name="fileName">The name of the file from which the instance will be loaded.</param>
@@ -62,6 +74,70 @@ namespace Syroot.NintenTools.MarioKart8.BinData
         /// Gets or sets the <see cref="Section"/> instances following the header.
         /// </summary>
         public SectionCollection Sections { get; set; }
+
+        // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Saves the data into the file with the given name.
+        /// </summary>
+        /// <param name="fileName">The name of the file in which the data will be stored.</param>
+        public void Save(string fileName)
+        {
+            using (FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                Save(stream);
+            }
+        }
+
+        /// <summary>
+        /// Saves the data into the the given stream.
+        /// </summary>
+        /// <param name="stream">The stream in which the data will be stored.</param>
+        public void Save(Stream stream)
+        {
+            using (BinaryDataWriter writer = new BinaryDataWriter(stream, Encoding.ASCII, true))
+            {
+                writer.ByteOrder = ByteOrder.BigEndian;
+
+                // Write the file header.
+                writer.Write(Identifier, BinaryStringFormat.NoPrefixOrTermination);
+                Offset fileSizeOffset = writer.ReserveOffset();
+                writer.Write((short)Sections.Count);
+                writer.Write(Unknown);
+                writer.Write(Version);
+                Offset[] sectionOffsets = new Offset[Sections.Count];
+                for (int i = 0; i < sectionOffsets.Length; i++)
+                {
+                    sectionOffsets[i] = writer.ReserveOffset();
+                }
+                int headerLength = (int)writer.Position;
+
+                // Write all the sections.
+                int sectionIndex = 0;
+                foreach (Section section in Sections)
+                {
+                    // Fill in the offset to this section.
+                    sectionOffsets[sectionIndex].Satisfy((int)writer.Position - headerLength);
+
+                    // Write the section header.
+                    writer.Write(section.Name, BinaryStringFormat.NoPrefixOrTermination);
+                    writer.Write((short)section.Groups[0].ElementCount);
+                    writer.Write((short)section.Groups.Count);
+                    writer.Write((int)section.SectionType);
+
+                    // Write the section groups, each of them is 4-byte aligned.
+                    foreach (GroupBase group in section.Groups)
+                    {
+                        writer.Write(group.GetData());
+                        writer.Align(4);
+                    }
+
+                    sectionIndex++;
+                }
+                
+                fileSizeOffset.Satisfy();
+            }
+        }
 
         // ---- METHODS (PRIVATE) --------------------------------------------------------------------------------------
 

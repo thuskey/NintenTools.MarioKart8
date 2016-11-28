@@ -19,7 +19,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
         public PointSetDataGridView()
         {
             ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            ColumnHeadersHeight = 60;
+            ColumnHeadersHeight = 44;
 
             AddColumn("Weight");
             AddColumn("Acceleration");

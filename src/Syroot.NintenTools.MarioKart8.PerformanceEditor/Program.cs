@@ -1,21 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 {
-    static class Program
+    /// <summary>
+    /// The main class of the program.
+    /// </summary>
+    internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        // ---- METHODS (PRIVATE) --------------------------------------------------------------------------------------
+
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            ToolStripManager.Renderer = new VisualStudioRenderer();
             Application.Run(new FormMain());
         }
     }

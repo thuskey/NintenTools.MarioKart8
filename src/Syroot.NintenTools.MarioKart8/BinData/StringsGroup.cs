@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using Syroot.IO;
 
 namespace Syroot.NintenTools.MarioKart8.BinData
@@ -9,6 +10,35 @@ namespace Syroot.NintenTools.MarioKart8.BinData
     /// </summary>
     public class StringsGroup : GroupBase<string>
     {
+        // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Gets the raw data of this group as a byte array.
+        /// </summary>
+        /// <returns>The data of this group.</returns>
+        public override byte[] GetData()
+        {
+            using (MemoryStream stream = new MemoryStream())
+            {
+                using (BinaryDataWriter writer = new BinaryDataWriter(stream, Encoding.ASCII, true))
+                {
+                    // Write the offsets to the strings.
+                    int offset = 0;
+                    foreach (string element in Elements)
+                    {
+                        writer.Write(offset);
+                        offset += element.Length + 1;
+                    }
+                    // Write the strings.
+                    foreach (string element in Elements)
+                    {
+                        writer.Write(element, BinaryStringFormat.ZeroTerminated);
+                    }
+                }
+                return stream.ToArray();
+            }
+        }
+
         // ---- METHODS (PROTECTED INTERNAL) ---------------------------------------------------------------------------
 
         /// <summary>

@@ -15,6 +15,17 @@ namespace Syroot.NintenTools.MarioKart8.BinData
         // ---- CONSTRUCTORS & DESTRUCTOR ------------------------------------------------------------------------------
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Section"/> class with the given <paramref name="name"/> and
+        /// <paramref name="sectionType"/>.
+        /// </summary>
+        public Section(string name, SectionType sectionType)
+        {
+            Name = name;
+            SectionType = SectionType;
+            Groups = new List<GroupBase>();
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Section"/> class, reading groups and elements from the
         /// given <paramref name="reader"/> and having the provided size in bytes.
         /// </summary>

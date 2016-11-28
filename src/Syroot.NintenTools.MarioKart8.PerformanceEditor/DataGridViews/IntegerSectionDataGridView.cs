@@ -36,6 +36,16 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
                 int.Parse(Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
         }
 
+        protected override void OnCellValueChanged(DataGridViewCellEventArgs e)
+        {
+            base.OnCellValueChanged(e);
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
+            {
+                SetDataValue(e.RowIndex, e.ColumnIndex,
+                    int.Parse(Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
+            }
+        }
+
         // ---- EVENTHANDLERS ------------------------------------------------------------------------------------------
 
         private void EditingControlTextBox_KeyPress(object sender, KeyPressEventArgs e)

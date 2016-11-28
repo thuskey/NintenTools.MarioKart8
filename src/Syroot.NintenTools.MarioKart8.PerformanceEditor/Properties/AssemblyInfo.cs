@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Mario Kart 8 Performance Editor")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Syroot")]
-[assembly: AssemblyProduct("Syroot.NintenTools.MarioKart8.PerformanceEditor")]
+[assembly: AssemblyProduct("Mario Kart 8 Performance Editor")]
 [assembly: AssemblyCopyright("WTFPL")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

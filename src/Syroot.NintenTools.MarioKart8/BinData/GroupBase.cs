@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Syroot.IO;
 
 namespace Syroot.NintenTools.MarioKart8.BinData
@@ -8,6 +9,24 @@ namespace Syroot.NintenTools.MarioKart8.BinData
     /// </summary>
     public abstract class GroupBase
     {
+        // ---- PROPERTIES ---------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Gets the number of elements in this group.
+        /// </summary>
+        public abstract int ElementCount
+        {
+            get;
+        }
+
+        // ---- METHODS (PUBLIC) ---------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Gets the raw data of this group as a byte array.
+        /// </summary>
+        /// <returns>The data of this group.</returns>
+        public abstract byte[] GetData();
+
         // ---- METHODS (PROTECTED INTERNAL) ---------------------------------------------------------------------------
 
         /// <summary>
@@ -32,5 +51,16 @@ namespace Syroot.NintenTools.MarioKart8.BinData
         /// Gets or sets the list of elements.
         /// </summary>
         public List<T> Elements { get; set; }
+
+        /// <summary>
+        /// Gets the number of elements in this group.
+        /// </summary>
+        public override int ElementCount
+        {
+            get
+            {
+                return Elements.Count;
+            }
+        }
     }
 }
