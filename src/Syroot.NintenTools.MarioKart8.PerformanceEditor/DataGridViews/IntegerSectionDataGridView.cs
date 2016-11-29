@@ -1,56 +1,31 @@
-﻿using System.Windows.Forms;
-
-namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
+﻿namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 {
     /// <summary>
     /// Represents a <see cref="SectionDataGridView"/> which only allows the input of integer values.
     /// </summary>
-    public class IntegerSectionDataGridView : SectionDataGridView
+    public abstract class IntegerSectionDataGridView : SectionDataGridView<int>
     {
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
 
-        protected virtual void SetDataValue(int row, int column, int value)
+        /// <summary>
+        /// Called when the user inputs a character and it has to be validated.
+        /// </summary>
+        /// <param name="character">The character which was input.</param>
+        /// <returns><c>true</c> to allow the character, otherwise <c>false</c>.</returns>
+        protected override bool ValidateCharacterInput(char character)
         {
+            return char.IsControl(character) && char.IsDigit(character);
         }
 
-        protected override void OnEditingControlShowing(DataGridViewEditingControlShowingEventArgs e)
-        {
-            e.Control.KeyPress -= EditingControlTextBox_KeyPress;
-            TextBox textBox = e.Control as TextBox;
-            if (textBox != null)
-            {
-                textBox.KeyPress += EditingControlTextBox_KeyPress;
-            }
-        }
-
-        protected override void OnCellValidating(DataGridViewCellValidatingEventArgs e)
+        /// <summary>
+        /// Called when the cell value text has to be validated.
+        /// </summary>
+        /// <param name="text">The value to validate.</param>
+        /// <returns><c>true</c> to allow the text, otherwise <c>false</c>.</returns>
+        protected override bool ValidateTextValue(string text)
         {
             int i;
-            e.Cancel = !int.TryParse(e.FormattedValue.ToString(), out i);
-        }
-
-        protected override void OnCellValidated(DataGridViewCellEventArgs e)
-        {
-            base.OnCellValidated(e);
-            SetDataValue(e.RowIndex, e.ColumnIndex,
-                int.Parse(Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
-        }
-
-        protected override void OnCellValueChanged(DataGridViewCellEventArgs e)
-        {
-            base.OnCellValueChanged(e);
-            if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
-            {
-                SetDataValue(e.RowIndex, e.ColumnIndex,
-                    int.Parse(Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()));
-            }
-        }
-
-        // ---- EVENTHANDLERS ------------------------------------------------------------------------------------------
-
-        private void EditingControlTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            return int.TryParse(text, out i);
         }
     }
 }

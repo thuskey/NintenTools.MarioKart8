@@ -53,32 +53,26 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             if (_controller.PerformanceData == null)
             {
                 Text = Application.ProductName;
-                _btSave.Enabled = false;
-                _btSaveAs.Enabled = false;
                 _ccPhysics.Enabled = false;
                 _ccSpeed.Enabled = false;
                 _ccHandling.Enabled = false;
                 _ccPoints.Enabled = false;
                 _ccMain.SelectedControl = _tlpFile;
+                _btSave.Visible = false;
+                _btSaveAs.Visible = false;
             }
             else
             {
                 Text = $"{_controller.FileName} - {Application.ProductName}";
-                _btSave.Enabled = true;
-                _btSaveAs.Enabled = true;
                 _ccPhysics.Enabled = true;
                 _ccSpeed.Enabled = true;
                 _ccHandling.Enabled = true;
                 _ccPoints.Enabled = true;
                 _ccMain.SelectedControl = _ccPhysics;
+                _btSave.Visible = true;
+                _btSaveAs.Visible = true;
             }
             UpdateDataGrids(this);
-        }
-
-        private void _btNew_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This feature is coming soon.", Application.ProductName, MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
         }
 
         private void _btOpen_Click(object sender, EventArgs e)
@@ -119,7 +113,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             DataGridView dataGridView = _cmsGrid.SourceControl as DataGridView;
             bool isFloatGrid = dataGridView is FloatSectionDataGridView;
 
-            float? value = FormCalculation.Show("Add", isFloatGrid, 0);
+            float? value = FormCalculation.Show("Add", isFloatGrid);
             if (value != null)
             {
                 if (isFloatGrid)
@@ -144,7 +138,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             DataGridView dataGridView = _cmsGrid.SourceControl as DataGridView;
             bool isFloatGrid = dataGridView is FloatSectionDataGridView;
 
-            float? value = FormCalculation.Show("Subtract", isFloatGrid, 0);
+            float? value = FormCalculation.Show("Subtract", isFloatGrid);
             if (value != null)
             {
                 if (isFloatGrid)
@@ -170,7 +164,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             DataGridView dataGridView = _cmsGrid.SourceControl as DataGridView;
             bool isFloatGrid = dataGridView is FloatSectionDataGridView;
 
-            float? value = FormCalculation.Show("Multiply", isFloatGrid, 0);
+            float? value = FormCalculation.Show("Multiply", isFloatGrid);
             if (value != null)
             {
                 if (isFloatGrid)
@@ -195,7 +189,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             DataGridView dataGridView = _cmsGrid.SourceControl as DataGridView;
             bool isFloatGrid = dataGridView is FloatSectionDataGridView;
 
-            float? value = FormCalculation.Show("Divide", isFloatGrid, 0);
+            float? value = FormCalculation.Show("Divide", isFloatGrid);
             if (value != null)
             {
                 if (isFloatGrid)

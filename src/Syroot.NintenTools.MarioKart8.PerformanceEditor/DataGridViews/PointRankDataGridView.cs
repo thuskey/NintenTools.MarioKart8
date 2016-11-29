@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a <see cref="FloatSectionDataGridView"/> which has 21 rows to display the values for each point rank.
     /// </summary>
-    public class PointRankDataGridView : FloatSectionDataGridView
+    public abstract class PointRankDataGridView : FloatSectionDataGridView
     {
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
 

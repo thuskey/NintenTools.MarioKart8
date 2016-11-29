@@ -28,10 +28,6 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 
         // ---- METHODS (INTERNAL) -------------------------------------------------------------------------------------
 
-        internal void NewFile()
-        {
-        }
-
         internal void OpenFile(string fileName)
         {
             FileName = fileName;

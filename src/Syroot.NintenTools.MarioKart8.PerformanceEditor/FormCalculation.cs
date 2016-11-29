@@ -7,6 +7,10 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
     /// </summary>
     public partial class FormCalculation : Form
     {
+        // ---- MEMBERS ------------------------------------------------------------------------------------------------
+
+        private static float _lastValue;
+
         // ---- CONSTRUCTORS & DESTRUCTOR ------------------------------------------------------------------------------
 
         /// <summary>
@@ -33,14 +37,32 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 
         // ---- METHODS (INTERNAL) -------------------------------------------------------------------------------------
 
-        internal static float? Show(string text, bool allowFloat, float defaultValue)
+        /// <summary>
+        /// Shows the input dialog with the given title and value settings.
+        /// </summary>
+        /// <param name="caption">The text in the title bar of the input box.</param>
+        /// <param name="allowFloat"><c>true</c> to allow floating point numbers.</param>
+        /// <returns>The value the user entered or <c>null</c> if he canceled.</returns>
+        internal static float? Show(string caption, bool allowFloat)
         {
             FormCalculation form = new FormCalculation();
-            form.Text = text;
+            form.Text = caption;
             form.AllowFloat = allowFloat;
-            form.Value = defaultValue;
+
+            // Set the last default value.
+            if (allowFloat)
+            {
+                form.Value = _lastValue;
+            }
+            else
+            {
+                form.Value = (int)_lastValue;
+            }
+
+            // Show the dialog and return the value.
             if (form.ShowDialog() == DialogResult.OK)
             {
+                _lastValue = form.Value;
                 return form.Value;
             }
             return null;

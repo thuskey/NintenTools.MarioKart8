@@ -4,7 +4,7 @@
     /// Represents a <see cref="IntegerSectionDataGridView"/> which has 21 rows to display the values for each point
     /// rank.
     /// </summary>
-    public class PointRankIntegerDataGridView : IntegerSectionDataGridView
+    public abstract class PointRankIntegerDataGridView : IntegerSectionDataGridView
     {
         // ---- METHODS (PROTECTED) ------------------------------------------------------------------------------------
 
