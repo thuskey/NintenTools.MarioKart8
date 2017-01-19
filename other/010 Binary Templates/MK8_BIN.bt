@@ -6,7 +6,7 @@
 //   Version: 0.1
 //   Purpose: Parse Mario Kart 8 BIN files.
 //  Category: Software
-// File Mask: *.bt
+// File Mask: *.bin
 //  ID Bytes: 
 //   History: 
 //   0.2   2016-11-23  Parse string arrays.
