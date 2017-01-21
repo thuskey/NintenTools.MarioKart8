@@ -45,12 +45,12 @@
       <HintPath>..\..\packages\Syroot.Maths.1.1.0\lib\net45\Syroot.Maths.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Syroot.NintenTools.Byaml, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syroot.NintenTools.Byaml.2.0.0\lib\net45\Syroot.NintenTools.Byaml.dll</HintPath>
+    <Reference Include="Syroot.NintenTools.Byaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syroot.NintenTools.Byaml.2.1.0-beta2\lib\net45\Syroot.NintenTools.Byaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Syroot.NintenTools.MarioKart8, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syroot.NintenTools.MarioKart8.0.3.0-alpha4\lib\net451\Syroot.NintenTools.MarioKart8.dll</HintPath>
+      <HintPath>..\..\packages\Syroot.NintenTools.MarioKart8.0.3.0-alpha5\lib\net451\Syroot.NintenTools.MarioKart8.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -66,6 +66,7 @@
     <Compile Include="DataGridViews\HandlingAirDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DataGridViews\NameImageValue.cs" />
     <Compile Include="DataGridViews\PointGlidersDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -138,6 +139,11 @@
     <Compile Include="MainController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="VisualStudioColorTable.cs" />
     <Compile Include="VisualStudioRenderer.cs" />
     <EmbeddedResource Include="FormMain.resx">
@@ -148,14 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,6 +173,116 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Logo.ico" />
+    <Content Include="Properties\Resources\Tire_GoldTires.png" />
+    <Content Include="Properties\Resources\Tire_LeafTires.png" />
+    <Content Include="Properties\Resources\Tire_TriforceTires.png" />
+    <None Include="Properties\Resources\Kart_Unknown.png" />
+    <None Include="Properties\Resources\Kart_YoshiBike.png" />
+    <None Include="Properties\Resources\Kart_WildWiggler.png" />
+    <None Include="Properties\Resources\Kart_W25SilverArrow.png" />
+    <None Include="Properties\Resources\Kart_Varmint.png" />
+    <None Include="Properties\Resources\Kart_TriSpeeder.png" />
+    <None Include="Properties\Resources\Kart_TheDuke.png" />
+    <None Include="Properties\Resources\Kart_TeddyBuggy.png" />
+    <None Include="Properties\Resources\Kart_TanookiKart.png" />
+    <None Include="Properties\Resources\Kart_Streetle.png" />
+    <None Include="Properties\Resources\Kart_SteelDriver.png" />
+    <None Include="Properties\Resources\Kart_StandardKart.png" />
+    <None Include="Properties\Resources\Kart_StandardBike.png" />
+    <None Include="Properties\Resources\Kart_StandardAtv.png" />
+    <None Include="Properties\Resources\Kart_SportsCoupe.png" />
+    <None Include="Properties\Resources\Kart_SportBike.png" />
+    <None Include="Properties\Resources\Kart_Sneeker.png" />
+    <None Include="Properties\Resources\Kart_PWing.png" />
+    <None Include="Properties\Resources\Kart_Prancer.png" />
+    <None Include="Properties\Resources\Kart_PipeFrame.png" />
+    <None Include="Properties\Resources\Kart_MrScooty.png" />
+    <None Include="Properties\Resources\Kart_MasterCycle.png" />
+    <None Include="Properties\Resources\Kart_Mach8.png" />
+    <None Include="Properties\Resources\Kart_Landship.png" />
+    <None Include="Properties\Resources\Kart_JetBike.png" />
+    <None Include="Properties\Resources\Kart_GoldStandard.png" />
+    <None Include="Properties\Resources\Kart_Gla.png" />
+    <None Include="Properties\Resources\Kart_FlameRider.png" />
+    <None Include="Properties\Resources\Kart_Comet.png" />
+    <None Include="Properties\Resources\Kart_CityTripper.png" />
+    <None Include="Properties\Resources\Kart_CircuitSpecial.png" />
+    <None Include="Properties\Resources\Kart_CatCruiser.png" />
+    <None Include="Properties\Resources\Kart_BoneRattler.png" />
+    <None Include="Properties\Resources\Kart_BlueFalcon.png" />
+    <None Include="Properties\Resources\Kart_Biddybuggy.png" />
+    <None Include="Properties\Resources\Kart_BDasher.png" />
+    <None Include="Properties\Resources\Kart_Badwagon.png" />
+    <None Include="Properties\Resources\Kart_300SlRoadster.png" />
+    <None Include="Properties\Resources\Glider_WarioWing.png" />
+    <None Include="Properties\Resources\Glider_WaddleWing.png" />
+    <None Include="Properties\Resources\Glider_SuperGlider.png" />
+    <None Include="Properties\Resources\Glider_PlaneGlider.png" />
+    <None Include="Properties\Resources\Glider_PeachParasol.png" />
+    <None Include="Properties\Resources\Glider_Parafoil.png" />
+    <None Include="Properties\Resources\Glider_Parachute.png" />
+    <None Include="Properties\Resources\Glider_PaperGlider.png" />
+    <None Include="Properties\Resources\Glider_MktvParafoil.png" />
+    <None Include="Properties\Resources\Glider_HylianKite.png" />
+    <None Include="Properties\Resources\Glider_GoldGlider.png" />
+    <None Include="Properties\Resources\Glider_FlowerGlider.png" />
+    <None Include="Properties\Resources\Glider_CloudGlider.png" />
+    <None Include="Properties\Resources\Glider_BowserKite.png" />
+    <None Include="Properties\Resources\Driver_Yoshi.png" />
+    <None Include="Properties\Resources\Driver_Wendy.png" />
+    <None Include="Properties\Resources\Driver_Wario.png" />
+    <None Include="Properties\Resources\Driver_Waluigi.png" />
+    <None Include="Properties\Resources\Driver_VillagerMale.png" />
+    <None Include="Properties\Resources\Driver_VillagerFemale.png" />
+    <None Include="Properties\Resources\Driver_Toadette.png" />
+    <None Include="Properties\Resources\Driver_Toad.png" />
+    <None Include="Properties\Resources\Driver_TanookiMario.png" />
+    <None Include="Properties\Resources\Driver_ShyGuy.png" />
+    <None Include="Properties\Resources\Driver_Roy.png" />
+    <None Include="Properties\Resources\Driver_Rosalina.png" />
+    <None Include="Properties\Resources\Driver_PinkGoldPeach.png" />
+    <None Include="Properties\Resources\Driver_Peach.png" />
+    <None Include="Properties\Resources\Driver_Morton.png" />
+    <None Include="Properties\Resources\Driver_Mii.png" />
+    <None Include="Properties\Resources\Driver_MetalMario.png" />
+    <None Include="Properties\Resources\Driver_Mario.png" />
+    <None Include="Properties\Resources\Driver_Luigi.png" />
+    <None Include="Properties\Resources\Driver_Ludwig.png" />
+    <None Include="Properties\Resources\Driver_Link.png" />
+    <None Include="Properties\Resources\Driver_Lemmy.png" />
+    <None Include="Properties\Resources\Driver_Larry.png" />
+    <None Include="Properties\Resources\Driver_Lakitu.png" />
+    <None Include="Properties\Resources\Driver_Koopa.png" />
+    <None Include="Properties\Resources\Driver_Isabelle.png" />
+    <None Include="Properties\Resources\Driver_Iggy.png" />
+    <None Include="Properties\Resources\Driver_DryBowser.png" />
+    <None Include="Properties\Resources\Driver_DonkeyKong.png" />
+    <None Include="Properties\Resources\Driver_Daisy.png" />
+    <None Include="Properties\Resources\Driver_CatPeach.png" />
+    <None Include="Properties\Resources\Driver_Bowser.png" />
+    <None Include="Properties\Resources\Driver_BabyRosalina.png" />
+    <None Include="Properties\Resources\Driver_BabyPeach.png" />
+    <None Include="Properties\Resources\Driver_BabyMario.png" />
+    <None Include="Properties\Resources\Driver_BabyLuigi.png" />
+    <None Include="Properties\Resources\Driver_BabyDaisy.png" />
+    <None Include="Properties\Resources\Tire_Wood.png" />
+    <None Include="Properties\Resources\Tire_Standard.png" />
+    <None Include="Properties\Resources\Tire_Sponge.png" />
+    <None Include="Properties\Resources\Tire_Slim.png" />
+    <None Include="Properties\Resources\Tire_Slick.png" />
+    <None Include="Properties\Resources\Tire_Roller.png" />
+    <None Include="Properties\Resources\Tire_RetroOffRoad.png" />
+    <None Include="Properties\Resources\Tire_OffRoad.png" />
+    <None Include="Properties\Resources\Tire_Monster.png" />
+    <None Include="Properties\Resources\Tire_Metal.png" />
+    <None Include="Properties\Resources\Tire_HotMonster.png" />
+    <None Include="Properties\Resources\Tire_GlaTires.png" />
+    <None Include="Properties\Resources\Tire_CyberSlick.png" />
+    <None Include="Properties\Resources\Tire_Cushion.png" />
+    <None Include="Properties\Resources\Tire_CrimsonSlim.png" />
+    <None Include="Properties\Resources\Tire_Button.png" />
+    <None Include="Properties\Resources\Tire_BlueStandard.png" />
+    <None Include="Properties\Resources\Tire_AzureRoller.png" />
     <None Include="Properties\Resources\Multiply.png" />
     <None Include="Properties\Resources\Add.png" />
     <None Include="Properties\Resources\Subtract.png" />

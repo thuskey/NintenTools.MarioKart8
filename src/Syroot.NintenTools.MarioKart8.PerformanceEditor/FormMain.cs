@@ -48,6 +48,20 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 
         // ---- EVENTHANDLERS ------------------------------------------------------------------------------------------
 
+        private void FormMain_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Move;
+            }
+        }
+
+        private void FormMain_DragDrop(object sender, DragEventArgs e)
+        {
+            string file = ((string[])e.Data.GetData(DataFormats.FileDrop))[0];
+            _controller.OpenFile(file);
+        }
+
         private void _controller_FileChanged(object sender, EventArgs e)
         {
             if (_controller.PerformanceData == null)

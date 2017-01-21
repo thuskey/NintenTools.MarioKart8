@@ -340,7 +340,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
                 textBox.KeyPress += EditingControlTextBox_KeyPress;
             }
         }
-        
+
         /// <summary>
         /// Raised when the user input of a cell is being validated.
         /// </summary>
