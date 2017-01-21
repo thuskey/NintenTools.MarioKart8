@@ -21,7 +21,7 @@ The repository contains the following command line tools. Please note these were
 - **BinDumper**: Dumps the data of **&ast;.bin** files as found in their section, group and element hierarchy.
 - **NoLakitu**: Removes `EnemyPath` and `LapPath` from a **&ast;_muunt&ast;.byaml** (and Objs having referenced those) in order to get rid of Lakitu who would prevent you from going out of bounds.
 - **ObjDumper**: Dumps the information found in **objflow.byaml** into a readable table.
-- **Performance Editor**: Shows physics and point set details of a **Performance.bin** file and allows editing and saving new versions.
+- **Performance Editor**: Shows physics and point set details of a 4.1 **Performance.bin** file and allows editing and saving new versions.
 
 License
 =======
