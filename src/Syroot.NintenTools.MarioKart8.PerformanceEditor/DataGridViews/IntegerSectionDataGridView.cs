@@ -1,4 +1,6 @@
-﻿namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
+﻿using System.Globalization;
+
+namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 {
     /// <summary>
     /// Represents a <see cref="SectionDataGridView"/> which only allows the input of integer values.
@@ -14,7 +16,11 @@
         /// <returns><c>true</c> to allow the character, otherwise <c>false</c>.</returns>
         protected override bool ValidateCharacterInput(char character)
         {
-            return char.IsControl(character) && char.IsDigit(character);
+            NumberFormatInfo numberFormat = CultureInfo.CurrentCulture.NumberFormat;
+
+            return char.IsControl(character)
+                || char.IsDigit(character)
+                || character.ToString() == numberFormat.NegativeSign;
         }
 
         /// <summary>

@@ -453,6 +453,16 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Equals {
+            get {
+                object obj = ResourceManager.GetObject("Equals", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Glider_BowserKite {
             get {
                 object obj = ResourceManager.GetObject("Glider_BowserKite", resourceCulture);

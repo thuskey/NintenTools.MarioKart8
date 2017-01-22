@@ -173,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Logo.ico" />
+    <None Include="Properties\Resources\Equals.png" />
     <Content Include="Properties\Resources\Tire_GoldTires.png" />
     <Content Include="Properties\Resources\Tire_LeafTires.png" />
     <Content Include="Properties\Resources\Tire_TriforceTires.png" />

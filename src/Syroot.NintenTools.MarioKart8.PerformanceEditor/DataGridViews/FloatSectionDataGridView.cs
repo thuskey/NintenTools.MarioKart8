@@ -26,7 +26,9 @@
         /// <returns><c>true</c> to allow the character, otherwise <c>false</c>.</returns>
         protected override bool ValidateCharacterInput(char character)
         {
-            return char.IsControl(character) && (char.IsDigit(character) || char.IsPunctuation(character));
+            return char.IsControl(character)
+                || char.IsDigit(character)
+                || char.IsPunctuation(character);
         }
 
         /// <summary>

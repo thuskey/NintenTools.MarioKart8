@@ -66,7 +66,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 
             // Columns
             base.AllowUserToResizeColumns = false;
-            base.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            base.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             base.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             base.ColumnHeadersDefaultCellStyle = new DataGridViewCellStyle()
             {
@@ -301,7 +301,8 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
         protected virtual int AddColumn(string text)
         {
             int index = Columns.Add($"_dgvc{text}", text);
-            Columns[index].SortMode = DataGridViewColumnSortMode.NotSortable;
+            DataGridViewColumn column = Columns[index];
+            column.SortMode = DataGridViewColumnSortMode.NotSortable;
             return index;
         }
 

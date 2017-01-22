@@ -15,8 +15,8 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 
         public PhysicsTurboDataGridView()
         {
-            AddColumn("Mini-Turbo Frames");
-            AddColumn("Super-Turbo Frames");
+            AddColumn("Mini-Turbo");
+            AddColumn("Super-Turbo");
             AddPointRankRows();
         }
 

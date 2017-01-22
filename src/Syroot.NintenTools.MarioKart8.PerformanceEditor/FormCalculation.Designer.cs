@@ -94,6 +94,7 @@
             this._tbValue.TabIndex = 0;
             this._tbValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this._tbValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this._tbValue_KeyPress);
+            this._tbValue.Validating += new System.ComponentModel.CancelEventHandler(this._tbValue_Validating);
             // 
             // FormCalculation
             // 

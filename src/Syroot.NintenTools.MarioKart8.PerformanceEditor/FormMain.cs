@@ -67,10 +67,10 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             if (_controller.PerformanceData == null)
             {
                 Text = Application.ProductName;
+                _ccPoints.Enabled = false;
                 _ccPhysics.Enabled = false;
                 _ccSpeed.Enabled = false;
                 _ccHandling.Enabled = false;
-                _ccPoints.Enabled = false;
                 _ccMain.SelectedControl = _tlpFile;
                 _btSave.Visible = false;
                 _btSaveAs.Visible = false;
@@ -78,11 +78,11 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             else
             {
                 Text = $"{_controller.FileName} - {Application.ProductName}";
+                _ccPoints.Enabled = true;
                 _ccPhysics.Enabled = true;
                 _ccSpeed.Enabled = true;
                 _ccHandling.Enabled = true;
-                _ccPoints.Enabled = true;
-                _ccMain.SelectedControl = _ccPhysics;
+                _ccMain.SelectedControl = _ccPoints;
                 _btSave.Visible = true;
                 _btSaveAs.Visible = true;
             }
@@ -118,6 +118,31 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     _controller.SaveFile(saveFileDialog.FileName);
+                }
+            }
+        }
+
+        private void _cmsGridSet_Click(object sender, EventArgs e)
+        {
+            DataGridView dataGridView = _cmsGrid.SourceControl as DataGridView;
+            bool isFloatGrid = dataGridView is FloatSectionDataGridView;
+
+            float? value = FormCalculation.Show("Set", isFloatGrid);
+            if (value != null)
+            {
+                if (isFloatGrid)
+                {
+                    foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+                    {
+                        cell.Value = (float)value;
+                    }
+                }
+                else
+                {
+                    foreach (DataGridViewCell cell in dataGridView.SelectedCells)
+                    {
+                        cell.Value = (int)value;
+                    }
                 }
             }
         }

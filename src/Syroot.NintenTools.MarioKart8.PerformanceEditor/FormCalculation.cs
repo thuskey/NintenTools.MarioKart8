@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System.ComponentModel;
+using System.Globalization;
+using System.Windows.Forms;
 
 namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 {
@@ -50,7 +52,7 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
             form.AllowFloat = allowFloat;
 
             // Set the last default value.
-            if (allowFloat)
+            if (form.AllowFloat)
             {
                 form.Value = _lastValue;
             }
@@ -70,8 +72,27 @@ namespace Syroot.NintenTools.MarioKart8.PerformanceEditor
 
         private void _tbValue_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsControl(e.KeyChar)
-                && !(char.IsDigit(e.KeyChar) || (AllowFloat && char.IsPunctuation(e.KeyChar)));
+            NumberFormatInfo numberFormat = CultureInfo.CurrentCulture.NumberFormat;
+
+            bool valid = char.IsControl(e.KeyChar)
+                || char.IsDigit(e.KeyChar)
+                || (AllowFloat && char.IsPunctuation(e.KeyChar))
+                || (!AllowFloat && e.KeyChar.ToString() == numberFormat.NegativeSign);
+            e.Handled = !valid;
+        }
+
+        private void _tbValue_Validating(object sender, CancelEventArgs e)
+        {
+            if (AllowFloat)
+            {
+                float result;
+                e.Cancel = !float.TryParse(_tbValue.Text, out result);
+            }
+            else
+            {
+                int result;
+                e.Cancel = !int.TryParse(_tbValue.Text, out result);
+            }
         }
     }
 }
