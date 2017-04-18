@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Syroot.NintenTools.MarioKart8.ObjDump": {
-      "commandName": "Project",
-      "commandLineArgs": "\"D:\\Archive\\Games\\Emulators\\Wii U\\Roms\\Mario Kart 8 EUR 4.1 with DLC1+2\\content\\data\\objflow.byaml\" \"D:\\Pictures\\test.csv\""
-    }
-  }
-}

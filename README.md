@@ -23,13 +23,3 @@ The repository contains the following command line tools. Please note these were
 - **ObjDumper**: Dumps the information found in **objflow.byaml** into a readable table.
 - **Performance Editor**: Shows physics and point set details of a 4.1 **Performance.bin** file and allows editing and saving new versions.
 ![Performance Editor](https://raw.githubusercontent.com/Syroot/NintenTools.MarioKart8/master/doc/readme/performance_editor.png)
-
-License
-=======
-
-<a href="http://www.wtfpl.net/"><img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl.svg" height="20" alt="WTFPL" /></a> WTFPL
-
-    Copyright © 2016 syroot.com <admin@syroot.com>
-    This work is free. You can redistribute it and/or modify it under the
-    terms of the Do What The Fuck You Want To Public License, Version 2,
-    as published by Sam Hocevar. See the COPYING file for more details.
